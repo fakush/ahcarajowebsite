@@ -1,0 +1,22 @@
+{
+  "name": "ahcarajowebsite",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+	  "watch-sass": "sass --watch ./scss/main.scss ./css/style.css",
+	  "build-sass": "sass ./scss/main.scss ./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fakush/ahcarajowebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fakush/ahcarajowebsite/issues"
+  },
+  "homepage": "https://github.com/fakush/ahcarajowebsite#readme",
+  "devDependencies": {
+    "sass": "^1.38.0"
+  }
+}
