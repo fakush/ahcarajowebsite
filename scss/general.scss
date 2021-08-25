@@ -1,16 +1,21 @@
 * {
 	font-family: $font-family, sans-serif;
 	letter-spacing: $letter-spacing;
+	line-height: normal;
 }
 // Override Bootstrap
 p,
-ul {
+ul,
+ol {
 	margin-bottom: 0;
 }
 
 .header {
 	position: sticky;
-	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
 	&__logo-wrapper-link {
 		position: absolute;
 		top: 0.5rem;
@@ -18,7 +23,7 @@ ul {
 	}
 	&__logo {
 		width: 92px;
-		filter: drop-shadow($shadow);
+		filter: drop-shadow($shadow-1);
 	}
 	&__top {
 		display: grid;
@@ -43,7 +48,7 @@ ul {
 		display: flex;
 		align-items: center;
 		background-color: $white;
-		box-shadow: $shadow;
+		box-shadow: $shadow-1;
 	}
 	&__nav-list {
 		display: grid;

@@ -12,6 +12,9 @@ ol {
 
 .header {
   position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 2;
 }
 .header__logo-wrapper-link {
@@ -138,20 +141,31 @@ ol {
     margin-left: 270px;
   }
 }
-.home-carousel__img-wrapper {
+.home-carousel__img-container {
   position: relative;
+  height: 311px;
+  background-size: cover;
+  background-position: center;
 }
-.home-carousel__img {
-  width: 100%;
+.home-carousel__img-container--slide-1 {
+  background-image: url("../assets/banners/home-slide-1.jpg");
+}
+.home-carousel__img-container--slide-2 {
+  background-image: url("../assets/banners/home-slide-2.jpg");
+}
+.home-carousel__img-container--slide-3 {
+  background-image: url("../assets/banners/home-slide-3.jpg");
+}
+.home-carousel__img-border-wrapper {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -2px;
 }
 .home-carousel__img-border {
   display: block;
-  position: absolute;
-  right: 0;
-  bottom: -2px;
-  width: 100%;
 }
-.home-carousel__container {
+.home-carousel__content {
   position: relative;
   background-color: #318B7C;
   padding-top: 3px;
@@ -210,29 +224,33 @@ ol {
   border-color: #D49B16 !important;
 }
 
-@media screen and (min-width: 992px) {
-  .home-carousel__item.active {
+@media screen and (min-width: 768px) {
+  .home-carousel__container {
     display: flex;
   }
-  .home-carousel__img-wrapper {
+  .home-carousel__img-container {
     width: 100%;
+    height: auto;
     order: 1;
   }
-  .home-carousel__img-border {
-    left: -1px;
+  .home-carousel__img-border-wrapper {
+    top: 0;
+    right: unset;
+    left: -2px;
     bottom: 0;
-    width: auto;
+  }
+  .home-carousel__img-border {
     height: 100%;
   }
-  .home-carousel__container {
-    padding: 199px 56px 159px 56px;
+  .home-carousel__content {
+    padding: 135px 56px 120px 56px;
   }
   .home-carousel__title {
     width: 379px;
     margin-bottom: 22px;
     margin-left: 0;
     margin-right: 0;
-    font-size: 40px;
+    font-size: 34px;
     font-weight: bold;
   }
   .home-carousel__text {
@@ -241,41 +259,20 @@ ol {
     font-size: 20px;
   }
   .home-carousel__link {
-    right: 21px;
-    bottom: 110px;
+    left: 370px;
+    bottom: 60px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .home-carousel__img-border {
-    left: -1px;
-    bottom: 0;
-    width: auto;
-    height: 100%;
-  }
-  .home-carousel__img {
-    width: 948px;
-    height: 558px;
-  }
-  .home-carousel__container {
-    width: 492px;
-    padding: 199px 56px 159px 56px;
+  .home-carousel__content {
+    padding: 199px 89px 125px 70px;
   }
   .home-carousel__title {
-    width: 379px;
-    margin-bottom: 22px;
-    margin-left: 0;
-    margin-right: 0;
     font-size: 40px;
-    font-weight: bold;
-  }
-  .home-carousel__text {
-    width: 346px;
-    padding: 0;
-    font-size: 20px;
   }
   .home-carousel__link {
-    right: 21px;
-    bottom: 110px;
+    left: 402px;
+    bottom: 70px;
   }
 }
 

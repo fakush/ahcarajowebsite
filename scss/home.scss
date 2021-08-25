@@ -1,0 +1,142 @@
+.home-carousel {
+	&__img-container {
+		position: relative;
+		height: 311px;
+		background-size: cover;
+		background-position: center;
+		&--slide-1 {
+			background-image: url('../assets/banners/home-slide-1.jpg');
+		}
+		&--slide-2 {
+			background-image: url('../assets/banners/home-slide-2.jpg');
+		}
+		&--slide-3 {
+			background-image: url('../assets/banners/home-slide-3.jpg');
+		}
+	}
+	&__img-border-wrapper {
+		position: absolute;
+		right: 0;
+		left: 0;
+		// Fix bottom white space in Chrome
+		bottom: -2px;
+	}
+	&__img-border {
+		display: block;
+	}
+	&__content {
+		position: relative;
+		background-color: $principal-dark;
+		padding-top: 3px;
+		padding-bottom: 82px;
+	}
+	&__title {
+		margin-left: 1rem;
+		margin-bottom: 11px;
+		color: $white;
+		font-size: $font-size-3;
+		font-weight: 700;
+	}
+	&__text {
+		padding: 0 1rem;
+		color: $white;
+		font-size: $font-size-5;
+	}
+	&__link {
+		display: block;
+		position: absolute;
+		right: 16px;
+		bottom: 35px;
+		width: max-content;
+		padding: 0.5rem;
+		background-color: $acento;
+		color: $white;
+		font-size: $font-size-5;
+		font-weight: 600;
+		text-decoration: none;
+		border-radius: 12px;
+		box-shadow: $shadow-2;
+	}
+	&__indicators {
+		display: grid;
+		grid-auto-flow: column;
+		justify-content: center;
+		gap: 1rem;
+		position: absolute;
+		right: 0;
+		bottom: 14px;
+		left: 0;
+		z-index: 2;
+		padding-left: 0;
+		list-style: none;
+	}
+	&__indicator {
+		border: 3px solid $white !important;
+		width: 12px !important;
+		height: 12px !important;
+		background-color: transparent !important;
+		box-sizing: border-box !important;
+		border-radius: 50%;
+		opacity: 1 !important;
+		&.active {
+			border-color: $acento !important;
+		}
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, md)) {
+	.home-carousel {
+		&__container {
+			display: flex;
+		}
+		&__img-container {
+			width: 100%;
+			height: auto;
+			order: 1;
+		}
+		&__img-border-wrapper {
+			top: 0;
+			right: unset;
+			left: -2px;
+			bottom: 0;
+		}
+		&__img-border {
+			height: 100%;
+		}
+		&__content {
+			padding: 135px 56px 120px 56px;
+		}
+		&__title {
+			width: 379px;
+			margin-bottom: 22px;
+			margin-left: 0;
+			margin-right: 0;
+			font-size: $font-size-2;
+			font-weight: bold;
+		}
+		&__text {
+			width: 346px;
+			padding: 0;
+			font-size: $font-size-3;
+		}
+		&__link {
+			left: 370px;
+			bottom: 60px;
+		}
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, xxl)) {
+	.home-carousel {
+		&__content {
+			padding: 199px 89px 125px 70px;
+		}
+		&__title {
+			font-size: $font-size-1;
+		}
+		&__link {
+			left: 402px;
+			bottom: 70px;
+		}
+	}
+}

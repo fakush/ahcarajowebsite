@@ -51,8 +51,77 @@
 			</div>
 		</nav>
 	</header>
-	<!-- Home banner -->
-	<section></section>
+	<!-- Home carousel -->
+	<section class="home-carousel carousel slide carousel-fade" id="carouselExampleIndicators" data-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="home-carousel__container">
+					<div class="home-carousel__img-container home-carousel__img-container--slide-1">
+						<picture class="home-carousel__img-border-wrapper">
+							<source media="(min-width: 768px)" srcset="./assets/layout/home-banner-border-desktop.svg">
+							<img class="home-carousel__img-border"
+								src="./assets/layout/home-banner-border-mobile.svg" alt="home-banner-border">
+						</picture>
+					</div>
+					<div class="home-carousel__content" carousel-container>
+						<h5 class="home-carousel__title">¡Estamos tragados de ésta tierrita!</h5>
+						<p class="home-carousel__text">
+							Hola, somos ¡Ah, Carajo! y hacemos lindos productos
+							inspirados en el lenguaje de Colombia.
+							¡Queremos demostrarle al mundo lo bacano que es este país!
+						</p>
+						<a class="home-carousel__link" href="./el-parche.html">
+							conocenos
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="home-carousel__container">
+					<div class="home-carousel__img-container  home-carousel__img-container--slide-2">
+						<picture class="home-carousel__img-border-wrapper">
+							<source media="(min-width: 768px)" srcset="./assets/layout/home-banner-border-desktop.svg">
+							<img class="home-carousel__img-border"
+								src="./assets/layout/home-banner-border-mobile.svg" alt="home-banner-border">
+						</picture>
+					</div>
+					<div class="home-carousel__content" carousel-container>
+						<h5 class="home-carousel__title">Productos con historia</h5>
+						<p class="home-carousel__text">
+							Todos tenemos una frase colombiana que nos identifica.
+							Si necesita un poquito de ayuda para’ identificar la de sumercé acá le ayudamos.
+						</p>
+						<a class="home-carousel__link" href="./frases.html">
+							frases
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="home-carousel__container">
+					<div class="home-carousel__img-container  home-carousel__img-container--slide-3">
+						<picture class="home-carousel__img-border-wrapper">
+							<source media="(min-width: 768px)" srcset="./assets/layout/home-banner-border-desktop.svg">
+							<img class="home-carousel__img-border"
+								src="./assets/layout/home-banner-border-mobile.svg" alt="home-banner-border">
+						</picture>
+					</div>
+					<div class="home-carousel__content" carousel-container>
+						<h5 class="home-carousel__title">Trabajamos para empresas</h5>
+						<p class="home-carousel__text">
+							Han sido muchísimos los emprendimientos y empresas con los que hemos colaborado.
+							Juntos construimos un país. ¡Cotice sin compromiso!
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ol class="home-carousel__indicators carousel-indicators">
+			<li class="home-carousel__indicator active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+			<li class="home-carousel__indicator" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li class="home-carousel__indicator" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+	</section>
 	<!-- Product preview -->
 	<section></section>
 	<!-- Services -->
