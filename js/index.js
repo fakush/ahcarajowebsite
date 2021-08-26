@@ -10,5 +10,5 @@ const equalizeCarouselContainerHeights = () => {
 	containers.forEach((container) => container.style.height = `${prevMaxHeight}px`);
 }
 
-document.addEventListener('DOMContentLoaded', equalizeCarouselContainerHeights)
+equalizeCarouselContainerHeights();
 window.addEventListener('resize', equalizeCarouselContainerHeights);
