@@ -1,0 +1,82 @@
+[
+  {
+    "seccion": "Proceso de compra",
+    "contenido": [
+      {
+        "pregunta": "¿Cómo puedo adquirir un producto?",
+        "respuesta": "Mijito, sumercé puede escribirnos a nuestro Whatsapp y en menos de 10 minutitos le respondemos y por allí puede hacer toda su compra."
+      },
+      {
+        "pregunta": "¿Cuánto demora mi pedido?",
+        "respuesta": "Damos tiempo de 3 a 4 días hábiles después del pago para que llegue el producto. Pero tranqui que el 99.9% de las veces llega antes!"
+      },
+      {
+        "pregunta": "¿Puedo pagar en efectivo?",
+        "respuesta": "¿Qué costo tienen los envíos?"
+      },
+      {
+        "pregunta": "¿Qué costo tienen los envíos?",
+        "respuesta": "Si su producto es para Bogotá el envío es ¡Gratis! y si es a nivel nacional el costo varía entre $7.000 y $20.000 dependiendo el lugar de destino."
+      },
+      {
+        "pregunta": "¿Tienen algún punto donde pueda recoger mi pedido?",
+        "respuesta": "¡Si! Si sumercé desea recoger su pedido, puede pasar a nuestro taller ubicado en Bogotá en la Carrera 37 # 11 - 30 sur en el barrio Ciudad Montes."
+      },
+      {
+        "pregunta": "Deseo un producto personalizado ¿Cómo lo obtengo?",
+        "respuesta": "¡Por supuesto! Podemos personalizar desde una unidad la frase que usted desee en las camisetas, buzos y pocillos. Elaboramos un prototipo en nuestro programa de diseño pa’ que vea como quedaría su producto. Pa’ más información escribanos al WhatsApp."
+      }
+    ]
+  },
+  {
+    "seccion": "Garantía",
+    "contenido": [
+      {
+        "pregunta": "¿Cómo funciona la garantía?",
+        "respuesta": "Damos una garantía de 14 días por defectos de fábrica. Así mismo, te pedimos el fa que si vas a adquirir una prenda te asegures bien de las medidas con la tabla de tallaje. Nos acogemos a la ley 1480 de 2011 para la devolución de dinero: \n* Aplica si: La persona que te atendió te dio la información incompleta o hubo incumplimientos en los tiempos de entrega.\n*No aplica si: El producto es personalizado, hubo información incompleta o errónea por parte del cliente o si el producto está usado, deteriorado o modificado.\nPara más info puedes comunicarte al: (+57) 311 411 8013"
+      }
+    ]
+  },
+  {
+    "seccion": "Productos",
+    "contenido": [
+      {
+        "pregunta": "¿Cuál es la técnica que usan en sus estampados?",
+        "respuesta": "Nuestra principal técnica de estampado para prendas es Vinilo textil y para mugs es sublimación."
+      },
+      {
+        "pregunta": "¿Cómo son los modelos de las prendas?",
+        "respuesta": "Nuestras camisetas vienen cuello V o redondo, los buzos vienen con capota o cuello redondo y las chaquetas vienen con cremallera o tipo buzo."
+      },
+      {
+        "pregunta": "¿Cómo vienen empacados los productos?",
+        "respuesta": "Queremos una Colombia limpia, es por ello que en ¡Ah,carajo! estamos 100% comprometidos con el medio ambiente, siendo así, empacamos nuestros productos en una tula ecológica o una caja kraft reutilizable."
+      },
+      {
+        "pregunta": "¿Por qué debería llevarme un producto ¡Ah,Carajo!?",
+        "respuesta": "Porque con nuestros productos inspirados en el lenguaje colombiano estás empoderando la identidad de nuestro país."
+      },
+      {
+        "pregunta": "¿Qué significa la historia inspirada en la frase el elijo?",
+        "respuesta": "Dentro de algunos de nuestros productos, sumercé encontrará una historia bacana contada por otro Colombiano, esta historia está relacionada con la frase que lleva estampado su producto. Queremos recargar nuestras frases con un valor simbólico."
+      },
+      {
+        "pregunta": "¿Tienen algún punto donde pueda recoger mi pedido?",
+        "respuesta": "¡Si! Si sumercé desea recoger su pedido, puede pasar a nuestro taller ubicado en Bogotá en la Carrera 37 # 11 - 30 sur en el barrio Ciudad Montes."
+      }
+    ]
+  },
+  {
+    "seccion": "Productos para empresas",
+    "contenido": [
+      {
+        "pregunta": "¿Cómo comprar al por mayor?",
+        "respuesta": "Para comprar al por mayor por fis escribanos directamente al WhatsApp, allí le damos información de precios, tiempos y diseños por cantidad."
+      },
+      {
+        "pregunta": "¿Puedo personalizar los productos con la imagen gráfica de mi empresa?",
+        "respuesta": "¡Claro que sí!  Para más información acerca de la personalización del logo de su empresa en nuestros productos escribanos al Whatsapp para darle toditica la información. "
+      }
+    ]
+  }
+]
