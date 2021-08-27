@@ -655,5 +655,33 @@ body {
     width: 474px;
   }
 }
+.banner--el-parche .banner__img {
+  height: 363px;
+}
+.banner--el-parche .banner__img--el-parche {
+  background-image: url("../assets/banners/el-parche-banner.jpg");
+}
+.banner--el-parche .banner__content {
+  padding: 0.75rem 1rem 92px 1rem;
+}
+.banner--el-parche .banner__title {
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner--el-parche {
+    min-height: calc(100vh - 102px);
+  }
+  .banner--el-parche .banner__content {
+    padding: 88px 40px 34px 54px;
+  }
+  .banner--el-parche .banner__title {
+    margin-bottom: 16px;
+  }
+  .banner--el-parche .banner__text {
+    width: 400px;
+    font-size: 16px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
