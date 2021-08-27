@@ -6,11 +6,6 @@ $light-gray: #F6F6F6;
 $gray: #9A9A9A;
 $black: #303030;
 
-$shadow-1: 0px 1px 8px rgba(0, 0, 0, 0.25);
-$shadow-2: 2px 4px 8px rgba(0, 0, 0, 0.25);
-$shadow-3: 2px -3px 8px rgba(0, 0, 0, 0.25);
-$product-preview-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 70.83%);
-
 $font-family: 'Work Sans';
 $letter-spacing: -0.02em;
 
@@ -21,6 +16,11 @@ $font-size-4: 16px;
 $font-size-5: 13px;
 $font-size-6: 11px;
 $font-size-7: 18px;
+
+$shadow-1: 0px 1px 8px rgba(0, 0, 0, 0.25);
+$shadow-2: 2px 4px 8px rgba(0, 0, 0, 0.25);
+$shadow-3: 2px -3px 8px rgba(0, 0, 0, 0.25);
+$product-preview-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 70.83%);
 
 // These media queries are used in the JS and HTML files.
 // If you want to change them, use a searcher with the px, example '992px', to change all the coincidences
@@ -33,4 +33,4 @@ $breakpoints: (
 );
 
 @import './general.scss';
-@import './home.scss';
+@import './inicio.scss';

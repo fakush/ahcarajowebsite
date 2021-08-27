@@ -80,6 +80,52 @@ body {
 		}
 	}
 }
+.banner {
+	&__img {
+		position: relative;
+		background-size: cover;
+		background-position: center;
+	}
+	&__img-border-wrapper {
+		position: absolute;
+		right: 0;
+		left: 0;
+		// Fix bottom white space in Chrome
+		bottom: -2px;
+	}
+	&__img-border {
+		display: block;
+		width: 100%;
+	}
+	&__content {
+		position: relative;
+		background-color: $principal-dark;
+	}
+	&__title {
+		color: $white;
+		font-size: $font-size-3;
+		font-weight: 700;
+	}
+	&__text {
+		color: $white;
+		font-size: $font-size-5;
+	}
+	&__link {
+		display: block;
+		position: absolute;
+		right: 16px;
+		bottom: 35px;
+		width: max-content;
+		padding: 0.5rem;
+		background-color: $acento;
+		color: $white;
+		font-size: $font-size-5;
+		font-weight: 600;
+		text-decoration: none;
+		border-radius: 12px;
+		box-shadow: $shadow-2;
+	}
+}
 .more-info {
 	&__text {
 		color: $black;
@@ -138,6 +184,37 @@ body {
 		transform: none;
 		.footer__whatsapp-link {
 			filter: drop-shadow($shadow-3);
+		}
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, md)) {
+	.banner {
+		display: flex;
+		&__img {
+			width: 100%;
+			height: auto !important;
+			order: 1;
+		}
+		&__img-border-wrapper {
+			top: 0;
+			right: unset;
+			left: -2px;
+			bottom: 0;
+		}
+		&__img-border {
+			height: 100%;
+		}
+		&__title {
+			font-size: $font-size-2;
+			font-weight: bold;
+		}
+		&__text {
+			font-size: $font-size-3;
+		}
+		&__link {
+			left: 370px;
+			bottom: 60px;
 		}
 	}
 }
@@ -215,6 +292,15 @@ body {
 		&__nav-list {
 			gap: 72px;
 			margin-left: 270px;
+		}
+	}
+	.banner {
+		&__title {
+			font-size: $font-size-1;
+		}
+		&__link {
+			left: 402px;
+			bottom: 70px;
 		}
 	}
 	.footer {
