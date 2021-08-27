@@ -7,7 +7,8 @@
 p,
 h1, h2, h3, h4, h5, h6,
 ul,
-ol {
+ol,
+figure {
   margin-bottom: 0;
 }
 
@@ -522,6 +523,136 @@ body {
   .payment-means__container {
     grid-auto-flow: column;
     grid-auto-columns: 151px;
+  }
+}
+.banner--phrases .banner__img {
+  height: 361px;
+}
+.banner--phrases .banner__img--phrases {
+  background-image: url("../assets/banners/frases-banner.jpg");
+}
+.banner--phrases .banner__content {
+  padding-top: 1rem;
+}
+.banner--phrases .banner__title, .banner--phrases .banner__text {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.banner--phrases .banner__title {
+  margin-bottom: 3px;
+}
+.banner--phrases .banner__sub-text {
+  display: none;
+}
+.banner--phrases .banner__link {
+  position: static;
+  margin: 1rem 15px 40px auto;
+}
+
+.phrases-history {
+  padding: 0 40px;
+  padding-bottom: 90px;
+  background-color: #318B7C;
+}
+.phrases-history__line {
+  width: 100%;
+  height: 1px;
+  background-color: #FFFFFF;
+}
+.phrases-history__content {
+  padding: 40px 0;
+}
+.phrases-history__title, .phrases-history__blockquote, .phrases-history__author-wrapper {
+  color: #FFFFFF;
+}
+.phrases-history__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 21px;
+}
+.phrases-history__blockquote, .phrases-history__author-wrapper {
+  font-size: 13px;
+}
+.phrases-history__blockquote {
+  font-size: 13px;
+  position: relative;
+}
+.phrases-history__blockquote::before {
+  content: open-quote;
+  font-size: 72px;
+  line-height: 0;
+  vertical-align: bottom;
+  margin-right: -0.05em;
+}
+.phrases-history__blockquote::after {
+  content: close-quote;
+}
+.phrases-history__large-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+.phrases-history__author-wrapper {
+  margin-top: 9px;
+  text-align: right;
+}
+.phrases-history__author-name {
+  display: block;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .banner--phrases .banner__content {
+    padding: 88px 40px 34px 54px;
+  }
+  .banner--phrases .banner__title {
+    width: 380px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .banner--phrases .banner__text, .banner--phrases .banner__sub-text {
+    width: 400px;
+    margin-left: 0;
+    font-size: 16px;
+  }
+  .banner--phrases .banner__sub-text {
+    display: block;
+    margin-top: 1rem;
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+  .banner--phrases .banner__link {
+    margin: 24px auto 34px auto;
+  }
+
+  .phrases-history {
+    padding: 0;
+  }
+  .phrases-history__title {
+    font-size: 32px;
+    text-align: center;
+  }
+  .phrases-history__blockquote {
+    width: 390px;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  .phrases-history__large-text {
+    font-size: 24px;
+  }
+  .phrases-history__author-name {
+    font-size: 17px;
+  }
+  .phrases-history__author-location {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .banner--phrases .banner__content {
+    padding-right: 53px;
+  }
+  .banner--phrases .banner__text, .banner--phrases .banner__sub-text {
+    width: 474px;
   }
 }
 

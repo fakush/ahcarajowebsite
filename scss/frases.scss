@@ -1,0 +1,148 @@
+.banner--phrases {
+	.banner {
+		&__img {
+			height: 361px;
+			&--phrases {
+				background-image: url('../assets/banners/frases-banner.jpg');
+			}
+		}
+		&__content {
+			padding-top: 1rem;
+		}
+		&__title,
+		&__text {
+			margin-right: 1rem;
+			margin-left: 1rem;
+		}
+		&__title {
+			margin-bottom: 3px;
+		}
+		&__sub-text {
+			display: none;
+		}
+		&__link {
+			position: static;
+			margin: 1rem 15px 40px auto;
+		}
+	}
+}
+.phrases-history {
+	padding: 0 40px;
+	padding-bottom: 90px;
+	background-color: $principal-dark;
+	&__line {
+		width: 100%;
+		height: 1px;
+		background-color: $white;
+	}
+	&__content {
+		padding: 40px 0;
+	}
+	&__title,
+	&__blockquote,
+	&__author-wrapper {
+		color: $white;
+	}
+	&__title {
+		font-size: $font-size-3;
+		font-weight: 700;
+		margin-bottom: 21px;
+	}
+	&__blockquote,
+	&__author-wrapper {
+		font-size: $font-size-5;
+	}
+	&__blockquote {
+		font-size: $font-size-5;
+		position: relative;
+		&::before {
+			content: open-quote;
+			font-size: 72px;
+			line-height: 0;
+			vertical-align: bottom;
+			margin-right: -0.05em;
+		}
+		&::after {
+			content: close-quote;
+		}
+	}
+	&__large-text {
+		font-size: $font-size-4;
+		font-weight: 600;
+	}
+	&__author-wrapper {
+		margin-top: 9px;
+		text-align: right;
+	}
+	&__author-name {
+		display: block;
+		font-weight: 700;
+		font-style: normal;
+	}
+
+}
+
+@media screen and (min-width: map-get($breakpoints, md)) {
+	.banner--phrases {
+		.banner {
+			&__content {
+				padding: 88px 40px 34px 54px;
+			}
+			&__title {
+				width: 380px;
+				margin-top: 0;
+				margin-left: 0;
+			}
+			&__text,
+			&__sub-text {
+				width: 400px;
+				margin-left: 0;
+				font-size: $font-size-4;
+			}
+			&__sub-text {
+				display: block;
+				margin-top: 1rem;
+				color: $white;
+				font-weight: 600;
+			}
+			&__link {
+				margin: 24px auto 34px auto;
+			}
+		}
+	}
+	.phrases-history {
+		padding: 0;
+		&__title {
+			font-size: $font-size-8;
+			text-align: center;
+		}
+		&__blockquote {
+			width: 390px;
+			margin: 0 auto;
+			font-size: $font-size-4;
+		}
+		&__large-text {
+			font-size: $font-size-9;
+		}
+		&__author-name {
+			font-size: $font-size-10;
+		}
+		&__author-location {
+			font-size: $font-size-11;
+		}
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, xxl)) {
+	.banner--phrases {
+		.banner {
+			&__content {
+				padding-right: 53px;
+			}
+			&__text,
+			&__sub-text {
+				width: 474px;
+			}
+		}
+	}
+}
