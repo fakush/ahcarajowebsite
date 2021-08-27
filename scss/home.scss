@@ -71,6 +71,7 @@
 		list-style: none;
 	}
 	&__indicator {
+		padding: 5px;
 		border: 3px solid $white !important;
 		width: 12px !important;
 		height: 12px !important;
@@ -172,7 +173,6 @@
 	}
 }
 
-
 @media screen and (min-width: map-get($breakpoints, md)) {
 	.home-carousel {
 		&__container {
@@ -221,7 +221,7 @@
 		padding-right: 51px;
 		&__title-wrapper,
 		&__container {
-			grid-template-columns: repeat(auto-fill, 315px);
+			grid-template-columns: repeat(auto-fit, 315px);
 			padding: 0;
 		}
 		&__link {

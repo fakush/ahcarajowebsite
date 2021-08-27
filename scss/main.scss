@@ -8,6 +8,7 @@ $black: #303030;
 
 $shadow-1: 0px 1px 8px rgba(0, 0, 0, 0.25);
 $shadow-2: 2px 4px 8px rgba(0, 0, 0, 0.25);
+$shadow-3: 2px -3px 8px rgba(0, 0, 0, 0.25);
 $product-preview-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 70.83%);
 
 $font-family: 'Work Sans';
@@ -21,8 +22,8 @@ $font-size-5: 13px;
 $font-size-6: 11px;
 $font-size-7: 18px;
 
-// These media queries are used in the HTML files.
-// If you wan to change them, use a searcher with the px, example '992px', to change all the coincidences
+// These media queries are used in the JS and HTML files.
+// If you want to change them, use a searcher with the px, example '992px', to change all the coincidences
 $breakpoints: (
 	sm: 576px,
 	md: 768px,
