@@ -266,6 +266,7 @@ body {
 		background-color: transparent;
 		transform: none;
 		box-shadow: none;
+		pointer-events: none;
 		&__social-media,
 		&__dividing-line,
 		&__text {

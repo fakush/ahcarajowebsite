@@ -261,6 +261,7 @@ body {
     background-color: transparent;
     transform: none;
     box-shadow: none;
+    pointer-events: none;
   }
   .footer__social-media, .footer__dividing-line, .footer__text {
     visibility: hidden;
