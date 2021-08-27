@@ -1,0 +1,57 @@
+[
+  {
+    "producto": "Buzos",
+    "tituloCard": "Tabla Talles Buzos",
+    "medidas": ["Ancho", "Alto", "Manga"],
+    "talles": [
+      {
+        "16": [52, 65, 56],
+        "XS": [54, 63, 60],
+        "S": [58, 65, 62],
+        "M": [60, 68, 66],
+        "L": [63, 73, 70],
+        "XL": [66, 77, 74]
+      }
+    ]
+  },
+  {
+    "producto": "Camisetas",
+    "tituloCard": "Camisetas Estilo Caballero",
+    "medidas": ["Ancho", "Largo"],
+    "talles": [
+      {
+        "S": [49, 67],
+        "M": [53, 70],
+        "L": [56, 72],
+        "XL": [58, 74]
+      }
+    ]
+  },
+  {
+    "producto": "Camisetas",
+    "tituloCard": "Camisetas Estilo Dama",
+    "medidas": ["Ancho", "Largo"],
+    "talles": [
+      {
+        "S": [42, 59],
+        "M": [43, 60],
+        "L": [45, 62],
+        "XL": [46, 66]
+      }
+    ]
+  },
+  {
+    "producto": "Chaquetas",
+    "tituloCard": "Tallas chaquetas",
+    "medidas": ["contorno", "Brazo", "Largo"],
+    "talles": [
+      {
+        "S": [95, 63, 64],
+        "M": [100, 63, 64],
+        "L": [110, 65, 68],
+        "XL": [120, 66, 71],
+        "XXL": [125, 66, 74]
+      }
+    ]
+  }
+]
