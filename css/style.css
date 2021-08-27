@@ -683,5 +683,62 @@ body {
     font-size: 16px;
   }
 }
+.faq {
+  padding: 1.5rem 1rem;
+}
+.faq__title {
+  color: #318B7C;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.faq__collapsable {
+  border-radius: 16px;
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 1rem;
+}
+.faq__collapsable-header {
+  padding: 0;
+  border: 1px solid #318B7C;
+  background: white;
+  border-radius: 16px !important;
+}
+.faq__collapsable-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 16px;
+  border: 0;
+  background-color: transparent;
+}
+.faq__collapsable-title {
+  color: #303030;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+.faq__collapsable-arrow {
+  width: 14px;
+  margin: 0 0.5rem;
+}
+.faq__collapsable-body {
+  display: grid;
+  row-gap: 1rem;
+  padding: 1rem 1rem 0 1rem;
+}
+.faq__collapsable-subtitle, .faq__collapsable-text {
+  font-size: 13px;
+}
+.faq__collapsable-subtitle {
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .faq__container {
+    width: min(760px, 70%);
+    margin: 0 auto;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
