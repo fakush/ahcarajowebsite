@@ -139,9 +139,13 @@
 		display: none;
 	}
 }
+.section-wrapper {
+	display: grid;
+	row-gap: 1rem;
+	padding-bottom: 95px;
+}
 .payment-means {
 	padding: 0 1rem;
-	margin-bottom: 1rem;
 	&__title {
 		display: inline-block;
 		margin-bottom: 1rem;
@@ -260,6 +264,9 @@
 			column-gap: 58px;
 		}
 	}
+	.section-wrapper {
+		padding-bottom: 21px;
+	}
 }
 @media screen and (min-width: map-get($breakpoints, xxl)) {
 	.home-carousel {
@@ -272,6 +279,19 @@
 		&__link {
 			left: 402px;
 			bottom: 70px;
+		}
+	}
+	.section-wrapper {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		align-items: end;
+		justify-items: start;
+		column-gap: 3.5rem;
+	}
+	.payment-means {
+		&__container {
+			grid-auto-flow: column;
+			grid-auto-columns: 151px;
 		}
 	}
 }
