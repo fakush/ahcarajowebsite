@@ -87,16 +87,19 @@ body {
 		background-size: cover;
 		background-position: center;
 	}
-	&__img-border-wrapper {
+	&__img-border {
 		position: absolute;
 		right: 0;
 		left: 0;
-		// Fix bottom white space in Chrome
-		bottom: -2px;
-	}
-	&__img-border {
-		display: block;
+		bottom: -2px; // Fix bottom white space in Chrome
 		width: 100%;
+		color: $principal-dark;
+		&--mobile {
+			display: block;
+		}
+		&--desktop {
+			display: none;
+		}
 	}
 	&__content {
 		position: relative;
@@ -224,14 +227,19 @@ body {
 			height: auto !important;
 			order: 1;
 		}
-		&__img-border-wrapper {
+		&__img-border {
 			top: 0;
 			right: unset;
 			left: -2px;
 			bottom: 0;
-		}
-		&__img-border {
+			width: auto;
 			height: 100%;
+			&--desktop {
+				display: block;
+			}
+			&--mobile {
+				display: none;
+			}
 		}
 		&__title {
 			font-size: $font-size-2;

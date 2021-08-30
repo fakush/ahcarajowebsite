@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Work Sans", sans-serif;
   letter-spacing: -0.02em;
@@ -86,15 +87,19 @@ body {
   background-size: cover;
   background-position: center;
 }
-.banner__img-border-wrapper {
+.banner__img-border {
   position: absolute;
   right: 0;
   left: 0;
   bottom: -2px;
-}
-.banner__img-border {
-  display: block;
   width: 100%;
+  color: #318B7C;
+}
+.banner__img-border--mobile {
+  display: block;
+}
+.banner__img-border--desktop {
+  display: none;
 }
 .banner__content {
   position: relative;
@@ -223,14 +228,19 @@ body {
     height: auto !important;
     order: 1;
   }
-  .banner__img-border-wrapper {
+  .banner__img-border {
     top: 0;
     right: unset;
     left: -2px;
     bottom: 0;
-  }
-  .banner__img-border {
+    width: auto;
     height: 100%;
+  }
+  .banner__img-border--desktop {
+    display: block;
+  }
+  .banner__img-border--mobile {
+    display: none;
   }
   .banner__title {
     font-size: 34px;
@@ -885,14 +895,14 @@ body {
   position: relative;
 }
 .phrases-history__blockquote::before {
-  content: open-quote;
+  content: "“";
   font-size: 72px;
   line-height: 0;
   vertical-align: bottom;
   margin-right: -0.05em;
 }
 .phrases-history__blockquote::after {
-  content: close-quote;
+  content: "”";
 }
 .phrases-history__large-text {
   font-size: 16px;
