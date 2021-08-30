@@ -32,9 +32,11 @@ const disableHideFooterInDesktop = () => {
 }
 
 // --------------Execution--------------
-disableHideFooterInDesktop();
-window.addEventListener('resize', disableHideFooterInDesktop);
-if ($containers) {
-	equalizeCarouselContainerHeights();
-	window.addEventListener('resize', equalizeCarouselContainerHeights);
-}
+window.addEventListener('DOMContentLoaded', () => {
+	disableHideFooterInDesktop();
+	window.addEventListener('resize', disableHideFooterInDesktop);
+	if ($containers) {
+		equalizeCarouselContainerHeights();
+		window.addEventListener('resize', equalizeCarouselContainerHeights);
+	}
+});
