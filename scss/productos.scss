@@ -1,0 +1,241 @@
+$card-radius: 1rem;
+$quantities: (
+	"camiseta": 4,
+	"buzo": 4,
+	"chaqueta": 3,
+	"agenda": 3,
+	"pocillo": 4,
+	"cafe": 3
+
+);
+$card-colors-1: (
+	"rojo": red,
+	"amarillo": yellow,
+	"gris": gray,
+	"ceniza": lightgray,
+	"naranja": orange,
+	"cyan": cyan,
+	"azul": blue,
+	"verde": green,
+	"negro": black,
+	"purpura": purple,
+	"rosa": pink,
+	"marron": brown
+);
+
+.products {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, min(100%, 357px));
+	justify-content: center;
+	gap: 1.5rem;
+	padding: 40px 15px 24px 15px;
+}
+.p-card {
+	border-radius: $card-radius;
+	box-shadow: $shadow-2;
+	&__img {
+		height: 148px;
+		background-size: cover;
+		background-position: center;
+		border-radius: $card-radius $card-radius 0 0;
+		@each $type, $quantity in $quantities {
+			@for $index from 1 through $quantity {
+				&--#{$type}-#{$index} {
+					background-image: url('../assets/products/#{$type}-#{$index}.jpg');
+				}
+			}
+		}
+	}
+	&__label {
+		position: absolute;
+		top: 1rem;
+		right: 0;
+		z-index: 2;
+		width: max-content;
+		max-width: 103px;
+		padding: 4px 11px;
+		background-color: #318B7C;
+		color: #FFFFFF;
+		font-size: 11px;
+		text-align: right;
+		border-radius: 0.5rem 0 0 0.5rem;
+	}
+	&__body {
+		padding: 18px 12px;
+		background-color: $white;
+		border-radius: 0 0 $card-radius $card-radius;
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+	&__title {
+		color: $principal-dark;
+		font-size: $font-size-3;
+		font-weight: 700;
+	}
+	&__price {
+		font-size: $font-size-7;
+		font-weight: 500;
+	}
+	&__details-list {
+		display: grid;
+		padding: 0;
+		list-style: none;
+		margin-bottom: 1rem;
+		&--with-icons {
+			row-gap: 0.5rem;	
+		}
+	}
+	&__details-item,
+	&__details-text {
+		font-size: $font-size-5;
+	}
+	&__details-icon {
+		width: 1rem;
+	}
+	&__bottom-info {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__info-box {
+		flex: 1;
+		padding: 0;
+		border: 0;
+		background: transparent;
+	}
+	&__info-title {
+		font-size: $font-size-5;
+		font-weight: 600;
+		text-align: left;
+	}
+	&__info-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 1rem);
+		grid-auto-rows: 1rem;
+		place-items: center;
+		gap: 0.5rem;
+		padding: 0;
+		margin-top: 0.5rem;
+		width: 100%;
+		list-style: none;
+	}
+	&__info-item {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		&--size,
+		&--more-colors {
+			padding: 2px;
+			font-size: $font-size-12;
+			border: 1px solid $black;
+			text-align: center;
+		}
+		@each $color, $color-code in $card-colors-1 {
+			$index: index($card-colors-1, $color $color-code);
+			@if $index <= 5 {
+				&--color-#{$index} {
+					background-color: $color-code;
+				}
+			}
+		}
+		
+	}
+}
+.p-modal {
+	&__content {
+		padding: 1rem 1rem 29px 1rem;
+		border: 0;
+		width: max-content;
+		margin: auto;
+		border-radius: 0.5rem;
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+	}
+	&__title {
+		font-size: $font-size-7;
+		font-weight: 500;
+	}
+	&__line {
+		width: 100%;
+		height: 1px;
+		background: $gray;
+	}
+	&__close-btn {
+		padding: 6px !important;
+	}
+	&__close-icon {
+		width: 14px;
+	}
+	&__table-row {
+		border-bottom: 1px solid #DEDEDE;
+		&--last {
+			border-bottom: 0;
+		}
+	}
+	&__table-header,
+	&__table-data {
+		font-size: $font-size-5;
+		padding: 1rem;
+	}
+	&__table-header {
+		font-weight: 500;
+		border-bottom: 0 !important;
+	}
+	&__color-list {
+		display: grid;
+		grid-template-columns: repeat(2, 84px);
+		row-gap: 10px;
+		column-gap: 40px;
+		margin-top: 1rem;
+		padding: 0;
+		list-style: none;
+	}
+	&__color-item {
+		display: flex;
+		align-items: center;
+		font-size: $font-size-5;
+	}
+	&__color-circle {
+		margin-right: 8px;
+		width: 1.5rem;
+		height: 1.5rem;
+		border-radius: 50%;
+		@each $color, $color-code in $card-colors-1{
+			&--#{$color} {
+				background-color: $color-code;
+			}
+		}
+	}
+}
+.more-info--products {
+	margin-bottom: 86px;
+}
+
+@media screen and (min-width: map-get($breakpoints, md)) {
+	.p-modal {
+		&__color-list {
+			grid-template-columns: repeat(3, 84px);
+		}
+	}
+}
+@media screen and (min-width: map-get($breakpoints, lg)) {
+	.products {
+		grid-template-columns: repeat(auto-fit, min(100%, 417px));
+		column-gap: 39px;
+		row-gap: 42px;
+	}
+}
+@media screen and (min-width: map-get($breakpoints, xxl)) {
+	.more-info--products {
+		width: max-content;
+		margin-left: 65px;
+	}
+}
