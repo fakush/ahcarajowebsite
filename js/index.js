@@ -58,7 +58,8 @@ const adaptToDeviceSize = () => {
 
 // --------------Execution--------------
 AOS.init({
-	once: false
+	once: true,
+	duration: 800
 });
 adaptToDeviceSize();
 window.addEventListener('resize', adaptToDeviceSize);
