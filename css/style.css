@@ -18,6 +18,7 @@ body {
 }
 
 .header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -116,11 +117,10 @@ body {
   font-size: 13px;
 }
 .banner__link {
-  display: block;
+  display: table;
   position: absolute;
   right: 16px;
   bottom: 35px;
-  width: max-content;
   padding: 0.5rem;
   background-color: #D49B16;
   color: #FFFFFF;
@@ -635,8 +635,7 @@ body {
   top: 1rem;
   right: 0;
   z-index: 2;
-  width: max-content;
-  max-width: 103px;
+  width: 103px;
   padding: 4px 11px;
   background-color: #318B7C;
   color: #FFFFFF;
