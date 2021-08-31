@@ -34,7 +34,6 @@ const moveUnderlineTo = (element) => {
 	});
 	element.setAttribute("underline-target", "");
 	const styles = getComputedStyle(element);
-	console.log(styles);
 		
 	const contentWidth = element.getBoundingClientRect().width - parseFloat(styles.paddingRight);
 	const left = element.getBoundingClientRect().left;
@@ -58,6 +57,9 @@ const adaptToDeviceSize = () => {
 
 
 // --------------Execution--------------
+AOS.init({
+	once: false
+});
 adaptToDeviceSize();
 window.addEventListener('resize', adaptToDeviceSize);
 if ($containers) {

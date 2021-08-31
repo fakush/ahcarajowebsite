@@ -220,6 +220,13 @@ body {
   filter: drop-shadow(2px -3px 8px rgba(0, 0, 0, 0.25));
 }
 
+[data-aos=shrink-logo] {
+  transition-property: width;
+}
+[data-aos=shrink-logo].aos-animate {
+  width: 58px;
+}
+
 @media screen and (min-width: 768px) {
   .banner {
     display: flex;
@@ -257,7 +264,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .header__logo-wrapper-link {
-    top: 24px;
+    top: 14px;
     left: 56px;
   }
   .header__logo {
@@ -293,6 +300,9 @@ body {
     gap: 19px;
     margin-left: auto;
     margin-right: 56px;
+  }
+  .header [data-aos=shrink-logo].aos-animate {
+    width: 78px;
   }
 
   .footer {

@@ -219,6 +219,12 @@ body {
 		}
 	}
 }
+[data-aos="shrink-logo"] {
+  transition-property: width;
+  &.aos-animate {
+    width: 58px;
+  }
+}
 
 @media screen and (min-width: map-get($breakpoints, md)) {
 	.banner {
@@ -259,7 +265,7 @@ body {
 @media screen and (min-width: map-get($breakpoints, lg)) {
 	.header {
 		&__logo-wrapper-link {
-			top: 24px;
+			top: 14px;
 			left: 56px;
 		}
 		&__logo {
@@ -298,6 +304,11 @@ body {
 			margin-left: auto;
 			margin-right: 56px;
 		}
+		[data-aos="shrink-logo"] {
+			&.aos-animate {
+				width: 78px
+			}
+		}
 	}
 	.footer {
 		background-color: transparent;
@@ -321,6 +332,7 @@ body {
 			width: 40px;
 		}
 	}
+	
 }
 
 @media screen and (min-width: map-get($breakpoints, xxl)) {
