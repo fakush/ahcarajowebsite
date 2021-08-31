@@ -21,22 +21,51 @@ const hideFooterOnScroll = () => {
 	}
 	previousPageY = window.pageYOffset;
 }
-const disableHideFooterInDesktop = () => {
-	if ($footer) {
-		if (window.matchMedia('(min-width: 992px)').matches) {
-			window.removeEventListener('scroll', hideFooterOnScroll);
-		} else {
-			window.addEventListener('scroll', hideFooterOnScroll);
+
+const $navLinks = document.querySelectorAll(".header__nav-link");
+const $activeNavLink = document.querySelector(".header__nav-link--active");
+const $underline = document.querySelector(".header__underline");
+let underlineGap = 0;
+const moveUnderlineTo = (element) => {
+	$navLinks.forEach((link) => {
+		if (link.getAttribute("underline-target")) {
+			link.removeAttribute("underline-target");
 		}
-	}
+	});
+	element.setAttribute("underline-target", "");
+	const styles = getComputedStyle(element);
+	console.log(styles);
+		
+	const contentWidth = element.getBoundingClientRect().width - parseFloat(styles.paddingRight);
+	const left = element.getBoundingClientRect().left;
+	const top = element.getBoundingClientRect().top + element.getBoundingClientRect().height + underlineGap;
+	$underline.style.width = `${contentWidth}px`;
+	$underline.style.left = `${left}px`;
+	$underline.style.top = `${top}px`;
+	$underline.style.transform = "none";
 }
 
-// --------------Execution--------------
-window.addEventListener('DOMContentLoaded', () => {
-	disableHideFooterInDesktop();
-	window.addEventListener('resize', disableHideFooterInDesktop);
-	if ($containers) {
-		equalizeCarouselContainerHeights();
-		window.addEventListener('resize', equalizeCarouselContainerHeights);
+const adaptToDeviceSize = () => {
+	if (window.matchMedia('(min-width: 992px)').matches) { // Desktop and above
+		if ($footer) window.removeEventListener('scroll', hideFooterOnScroll);
+		underlineGap = 12;
+	} else { // Tablets and below
+		if ($footer) window.addEventListener('scroll', hideFooterOnScroll);	
+		underlineGap = 8;
 	}
-});
+	moveUnderlineTo($activeNavLink);
+}
+
+
+// --------------Execution--------------
+adaptToDeviceSize();
+window.addEventListener('resize', adaptToDeviceSize);
+if ($containers) {
+	equalizeCarouselContainerHeights();
+	window.addEventListener('resize', equalizeCarouselContainerHeights);
+}
+if ($navLinks && $underline) {
+	moveUnderlineTo($activeNavLink);
+	$navLinks.forEach((link) => link.addEventListener("mouseenter", (e) => moveUnderlineTo(e.target)));
+	$navLinks.forEach((link) => link.addEventListener("mouseleave", () => moveUnderlineTo($activeNavLink)));
+}

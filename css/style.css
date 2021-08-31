@@ -54,14 +54,15 @@ body {
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.25);
 }
 .header__nav-list {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 0.5rem;
+  display: flex;
   width: max-content;
   margin-left: auto;
   margin-right: 1rem;
   padding: 1rem 0;
   list-style: none;
+}
+.header__nav-item:not(:last-child) .header__nav-link {
+  padding-right: 0.5rem;
 }
 .header__nav-link {
   color: #303030;
@@ -69,17 +70,17 @@ body {
   text-decoration: none;
 }
 .header__nav-link--active {
-  position: relative;
   font-weight: 600;
 }
-.header__nav-link--active::after {
-  content: "";
+.header__nav-link:hover {
+  color: #303030;
+  text-decoration: none;
+}
+.header__underline {
   position: absolute;
-  left: 0;
-  bottom: -0.5rem;
-  width: 100%;
   height: 3px;
   background-color: #D49B16;
+  transition: all 0.3s linear;
 }
 
 .banner__img {
@@ -276,16 +277,15 @@ body {
     font-weight: 400;
   }
   .header__nav-list {
-    gap: 2rem;
     margin-left: 240px;
     margin-right: 0;
     padding: 20px 0;
   }
+  .header__nav-item:not(:last-child) .header__nav-link {
+    padding-right: 2rem;
+  }
   .header__nav-link {
     font-size: 16px;
-  }
-  .header__nav-link--active::after {
-    bottom: -14px;
   }
   .header__contact {
     display: grid;
@@ -321,8 +321,10 @@ body {
     width: 154px;
   }
   .header__nav-list {
-    gap: 72px;
     margin-left: 270px;
+  }
+  .header__nav-item:not(:last-child) .header__nav-link {
+    padding-right: 72px;
   }
 
   .banner__title {
