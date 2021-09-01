@@ -43,6 +43,12 @@ const moveUnderlineTo = (element) => {
 	$underline.style.top = `${top}px`;
 	$underline.style.transform = "none";
 }
+const underlineToActive = () => moveUnderlineTo($activeNavLink);
+const activateThisLink = (e) => {
+	e.target.removeEventListener("mouseleave", underlineToActive);
+	e.target.classList.add("header__nav-link--active");
+	$activeNavLink.classList.remove("header__nav-link--active");
+};
 
 const adaptToDeviceSize = () => {
 	if (window.matchMedia('(min-width: 992px)').matches) { // Desktop and above
@@ -62,6 +68,7 @@ AOS.init({
 	duration: 800
 });
 adaptToDeviceSize();
+
 window.addEventListener('resize', adaptToDeviceSize);
 if ($containers) {
 	equalizeCarouselContainerHeights();
@@ -70,5 +77,6 @@ if ($containers) {
 if ($navLinks && $underline) {
 	moveUnderlineTo($activeNavLink);
 	$navLinks.forEach((link) => link.addEventListener("mouseenter", (e) => moveUnderlineTo(e.target)));
-	$navLinks.forEach((link) => link.addEventListener("mouseleave", () => moveUnderlineTo($activeNavLink)));
+	$navLinks.forEach((link) => link.addEventListener("mouseleave", underlineToActive));
+	$navLinks.forEach((link) => link.addEventListener("click", activateThisLink));
 }
