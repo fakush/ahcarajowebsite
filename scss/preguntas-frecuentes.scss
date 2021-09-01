@@ -26,6 +26,11 @@
 		padding: 12px 16px;
 		border: 0;
 		background-color: transparent;
+		&[aria-expanded="true"] {
+			.faq__collapsable-arrow {
+				transform: scaleY(-1);
+			}
+		}
 	}
 	&__collapsable-title {
 		color: $black;
@@ -36,6 +41,7 @@
 	&__collapsable-arrow {
 		width: 14px;
 		margin: 0 0.5rem;
+		transition: transform ease-in-out 0.25s;
 	}
 	&__collapsable-body {
 		display: grid;

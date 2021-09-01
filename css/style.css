@@ -1051,6 +1051,9 @@ body {
   border: 0;
   background-color: transparent;
 }
+.faq__collapsable-btn[aria-expanded=true] .faq__collapsable-arrow {
+  transform: scaleY(-1);
+}
 .faq__collapsable-title {
   color: #303030;
   font-size: 13px;
@@ -1060,6 +1063,7 @@ body {
 .faq__collapsable-arrow {
   width: 14px;
   margin: 0 0.5rem;
+  transition: transform ease-in-out 0.25s;
 }
 .faq__collapsable-body {
   display: grid;
