@@ -28,9 +28,10 @@ $card-colors-1: (
 	grid-template-columns: repeat(auto-fit, min(100%, 357px));
 	justify-content: center;
 	gap: 1.5rem;
-	padding: 40px 15px 24px 15px;
+	padding: 40px $side-space 24px $side-space;
 }
 .p-card {
+	background-color: $white;
 	border-radius: $card-radius;
 	box-shadow: $shadow-2;
 	&__img {
@@ -61,7 +62,6 @@ $card-colors-1: (
 	}
 	&__body {
 		padding: 18px 12px;
-		background-color: $white;
 		border-radius: 0 0 $card-radius $card-radius;
 	}
 	&__header {
@@ -230,6 +230,8 @@ $card-colors-1: (
 		grid-template-columns: repeat(auto-fit, min(100%, 417px));
 		column-gap: 39px;
 		row-gap: 42px;
+		padding-right: $side-space-lg;
+		padding-left: $side-space-lg;
 	}
 	.more-info--products {
 		margin-top: 14px;

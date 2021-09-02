@@ -14,16 +14,10 @@ const $activeNavLink = document.querySelector(".header__nav-link--active");
 const $underline = document.querySelector(".header__underline");
 let underlineGap = 0;
 const moveUnderlineTo = (element) => {
-	$navLinks.forEach((link) => {
-		if (link.getAttribute("underline-target")) {
-			link.removeAttribute("underline-target");
-		}
-	});
-	element.setAttribute("underline-target", "");
 	const { paddingLeft, paddingRight } = getComputedStyle(element);
-	const contentWidth = element.getBoundingClientRect().width - parseFloat(paddingRight) - parseFloat(paddingLeft);
-	const left = element.getBoundingClientRect().left;
-	const top = element.getBoundingClientRect().top + element.getBoundingClientRect().height + underlineGap;
+	const contentWidth = element.offsetWidth - parseFloat(paddingRight) - parseFloat(paddingLeft);
+	const left = element.offsetLeft;
+	const top = element.offsetTop + element.offsetHeight + underlineGap;
 	$underline.style.width = `${contentWidth}px`;
 	$underline.style.left = `${left}px`;
 	$underline.style.top = `${top}px`;
@@ -37,16 +31,16 @@ const activateThisLink = (e) => {
 };
 
 // -------Carousel containers with same height-------
-const $containers = document.querySelectorAll('[carousel-container]');
+const $carouselContainers = document.querySelectorAll('[carousel-container]');
 const equalizeCarouselContainerHeights = () => {
 	let prevMaxHeight = 0;
-	$containers.forEach((container) => {
-		container.style.height = null;
-		container.parentElement.parentElement.style.display = 'block';
-		if (container.offsetHeight > prevMaxHeight) prevMaxHeight = container.offsetHeight;
-		container.parentElement.parentElement.style.display = null;
+	$carouselContainers.forEach(($container) => {
+		$container.style.height = null;
+		$container.parentElement.parentElement.style.display = 'block';
+		if ($container.offsetHeight > prevMaxHeight) prevMaxHeight = $container.offsetHeight;
+		$container.parentElement.parentElement.style.display = null;
 	})
-	$containers.forEach((container) => container.style.height = `${prevMaxHeight}px`);
+	$carouselContainers.forEach(($container) => $container.style.height = `${prevMaxHeight}px`);
 }
 
 // -------On scroll down/up-------
@@ -84,14 +78,14 @@ AOS.init({
 adaptToDeviceSize();
 window.addEventListener('resize', adaptToDeviceSize);
 window.addEventListener('scroll', handleScroll);
-if ($containers) {
+if ($carouselContainers.length) {
 	equalizeCarouselContainerHeights();
 	window.addEventListener('resize', equalizeCarouselContainerHeights);
 }
-if ($navLinks && $underline) {
+if ($navLinks.length && $underline) {
 	moveUnderlineTo($activeNavLink);
-	$navLinks.forEach((link) => link.addEventListener("mouseenter", (e) => moveUnderlineTo(e.target)));
-	$navLinks.forEach((link) => link.addEventListener("mouseleave", underlineToActive));
-	$navLinks.forEach((link) => link.addEventListener("click", activateThisLink));
+	$navLinks.forEach(($link) => $link.addEventListener("mouseenter", (e) => moveUnderlineTo(e.target)));
+	$navLinks.forEach(($link) => $link.addEventListener("mouseleave", underlineToActive));
+	$navLinks.forEach(($link) => $link.addEventListener("click", activateThisLink));
 	window.addEventListener('resize', underlineToActive);
 }

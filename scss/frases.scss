@@ -11,8 +11,8 @@
 		}
 		&__title,
 		&__text {
-			margin-right: 1rem;
-			margin-left: 1rem;
+			margin-right: $side-space;
+			margin-left: $side-space;
 		}
 		&__title {
 			margin-bottom: 3px;
@@ -22,7 +22,7 @@
 		}
 		&__link {
 			position: static;
-			margin: 1rem 15px 40px auto;
+			margin: 1rem $side-space 40px auto;
 		}
 	}
 }
@@ -86,7 +86,7 @@
 	.banner--phrases {
 		.banner {
 			&__content {
-				padding: 88px 40px 34px 54px;
+				padding: 88px 40px 34px $side-space-lg;
 			}
 			&__title {
 				width: 380px;
