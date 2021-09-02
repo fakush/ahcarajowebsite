@@ -224,6 +224,17 @@ body {
 	}
 }
 
+@media screen and (min-width: map-get($breakpoints, sm)) {
+	.header {
+		&__nav-list {
+			margin-right: clamp(48px, 8vw, 72px);
+		}
+		&__nav-item:not(:last-child) .header__nav-link {
+			padding-right: 2rem;
+		}
+	}
+}
+
 @media screen and (min-width: map-get($breakpoints, md)) {
 	.banner {
 		display: flex;

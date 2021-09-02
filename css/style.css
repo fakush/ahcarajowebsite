@@ -224,6 +224,14 @@ body {
   filter: drop-shadow(2px -3px 8px rgba(0, 0, 0, 0.25));
 }
 
+@media screen and (min-width: 576px) {
+  .header__nav-list {
+    margin-right: clamp(48px, 8vw, 72px);
+  }
+  .header__nav-item:not(:last-child) .header__nav-link {
+    padding-right: 2rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .banner {
     display: flex;
