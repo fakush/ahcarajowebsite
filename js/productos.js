@@ -21,7 +21,7 @@ const fillCard = (data) => {
     return indicadores;
   };
   const punteo = (data) => {
-    const punteo = ``;
+    let punteo = ``;
     if (data.length > 0) {
       for (let i = 0; i < data.length; i++) {
         punteo += `
@@ -47,6 +47,7 @@ const fillCard = (data) => {
 					</button>`;
       return salida;
     }
+    return ``;
   };
   const colores = (data) => {
     if (data.length > 0) {
@@ -67,40 +68,41 @@ const fillCard = (data) => {
 	  `;
       return salida;
     }
+    return ``;
   };
-  data.array.forEach((element) => {
+  for (let i = 0; i < data.length - 1; i++) {
     card += `
         <article class="p-card" data-aos="fade-up">
 			<div class="p-card__carousel carousel slide carousel-fade" id="p-card-1" data-ride="carousel">
 				<div class="carousel-inner">
-					<p class="p-card__label">${element.tag}</p>
-					<div class="p-card__img p-card__img--${element.nombre}-1 carousel-item active"></div>
-					${fotos(element.fotos, element.nombre)}
+					<p class="p-card__label">${data[i].tag}</p>
+					<div class="p-card__img p-card__img--${data[i].nombre}-1 carousel-item active"></div>
+					${fotos(data[i].fotos, data[i].nombre)}
 				</div>
 				<ol class="custom-indicators carousel-indicators">
 					<li class="custom-indicators__indicator active" data-target="#p-card-1" data-slide-to="0"></li>
-					${indicadores(element.fotos)}
+					${indicadores(data[i].fotos)}
 				</ol>
 			</div>
 			<div class="p-card__body">
 				<div class="p-card__header">
-					<h3 class="p-card__title">${element.producto}</h3>
-					<p class="p-card__price">${element.precio}</p>
+					<h3 class="p-card__title">${data[i].producto}</h3>
+					<p class="p-card__price">${data[i].precio}</p>
 				</div>
 				<ul class="p-card__details-list">
-					${punteo(element.detalle)}
+					${punteo(data[i].detalle)}
 				</ul>
 				<p class="p-card__details-text">
-					${element.bajada}
+					${data[i].bajada}
 				</p>
 				<div class="p-card__bottom-info">
-					${talles(element.talles)}
-					${colores(element.colores)}
+					${talles(data[i].talles)}
+					${colores(data[i].colores)}
 				</div>
 			</div>
 		</article>
   `;
-  });
+  }
   cuerpoHistoria.innerHTML = card;
 };
 
