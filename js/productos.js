@@ -3,7 +3,7 @@ const cuerpoHistoria = document.getElementById('nuevaCard');
 const fillCard = (data) => {
   let card = ``;
   const fotos = (int, prod) => {
-    const fotos = ``;
+    let fotos = ``;
     for (let i = 2; i <= int; i++) {
       fotos += `
 		  		<div class="p-card__img p-card__img--${prod}-${i} carousel-item"></div>
@@ -12,7 +12,7 @@ const fillCard = (data) => {
     return fotos;
   };
   const indicadores = (int) => {
-    const indicadores = ``;
+    let indicadores = ``;
     for (let i = 1; i < int; i++) {
       indicadores += `
 				<li class="custom-indicators__indicator" data-target="#p-card-1" data-slide-to="${i}"></li>
@@ -77,11 +77,11 @@ const fillCard = (data) => {
 				<div class="carousel-inner">
 					<p class="p-card__label">${data[i].tag}</p>
 					<div class="p-card__img p-card__img--${data[i].nombre}-1 carousel-item active"></div>
-					${fotos(data[i].fotos, data[i].nombre)}
+					${fotos(data[i].imagenes, data[i].nombre)}
 				</div>
 				<ol class="custom-indicators carousel-indicators">
 					<li class="custom-indicators__indicator active" data-target="#p-card-1" data-slide-to="0"></li>
-					${indicadores(data[i].fotos)}
+					${indicadores(data[i].imagenes)}
 				</ol>
 			</div>
 			<div class="p-card__body">
