@@ -54,7 +54,7 @@ const fillCard = (data) => {
       let aux = ``;
       for (let i = 0; i < data.length - 1; i++) {
         aux += `
-					<li class="p-card__info-item  p-card__info-item--color-1"></li>
+					<li class="p-card__info-item  p-card__info-item--color-1" style="background-color: ${data[i]}; border: 1px solid #303030;"></li>
 				`;
       }
       let salida = `
