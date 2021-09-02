@@ -1,18 +1,16 @@
-{
-  "colores": [
-    "#000000",
-    "#808080",
-    "#FFFFFF",
-    "#7F01B1",
-    "#D3A9CD",
-    "#E5709D",
-    "#F91490",
-    "#162C88",
-    "#4CA82D",
-    "#F3CA1C",
-    "#D3171E",
-    "#4385F5",
-    "#B2F4E8",
-    "#FA6602"
-  ]
-}
+[
+  { "nombre": "Black", "hexa": "#000000" },
+  { "nombre": "Gray", "hexa": "#808080" },
+  { "nombre": "White", "hexa": "#FFFFFF" },
+  { "nombre": "Purple", "hexa": "#7F01B1" },
+  { "nombre": "Lilac", "hexa": "#D3A9CD" },
+  { "nombre": "Deep Blush", "hexa": "#E5709D" },
+  { "nombre": "Rose", "hexa": "#F91490" },
+  { "nombre": "Deep Koamaru", "hexa": "#162C88" },
+  { "nombre": "Apple", "hexa": "#4CA82D" },
+  { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
+  { "nombre": "Thunderbird", "hexa": "#D3171E" },
+  { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
+  { "nombre": "Ice Cold", "hexa": "#B2F4E8" },
+  { "nombre": "Blaze Orange", "hexa": "#FA6602" }
+]
