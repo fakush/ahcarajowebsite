@@ -1,6 +1,8 @@
 [
   {
     "id": 1,
+    "nombre": "camiseta",
+    "imagenes": "4",
     "producto": "Camisetas",
     "precio": "$45.000",
     "bajada": "Nuestras camisetas y buzos están elaborados en algodón, podemos estamparlas con la frase colombia que sumercé elija. Las chaquetas son elaboradas en antifluido unicolor o inspiradas en la flora y fauna de nuestro país.",
@@ -12,10 +14,13 @@
       "Empacada en una tula ecológica",
       "Incluye envío en Bogotá"
     ],
+    "talles": ["2", "XS", "S", "M", "L", "XL"],
     "colores": ["#162C88", "#FFFFFF", "#00000", "#A5A4A4", "#72051A", "+5"]
   },
   {
     "id": 2,
+    "nombre": "buzo",
+    "imagenes": "4",
     "producto": "Buzos",
     "precio": "",
     "bajada": "Nuestras camisetas y buzos están elaborados en algodón, podemos estamparlas con la frase colombia que sumercé elija. Las chaquetas son elaboradas en antifluido unicolor o inspiradas en la flora y fauna de nuestro país.",
@@ -27,10 +32,13 @@
       "Empacado en una tula ecológica",
       "Incluye envío en Bogotá"
     ],
+    "talles": ["2", "XS", "S", "M", "L", "XL"],
     "colores": ["#B2F4E8", "#D3A9CD", "#00000", "#7F9AEF", "#FFFFFF", "#A5A4A4", "+7"]
   },
   {
     "id": 3,
+    "nombre": "chaqueta",
+    "imagenes": "3",
     "producto": "Chaquetas",
     "precio": "",
     "bajada": "Nuestras camisetas y buzos están elaborados en algodón, podemos estamparlas con la frase colombia que sumercé elija. Las chaquetas son elaboradas en antifluido unicolor o inspiradas en la flora y fauna de nuestro país.",
@@ -41,19 +49,25 @@
       "Diseños inspirados en la flora y fauna de Colombia",
       "Empacado en una tula ecológica"
     ],
-    "colores": []
+    "talles": ["2", "XS", "S", "M", "L", "XL"],
+    "colores": ["#B2F4E8", "#D3A9CD", "#00000", "#7F9AEF", "#FFFFFF", "#A5A4A4", "+7"]
   },
   {
     "id": 4,
+    "nombre": "agenda",
+    "imagenes": "4",
     "producto": "Agendas",
     "precio": "",
     "bajada": "Nuestras agendas son tipo cuaderno hechas en material 100% reciclable y biodegradable. Incluye: hoja de stickers, calendario, planeador mensual, mapa de sueños, mapa de emociones, registro financiero y hojas cuadriculadas.",
     "tag": "Incluye historia de la frase",
     "detalle": ["Incluye envío en Bogotá"],
+    "talles": [],
     "colores": []
   },
   {
     "id": 5,
+    "nombre": "pocillo",
+    "imagenes": "4",
     "producto": "Pocillos",
     "precio": "",
     "bajada": "Pocillos de 11 onzas elaborados en cerámica y estampados   con nuestros diseños de frases inspiradas en Colombia que se encuentran en nuestras redes sociales o se pueden personalizar con lo que sumercé elija.",
@@ -64,20 +78,19 @@
       "Incluye envío en Bogotá",
       "Empacado en caja kraft y con cinta decorativa"
     ],
+    "talles": [],
     "colores": []
   },
   {
     "id": 6,
+    "nombre": "cafe",
+    "imagenes": "3",
     "producto": "Kit cafetero",
     "precio": "",
     "bajada": "Aquí le ofrecemos nuestro tintico ¡Ah,Carajo! por 250 gr de origen 100% Colombiano con sabor a chocolate, frutos secos, frutos rojos, caña de azúcar y una dulce fragancia a panela y nuez de las montañas de nuestro país.. Llévelo con un pocillo personalizado.",
     "tag": "Incluye pocillo personalizado",
     "detalle": ["250 gr", "100% Colombiano", "Incluye envío en Bogotá", "Incluye historia de su origen"],
+    "talles": [],
     "colores": []
-  },
-  {
-    "producto": "",
-    "titulo": "",
-    "bajada": ""
   }
 ]
