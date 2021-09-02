@@ -26,7 +26,7 @@ body {
 	&__logo-wrapper-link {
 		position: absolute;
 		top: 0.5rem;
-		left: $side-space;
+		left: var(--side-space);
 	}
 	&__logo {
 		width: 92px;
@@ -61,7 +61,7 @@ body {
 		display: flex;
 		width: max-content;
 		margin-left: auto;
-		margin-right: $side-space;
+		margin-right: var(--side-space);
 		padding: 1rem 0;
 		list-style: none;
 	}
@@ -123,7 +123,7 @@ body {
 	&__link {
 		display: table; // width max-c + p absolute not working in Safari 12.0
 		position: absolute;
-		right: $side-space;
+		right: var(--side-space);
 		bottom: 35px;
 		padding: 0.5rem;
 		background-color: $acento;
@@ -181,7 +181,7 @@ body {
 	bottom: 0;
 	z-index: 10;
 	height: 50px;
-	padding: $side-space 0px $side-space 1rem;
+	padding: var(--side-space) 0px var(--side-space) 1rem;
 	background-color: $principal-dark;
 	transform: translateY(150%);
 	box-shadow: $shadow-3;
@@ -211,7 +211,7 @@ body {
 		background: $acento;
 		padding: 13px;
 		border-radius: 50%;
-		margin: -21px $side-space 8px auto;
+		margin: -21px var(--side-space) 8px auto;
 	}
 	&__whatsapp-icon {
 		width: 36px;
@@ -275,7 +275,6 @@ body {
 	.header {
 		&__logo-wrapper-link {
 			top: 14px;
-			left: $side-space-lg;
 		}
 		&__logo {
 			width: 124px;
@@ -312,9 +311,9 @@ body {
 		&__contact {
 			display: grid;
 			grid-auto-flow: column;
-			gap: 19px;
+			gap: var(--space-between-items);
 			margin-left: auto;
-			margin-right: $side-space-lg;
+			margin-right: var(--side-space);
 		}
 	}
 	.footer {
@@ -329,7 +328,7 @@ body {
 		}
 		&__whatsapp-link {
 			position: absolute;
-			right: $side-space-lg;
+			right: var(--side-space);
 			bottom: 40px;
 			margin: 0;
 			padding: 15px 14px;

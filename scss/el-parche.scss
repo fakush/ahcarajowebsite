@@ -7,7 +7,7 @@
 			}
 		}
 		&__content {
-			padding: 0.75rem $side-space 92px $side-space;
+			padding: 0.75rem var(--side-space) 92px var(--side-space);
 		}
 		&__title {
 			margin-bottom: 5px;
@@ -20,7 +20,8 @@
 		min-height: calc(100vh - 102px);
 		.banner {
 			&__content {
-				padding: 88px 40px 34px $side-space-lg;
+				padding-top: 88px;
+				padding-bottom: 34px;
 			}
 			&__title {
 				margin-bottom: 16px;

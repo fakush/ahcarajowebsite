@@ -1,12 +1,11 @@
 $card-radius: 1rem;
-$quantities: (
+$img-quantities: (
 	"camiseta": 4,
 	"buzo": 4,
 	"chaqueta": 3,
 	"agenda": 3,
 	"pocillo": 4,
 	"cafe": 3
-
 );
 $card-colors-1: (
 	"rojo": red,
@@ -25,10 +24,11 @@ $card-colors-1: (
 
 .products {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, min(100%, 357px));
+	grid-template-columns: 1fr;
 	justify-content: center;
-	gap: 1.5rem;
-	padding: 40px $side-space 24px $side-space;
+	row-gap: var(--space-between-blocks);
+	column-gap: var(--space-between-items);
+	padding: 40px var(--side-space) var(--space-between-blocks) var(--side-space);
 }
 .p-card {
 	display: flex;
@@ -41,7 +41,7 @@ $card-colors-1: (
 		background-size: cover;
 		background-position: center;
 		border-radius: $card-radius $card-radius 0 0;
-		@each $type, $quantity in $quantities {
+		@each $type, $quantity in $img-quantities {
 			@for $index from 1 through $quantity {
 				&--#{$type}-#{$index} {
 					background-image: url('../assets/products/#{$type}-#{$index}.jpg');
@@ -64,9 +64,10 @@ $card-colors-1: (
 	}
 	&__body {
 		display: grid;
+		grid-auto-rows: max-content;
 		row-gap: 1rem;
 		height: 100%;
-		padding: 24px;
+		padding: 18px 12px;
 		border-radius: 0 0 $card-radius $card-radius;
 	}
 	&__header {
@@ -100,9 +101,11 @@ $card-colors-1: (
 		width: 1rem;
 	}
 	&__bottom-info {
-		display: flex;
-		justify-content: space-between;
 		align-self: end;
+		display: grid;
+		grid-auto-flow: column;
+		justify-content: space-between;
+		column-gap: var(--space-between-blocks);
 	}
 	&__info-box {
 		padding: 0;
@@ -194,7 +197,7 @@ $card-colors-1: (
 	}
 	&__color-list {
 		display: grid;
-		grid-template-columns: repeat(2, 84px);
+		grid-template-columns: repeat(2, 1fr);
 		row-gap: 10px;
 		column-gap: 40px;
 		margin-top: 1rem;
@@ -222,33 +225,39 @@ $card-colors-1: (
 	margin-bottom: 86px;
 }
 
+@media screen and (min-width: map-get($breakpoints, sm)) {
+	.p-card__body {
+		padding: 24px;
+	}
+}
 @media screen and (min-width: map-get($breakpoints, md)) {
+	.products {
+		grid-template-columns: repeat(2, 1fr);
+	}
 	.p-modal {
 		&__color-list {
-			grid-template-columns: repeat(3, 84px);
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 }
 @media screen and (min-width: map-get($breakpoints, lg)) {
 	.products {
-		grid-template-columns: repeat(auto-fit, min(100%, 417px));
-		column-gap: 39px;
-		row-gap: 42px;
-		padding-right: $side-space-lg;
-		padding-left: $side-space-lg;
+		padding-right: var(--side-space);
+		padding-left: var(--side-space);
 	}
 	.more-info--products {
-		margin-top: 14px;
 		margin-bottom: 38px;
 	}
 }
 @media screen and (min-width: map-get($breakpoints, xxl)) {
-	.more-info--products {
-		width: max-content;
-		margin-left: 65px;
+	.products {
+		grid-template-columns: repeat(3, 1fr);
 	}
 	.more-info--products {
-		margin-top: 0;
+		width: max-content;
+		margin-left: var(--side-space);
+	}
+	.more-info--products {
 		margin-bottom: 76px;
 	}
 }
