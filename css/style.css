@@ -477,6 +477,11 @@ body {
   }
 }
 @media screen and (min-width: 992px) {
+  .product-preview {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+
   .payment-means {
     padding: 0 56px 21px 56px;
   }
@@ -501,10 +506,6 @@ body {
     column-gap: 3.5rem;
   }
 
-  .product-preview {
-    padding-left: 56px;
-    padding-right: 56px;
-  }
   .product-preview__title-wrapper, .product-preview__container {
     grid-template-columns: repeat(auto-fit, 315px);
     padding: 0;
@@ -551,12 +552,14 @@ body {
 }
 
 .p-card {
+  display: flex;
+  flex-direction: column;
   background-color: #FFFFFF;
   border-radius: 1rem;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
 }
 .p-card__img {
-  height: 148px;
+  height: 210px;
   background-size: cover;
   background-position: center;
   border-radius: 1rem 1rem 0 0;
@@ -638,7 +641,10 @@ body {
   border-radius: 0.5rem 0 0 0.5rem;
 }
 .p-card__body {
-  padding: 18px 12px;
+  display: grid;
+  row-gap: 1rem;
+  height: 100%;
+  padding: 24px;
   border-radius: 0 0 1rem 1rem;
 }
 .p-card__header {
@@ -646,7 +652,6 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 1rem;
 }
 .p-card__title {
   color: #318B7C;
@@ -661,7 +666,6 @@ body {
   display: grid;
   padding: 0;
   list-style: none;
-  margin-bottom: 1rem;
 }
 .p-card__details-list--with-icons {
   row-gap: 0.5rem;
@@ -675,9 +679,9 @@ body {
 .p-card__bottom-info {
   display: flex;
   justify-content: space-between;
+  align-self: end;
 }
 .p-card__info-box {
-  flex: 1;
   padding: 0;
   border: 0;
   background: transparent;
@@ -689,8 +693,9 @@ body {
 }
 .p-card__info-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 1rem);
-  grid-auto-rows: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 1rem;
+  grid-template-rows: 1rem;
   place-items: center;
   gap: 0.5rem;
   padding: 0;

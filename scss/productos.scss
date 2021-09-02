@@ -31,11 +31,13 @@ $card-colors-1: (
 	padding: 40px $side-space 24px $side-space;
 }
 .p-card {
+	display: flex;
+	flex-direction: column;
 	background-color: $white;
 	border-radius: $card-radius;
 	box-shadow: $shadow-2;
 	&__img {
-		height: 148px;
+		height: 210px;
 		background-size: cover;
 		background-position: center;
 		border-radius: $card-radius $card-radius 0 0;
@@ -61,7 +63,10 @@ $card-colors-1: (
 		border-radius: 0.5rem 0 0 0.5rem;
 	}
 	&__body {
-		padding: 18px 12px;
+		display: grid;
+		row-gap: 1rem;
+		height: 100%;
+		padding: 24px;
 		border-radius: 0 0 $card-radius $card-radius;
 	}
 	&__header {
@@ -69,7 +74,6 @@ $card-colors-1: (
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
-		margin-bottom: 1rem;
 	}
 	&__title {
 		color: $principal-dark;
@@ -84,7 +88,6 @@ $card-colors-1: (
 		display: grid;
 		padding: 0;
 		list-style: none;
-		margin-bottom: 1rem;
 		&--with-icons {
 			row-gap: 0.5rem;	
 		}
@@ -99,9 +102,9 @@ $card-colors-1: (
 	&__bottom-info {
 		display: flex;
 		justify-content: space-between;
+		align-self: end;
 	}
 	&__info-box {
-		flex: 1;
 		padding: 0;
 		border: 0;
 		background: transparent;
@@ -113,8 +116,9 @@ $card-colors-1: (
 	}
 	&__info-list {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, 1rem);
-		grid-auto-rows: 1rem;
+		grid-auto-flow: column;
+		grid-auto-columns: 1rem;
+		grid-template-rows: 1rem;
 		place-items: center;
 		gap: 0.5rem;
 		padding: 0;
