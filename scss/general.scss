@@ -11,6 +11,9 @@ ol,
 figure {
 	margin-bottom: 0;
 }
+a:hover {
+    text-decoration: none;
+}
 
 body {
 	background-color: $light-gray;
@@ -133,6 +136,9 @@ body {
 		text-decoration: none;
 		border-radius: 12px;
 		box-shadow: $shadow-2;
+		&:hover {
+			color: $white;
+		}
 	}
 }
 .custom-indicators {
@@ -170,6 +176,9 @@ body {
 	}
 	&__link {
 		color: $acento;
+		&:hover {
+			color: $acento;
+		}
 	}
 }
 .footer {
@@ -212,6 +221,7 @@ body {
 		padding: 13px;
 		border-radius: 50%;
 		margin: -21px var(--side-space) 8px auto;
+		pointer-events: all;
 	}
 	&__whatsapp-icon {
 		width: 36px;
