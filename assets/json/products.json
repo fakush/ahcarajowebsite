@@ -3,7 +3,7 @@
     "id": 1,
     "nombre": "camiseta",
     "imagenes": "4",
-    "producto": "Camisetas",
+    "producto": "Camisetas Dama",
     "precio": "$45.000",
     "bajada": "Nuestras camisetas y buzos están elaborados en algodón, podemos estamparlas con la frase colombia que sumercé elija. Las chaquetas son elaboradas en antifluido unicolor o inspiradas en la flora y fauna de nuestro país.",
     "tag": "Incluye historia de la frase",
@@ -14,8 +14,56 @@
       "Empacada en una tula ecológica",
       "Incluye envío en Bogotá"
     ],
-    "talles": ["2", "XS", "S", "M", "L", "XL"],
-    "colores": ["#162C88", "#FFFFFF", "#00000", "#A5A4A4", "#72051A", "+5"]
+    "talles": true,
+    "colores": [
+      { "nombre": "Black", "hexa": "#000000" },
+      { "nombre": "Gray", "hexa": "#808080" },
+      { "nombre": "White", "hexa": "#FFFFFF" },
+      { "nombre": "Purple", "hexa": "#7F01B1" },
+      { "nombre": "Lilac", "hexa": "#D3A9CD" },
+      { "nombre": "Deep Blush", "hexa": "#E5709D" },
+      { "nombre": "Rose", "hexa": "#F91490" },
+      { "nombre": "Deep Koamaru", "hexa": "#162C88" },
+      { "nombre": "Apple", "hexa": "#4CA82D" },
+      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
+      { "nombre": "Thunderbird", "hexa": "#D3171E" },
+      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
+      { "nombre": "Ice Cold", "hexa": "#B2F4E8" },
+      { "nombre": "Blaze Orange", "hexa": "#FA6602" }
+    ]
+  },
+  {
+    "id": 1,
+    "nombre": "camiseta",
+    "imagenes": "4",
+    "producto": "Camisetas Caballero",
+    "precio": "$45.000",
+    "bajada": "Nuestras camisetas y buzos están elaborados en algodón, podemos estamparlas con la frase colombia que sumercé elija. Las chaquetas son elaboradas en antifluido unicolor o inspiradas en la flora y fauna de nuestro país.",
+    "tag": "Incluye historia de la frase",
+    "detalle": [
+      "100% algodón",
+      "Cuello V o Redondo",
+      "Personalízala con tu frase colombiana favorita",
+      "Empacada en una tula ecológica",
+      "Incluye envío en Bogotá"
+    ],
+    "talles": true,
+    "colores": [
+      { "nombre": "Black", "hexa": "#000000" },
+      { "nombre": "Gray", "hexa": "#808080" },
+      { "nombre": "White", "hexa": "#FFFFFF" },
+      { "nombre": "Purple", "hexa": "#7F01B1" },
+      { "nombre": "Lilac", "hexa": "#D3A9CD" },
+      { "nombre": "Deep Blush", "hexa": "#E5709D" },
+      { "nombre": "Rose", "hexa": "#F91490" },
+      { "nombre": "Deep Koamaru", "hexa": "#162C88" },
+      { "nombre": "Apple", "hexa": "#4CA82D" },
+      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
+      { "nombre": "Thunderbird", "hexa": "#D3171E" },
+      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
+      { "nombre": "Ice Cold", "hexa": "#B2F4E8" },
+      { "nombre": "Blaze Orange", "hexa": "#FA6602" }
+    ]
   },
   {
     "id": 2,
@@ -32,8 +80,19 @@
       "Empacado en una tula ecológica",
       "Incluye envío en Bogotá"
     ],
-    "talles": ["2", "XS", "S", "M", "L", "XL"],
-    "colores": ["#B2F4E8", "#D3A9CD", "#00000", "#7F9AEF", "#FFFFFF", "#A5A4A4", "+7"]
+    "talles": true,
+    "colores": [
+      { "nombre": "Purple", "hexa": "#7F01B1" },
+      { "nombre": "Lilac", "hexa": "#D3A9CD" },
+      { "nombre": "Deep Blush", "hexa": "#E5709D" },
+      { "nombre": "Rose", "hexa": "#F91490" },
+      { "nombre": "Deep Koamaru", "hexa": "#162C88" },
+      { "nombre": "Apple", "hexa": "#4CA82D" },
+      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
+      { "nombre": "Thunderbird", "hexa": "#D3171E" },
+      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
+      { "nombre": "Ice Cold", "hexa": "#B2F4E8" }
+    ]
   },
   {
     "id": 3,
@@ -49,8 +108,21 @@
       "Diseños inspirados en la flora y fauna de Colombia",
       "Empacado en una tula ecológica"
     ],
-    "talles": ["2", "XS", "S", "M", "L", "XL"],
-    "colores": ["#B2F4E8", "#D3A9CD", "#00000", "#7F9AEF", "#FFFFFF", "#A5A4A4", "+7"]
+    "talles": true,
+    "colores": [
+      { "nombre": "Black", "hexa": "#000000" },
+      { "nombre": "Gray", "hexa": "#808080" },
+      { "nombre": "White", "hexa": "#FFFFFF" },
+      { "nombre": "Purple", "hexa": "#7F01B1" },
+      { "nombre": "Lilac", "hexa": "#D3A9CD" },
+      { "nombre": "Deep Blush", "hexa": "#E5709D" },
+      { "nombre": "Rose", "hexa": "#F91490" },
+      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
+      { "nombre": "Thunderbird", "hexa": "#D3171E" },
+      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
+      { "nombre": "Ice Cold", "hexa": "#B2F4E8" },
+      { "nombre": "Blaze Orange", "hexa": "#FA6602" }
+    ]
   },
   {
     "id": 4,
@@ -61,7 +133,7 @@
     "bajada": "Nuestras agendas son tipo cuaderno hechas en material 100% reciclable y biodegradable. Incluye: hoja de stickers, calendario, planeador mensual, mapa de sueños, mapa de emociones, registro financiero y hojas cuadriculadas.",
     "tag": "Incluye historia de la frase",
     "detalle": ["Incluye envío en Bogotá"],
-    "talles": [],
+    "talles": false,
     "colores": []
   },
   {
@@ -78,7 +150,7 @@
       "Incluye envío en Bogotá",
       "Empacado en caja kraft y con cinta decorativa"
     ],
-    "talles": [],
+    "talles": false,
     "colores": []
   },
   {
@@ -90,7 +162,7 @@
     "bajada": "Aquí le ofrecemos nuestro tintico ¡Ah,Carajo! por 250 gr de origen 100% Colombiano con sabor a chocolate, frutos secos, frutos rojos, caña de azúcar y una dulce fragancia a panela y nuez de las montañas de nuestro país.. Llévelo con un pocillo personalizado.",
     "tag": "Incluye pocillo personalizado",
     "detalle": ["250 gr", "100% Colombiano", "Incluye envío en Bogotá", "Incluye historia de su origen"],
-    "talles": [],
+    "talles": false,
     "colores": []
   }
 ]

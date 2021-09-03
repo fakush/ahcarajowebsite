@@ -1,6 +1,6 @@
 [
   {
-    "producto": "Buzos",
+    "producto": "buzo",
     "tituloCard": "Tabla Talles Buzos",
     "medidas": ["Ancho", "Alto", "Manga"],
     "talles": [
@@ -15,7 +15,7 @@
     ]
   },
   {
-    "producto": "Camisetas",
+    "producto": "camisetaHombre",
     "tituloCard": "Camisetas Estilo Caballero",
     "medidas": ["Ancho", "Largo"],
     "talles": [
@@ -28,7 +28,7 @@
     ]
   },
   {
-    "producto": "Camisetas",
+    "producto": "camisetaDama",
     "tituloCard": "Camisetas Estilo Dama",
     "medidas": ["Ancho", "Largo"],
     "talles": [
@@ -41,7 +41,7 @@
     ]
   },
   {
-    "producto": "Chaquetas",
+    "producto": "chaqueta",
     "tituloCard": "Tallas chaquetas",
     "medidas": ["contorno", "Brazo", "Largo"],
     "talles": [
