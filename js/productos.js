@@ -7,7 +7,7 @@ const fillCard = (data) => {
   const fotos = (int, prod) => {
     let fotos = ``;
     for (let i = 2; i <= int; i++) {
-      fotos += `<div class="p-card__img p-card__img--${prod}-${i} carousel-item" data-interval="15000"></div>`;
+      fotos += `<div class="p-card__img p-card__img--${prod}-${i} carousel-item" data-interval="15000" style="background-image: url(../assets/products/${prod}-${i}.jpg);"></div>`;
     }
     return fotos;
   };
@@ -82,7 +82,9 @@ const fillCard = (data) => {
 					<p class="p-card__label">${data[i].tag}</p>
 					<div class="p-card__img p-card__img--${
             data[i].nombre
-          }-1 carousel-item active" data-interval="15000"></div>
+          }-1 carousel-item active" data-interval="15000" style="background-image: url(../assets/products/${
+      data[i].nombre
+    }-1.jpg);"></div>
 					${fotos(data[i].imagenes, data[i].nombre)}
 				</div>
 				<ol class="custom-indicators carousel-indicators">
