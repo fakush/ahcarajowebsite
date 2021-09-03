@@ -7,15 +7,15 @@ const fillCard = (data) => {
   const fotos = (int, prod) => {
     let fotos = ``;
     for (let i = 2; i <= int; i++) {
-      fotos += `<div class="p-card__img p-card__img--${prod}-${i} carousel-item"></div>`;
+      fotos += `<div class="p-card__img p-card__img--${prod}-${i} carousel-item" data-interval="15000"></div>`;
     }
     return fotos;
   };
   // Me fijo cuantas fotos hay, y creo un indicador para cada uno, desde la segunda.
-  const indicadores = (int) => {
+  const indicadores = (int, id) => {
     let indicadores = ``;
     for (let i = 1; i < int; i++) {
-      indicadores += `<li class="custom-indicators__indicator" data-target="#p-card-1" data-slide-to="${i}"></li>`;
+      indicadores += `<li class="custom-indicators__indicator" data-target="#p-card-${id}" data-slide-to="${i}"></li>`;
     }
     return indicadores;
   };
@@ -53,7 +53,7 @@ const fillCard = (data) => {
   const colores = (data, nombre) => {
     if (data.length > 0) {
       let aux = ``;
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < 4; i++) {
         aux += `
 					<li class="p-card__info-item  p-card__info-item--color-1" style="background-color: ${data[i].hexa}; border: 1px solid #303030;"></li>
 				`;
@@ -75,15 +75,21 @@ const fillCard = (data) => {
   for (let i = 0; i < data.length; i++) {
     card += `
     <article class="p-card" data-aos="fade-up">
-			<div class="p-card__carousel carousel slide carousel-fade" id="p-card-1" data-ride="carousel">
+			<div class="p-card__carousel carousel slide carousel-fade" id="p-card-${
+        data[i].id
+      }" data-ride="carousel">
 				<div class="carousel-inner">
 					<p class="p-card__label">${data[i].tag}</p>
-					<div class="p-card__img p-card__img--${data[i].nombre}-1 carousel-item active"></div>
+					<div class="p-card__img p-card__img--${
+            data[i].nombre
+          }-1 carousel-item active" data-interval="15000"></div>
 					${fotos(data[i].imagenes, data[i].nombre)}
 				</div>
 				<ol class="custom-indicators carousel-indicators">
-					<li class="custom-indicators__indicator active" data-target="#p-card-1" data-slide-to="0"></li>
-					${indicadores(data[i].imagenes)}
+					<li class="custom-indicators__indicator active" data-target="#p-card-${
+            data[i].id
+          }" data-slide-to="0"></li>
+					${indicadores(data[i].imagenes, data[i].id)}
 				</ol>
 			</div>
 			<div class="p-card__body">
