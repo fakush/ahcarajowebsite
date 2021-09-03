@@ -53,7 +53,7 @@ const fillCard = (data) => {
   const colores = (data, nombre) => {
     if (data.length > 0) {
       let aux = ``;
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 5; i++) {
         aux += `
 					<li class="p-card__info-item  p-card__info-item--color-1" style="background-color: ${data[i].hexa}; border: 1px solid #303030;"></li>
 				`;
