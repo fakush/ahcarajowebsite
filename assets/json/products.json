@@ -14,8 +14,29 @@
       "Empacada en una tula ecológica",
       "Incluye envío en Bogotá"
     ],
-    "talles": ["2", "XS", "S", "M", "L", "XL"],
-    "colores": ["#162C88", "#FFFFFF", "#00000", "#A5A4A4", "#72051A", "+5"]
+    "talles": [
+      ["", "Ancho", "Largo", ""],
+      ["S", 49, 67, ""],
+      ["M", 53, 70, ""],
+      ["L", 56, 72, ""],
+      ["XL", 58, 74, ""]
+    ],
+    "colores": [
+      { "nombre": "Black", "hexa": "#000000" },
+      { "nombre": "Gray", "hexa": "#808080" },
+      { "nombre": "White", "hexa": "#FFFFFF" },
+      { "nombre": "Purple", "hexa": "#7F01B1" },
+      { "nombre": "Lilac", "hexa": "#D3A9CD" },
+      { "nombre": "Deep Blush", "hexa": "#E5709D" },
+      { "nombre": "Rose", "hexa": "#F91490" },
+      { "nombre": "Deep Koamaru", "hexa": "#162C88" },
+      { "nombre": "Apple", "hexa": "#4CA82D" },
+      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
+      { "nombre": "Thunderbird", "hexa": "#D3171E" },
+      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
+      { "nombre": "Ice Cold", "hexa": "#B2F4E8" },
+      { "nombre": "Blaze Orange", "hexa": "#FA6602" }
+    ]
   },
   {
     "id": 2,
@@ -32,8 +53,27 @@
       "Empacado en una tula ecológica",
       "Incluye envío en Bogotá"
     ],
-    "talles": ["2", "XS", "S", "M", "L", "XL"],
-    "colores": ["#B2F4E8", "#D3A9CD", "#00000", "#7F9AEF", "#FFFFFF", "#A5A4A4", "+7"]
+    "talles": [
+      ["", "Ancho", "Alto", "Manga"],
+      ["16", 52, 65, 56],
+      ["XS", 54, 63, 60],
+      ["S", 58, 65, 62],
+      ["M", 60, 68, 66],
+      ["L", 63, 73, 70],
+      ["XL", 66, 77, 74]
+    ],
+    "colores": [
+      { "nombre": "Purple", "hexa": "#7F01B1" },
+      { "nombre": "Lilac", "hexa": "#D3A9CD" },
+      { "nombre": "Deep Blush", "hexa": "#E5709D" },
+      { "nombre": "Rose", "hexa": "#F91490" },
+      { "nombre": "Deep Koamaru", "hexa": "#162C88" },
+      { "nombre": "Apple", "hexa": "#4CA82D" },
+      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
+      { "nombre": "Thunderbird", "hexa": "#D3171E" },
+      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
+      { "nombre": "Ice Cold", "hexa": "#B2F4E8" }
+    ]
   },
   {
     "id": 3,
@@ -49,8 +89,28 @@
       "Diseños inspirados en la flora y fauna de Colombia",
       "Empacado en una tula ecológica"
     ],
-    "talles": ["2", "XS", "S", "M", "L", "XL"],
-    "colores": ["#B2F4E8", "#D3A9CD", "#00000", "#7F9AEF", "#FFFFFF", "#A5A4A4", "+7"]
+    "talles": [
+      ["", "contorno", "Brazo", "Largo"],
+      ["S", 95, 63, 64],
+      ["M", 100, 63, 64],
+      ["L", 110, 65, 68],
+      ["XL", 120, 66, 71],
+      ["XXL", 125, 66, 74]
+    ],
+    "colores": [
+      { "nombre": "Black", "hexa": "#000000" },
+      { "nombre": "Gray", "hexa": "#808080" },
+      { "nombre": "White", "hexa": "#FFFFFF" },
+      { "nombre": "Purple", "hexa": "#7F01B1" },
+      { "nombre": "Lilac", "hexa": "#D3A9CD" },
+      { "nombre": "Deep Blush", "hexa": "#E5709D" },
+      { "nombre": "Rose", "hexa": "#F91490" },
+      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
+      { "nombre": "Thunderbird", "hexa": "#D3171E" },
+      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
+      { "nombre": "Ice Cold", "hexa": "#B2F4E8" },
+      { "nombre": "Blaze Orange", "hexa": "#FA6602" }
+    ]
   },
   {
     "id": 4,
@@ -61,7 +121,7 @@
     "bajada": "Nuestras agendas son tipo cuaderno hechas en material 100% reciclable y biodegradable. Incluye: hoja de stickers, calendario, planeador mensual, mapa de sueños, mapa de emociones, registro financiero y hojas cuadriculadas.",
     "tag": "Incluye historia de la frase",
     "detalle": ["Incluye envío en Bogotá"],
-    "talles": [],
+    "talles": false,
     "colores": []
   },
   {
@@ -78,7 +138,7 @@
       "Incluye envío en Bogotá",
       "Empacado en caja kraft y con cinta decorativa"
     ],
-    "talles": [],
+    "talles": false,
     "colores": []
   },
   {
@@ -90,7 +150,7 @@
     "bajada": "Aquí le ofrecemos nuestro tintico ¡Ah,Carajo! por 250 gr de origen 100% Colombiano con sabor a chocolate, frutos secos, frutos rojos, caña de azúcar y una dulce fragancia a panela y nuez de las montañas de nuestro país.. Llévelo con un pocillo personalizado.",
     "tag": "Incluye pocillo personalizado",
     "detalle": ["250 gr", "100% Colombiano", "Incluye envío en Bogotá", "Incluye historia de su origen"],
-    "talles": [],
+    "talles": false,
     "colores": []
   }
 ]
