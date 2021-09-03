@@ -55,7 +55,7 @@ const fillCard = (data) => {
       let aux = ``;
       for (let i = 0; i < 4; i++) {
         aux += `
-					<li class="p-card__info-item  p-card__info-item--color-1" style="background-color: ${data[i].hexa}; border: 1px solid #303030;"></li>
+					<li class="p-card__info-item" style="background-color: ${data[i].hexa}; border: 1px solid #303030;"></li>
 				`;
       }
       let salida = `
@@ -121,7 +121,7 @@ const fillModales = (data) => {
     for (let i = 0; i < data.length; i++) {
       aux += `
           <li class="p-modal__color-item">
-            <span class="p-modal__color-circle p-modal__color-circle--rojo" style="background-color: ${data[i].hexa}; border: 1px solid #303030;"></span>
+            <span class="p-modal__color-circle" style="background-color: ${data[i].hexa}; border: 1px solid #303030;"></span>
             ${data[i].nombre}
           </li>
 

@@ -1,26 +1,4 @@
 $card-radius: 1rem;
-$img-quantities: (
-	"camiseta": 4,
-	"buzo": 4,
-	"chaqueta": 3,
-	"agenda": 3,
-	"pocillo": 4,
-	"cafe": 3
-);
-$card-colors-1: (
-	"rojo": red,
-	"amarillo": yellow,
-	"gris": gray,
-	"ceniza": lightgray,
-	"naranja": orange,
-	"cyan": cyan,
-	"azul": blue,
-	"verde": green,
-	"negro": black,
-	"purpura": purple,
-	"rosa": pink,
-	"marron": brown
-);
 
 .products {
 	display: grid;
@@ -41,13 +19,6 @@ $card-colors-1: (
 		background-size: cover;
 		background-position: center;
 		border-radius: $card-radius $card-radius 0 0;
-		@each $type, $quantity in $img-quantities {
-			@for $index from 1 through $quantity {
-				&--#{$type}-#{$index} {
-					background-image: url('../assets/products/#{$type}-#{$index}.jpg');
-				}
-			}
-		}
 	}
 	&__label {
 		position: absolute;
@@ -139,15 +110,6 @@ $card-colors-1: (
 			font-size: $font-size-12;
 			border: 1px solid $black;
 		}
-		@each $color, $color-code in $card-colors-1 {
-			$index: index($card-colors-1, $color $color-code);
-			@if $index <= 5 {
-				&--color-#{$index} {
-					background-color: $color-code;
-				}
-			}
-		}
-		
 	}
 }
 .p-modal {
@@ -213,11 +175,6 @@ $card-colors-1: (
 		width: 1.5rem;
 		height: 1.5rem;
 		border-radius: 50%;
-		@each $color, $color-code in $card-colors-1{
-			&--#{$color} {
-				background-color: $color-code;
-			}
-		}
 	}
 }
 .more-info--products {
@@ -248,7 +205,8 @@ $card-colors-1: (
 		&__info-item {
 			width: 1.5rem;
 			height: 1.5rem;
-			&--size {
+			&--size,
+			&--more-colors {
 				font-size: $font-size-6;
 			}
 		}
