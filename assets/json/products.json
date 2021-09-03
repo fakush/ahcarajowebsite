@@ -3,7 +3,7 @@
     "id": 1,
     "nombre": "camiseta",
     "imagenes": "4",
-    "producto": "Camisetas Dama",
+    "producto": "Camisetas",
     "precio": "$45.000",
     "bajada": "Nuestras camisetas y buzos están elaborados en algodón, podemos estamparlas con la frase colombia que sumercé elija. Las chaquetas son elaboradas en antifluido unicolor o inspiradas en la flora y fauna de nuestro país.",
     "tag": "Incluye historia de la frase",
@@ -14,40 +14,13 @@
       "Empacada en una tula ecológica",
       "Incluye envío en Bogotá"
     ],
-    "talles": true,
-    "colores": [
-      { "nombre": "Black", "hexa": "#000000" },
-      { "nombre": "Gray", "hexa": "#808080" },
-      { "nombre": "White", "hexa": "#FFFFFF" },
-      { "nombre": "Purple", "hexa": "#7F01B1" },
-      { "nombre": "Lilac", "hexa": "#D3A9CD" },
-      { "nombre": "Deep Blush", "hexa": "#E5709D" },
-      { "nombre": "Rose", "hexa": "#F91490" },
-      { "nombre": "Deep Koamaru", "hexa": "#162C88" },
-      { "nombre": "Apple", "hexa": "#4CA82D" },
-      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
-      { "nombre": "Thunderbird", "hexa": "#D3171E" },
-      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
-      { "nombre": "Ice Cold", "hexa": "#B2F4E8" },
-      { "nombre": "Blaze Orange", "hexa": "#FA6602" }
-    ]
-  },
-  {
-    "id": 1,
-    "nombre": "camiseta",
-    "imagenes": "4",
-    "producto": "Camisetas Caballero",
-    "precio": "$45.000",
-    "bajada": "Nuestras camisetas y buzos están elaborados en algodón, podemos estamparlas con la frase colombia que sumercé elija. Las chaquetas son elaboradas en antifluido unicolor o inspiradas en la flora y fauna de nuestro país.",
-    "tag": "Incluye historia de la frase",
-    "detalle": [
-      "100% algodón",
-      "Cuello V o Redondo",
-      "Personalízala con tu frase colombiana favorita",
-      "Empacada en una tula ecológica",
-      "Incluye envío en Bogotá"
+    "talles": [
+      ["", "Ancho", "Largo", ""],
+      ["S", 49, 67, ""],
+      ["M", 53, 70, ""],
+      ["L", 56, 72, ""],
+      ["XL", 58, 74, ""]
     ],
-    "talles": true,
     "colores": [
       { "nombre": "Black", "hexa": "#000000" },
       { "nombre": "Gray", "hexa": "#808080" },
@@ -80,7 +53,15 @@
       "Empacado en una tula ecológica",
       "Incluye envío en Bogotá"
     ],
-    "talles": true,
+    "talles": [
+      ["", "Ancho", "Alto", "Manga"],
+      ["16", 52, 65, 56],
+      ["XS", 54, 63, 60],
+      ["S", 58, 65, 62],
+      ["M", 60, 68, 66],
+      ["L", 63, 73, 70],
+      ["XL", 66, 77, 74]
+    ],
     "colores": [
       { "nombre": "Purple", "hexa": "#7F01B1" },
       { "nombre": "Lilac", "hexa": "#D3A9CD" },
@@ -108,7 +89,14 @@
       "Diseños inspirados en la flora y fauna de Colombia",
       "Empacado en una tula ecológica"
     ],
-    "talles": true,
+    "talles": [
+      ["", "contorno", "Brazo", "Largo"],
+      ["S", 95, 63, 64],
+      ["M", 100, 63, 64],
+      ["L", 110, 65, 68],
+      ["XL", 120, 66, 71],
+      ["XXL", 125, 66, 74]
+    ],
     "colores": [
       { "nombre": "Black", "hexa": "#000000" },
       { "nombre": "Gray", "hexa": "#808080" },

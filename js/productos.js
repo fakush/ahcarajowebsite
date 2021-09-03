@@ -33,9 +33,9 @@ const fillCard = (data) => {
   const talles = (data, nombre) => {
     if (data.length > 0) {
       let aux = ``;
-      for (let i = 0; i < data.length; i++) {
+      for (let i = 1; i < data.length; i++) {
         aux += `
-				<li class="p-card__info-item  p-card__info-item--size">${data[i]}</li>
+				<li class="p-card__info-item  p-card__info-item--size">${data[i][0]}</li>
 			`;
       }
       let salida = `
@@ -154,15 +154,29 @@ const fillModales = (data) => {
     `;
   }
   // Armo la lista de talles
-  const talles = (data) => {
+  const tablaTalles = (data) => {
     let aux = ``;
-    for (let i = 0; i < data.length; i++) {
+    if (data.length > 0) {
       aux += `
-          <li class="p-modal__color-item">
-            <span class="p-modal__color-circle p-modal__color-circle--rojo" style="background-color: ${data[i].hexa}; border: 1px solid #303030;"></span>
-            ${data[i].nombre}
-          </li>
-
+      <thead>
+        <tr class="p-modal__table-row">
+          <th class="p-modal__table-header" scope="col"></th>
+          <th class="p-modal__table-header" scope="col">${data[0][1]}</th>
+          <th class="p-modal__table-header" scope="col">${data[0][2]}</th>
+          <th class="p-modal__table-header" scope="col">${data[0][3]}</th>
+        </tr>
+      </thead>
+      <tbody>
+      `;
+    }
+    for (let i = 1; i < data.length; i++) {
+      aux += `
+          <tr class="p-modal__table-row">
+            <th class="p-modal__table-header" scope="row">${data[i][0]}</th>
+            <td class="p-modal__table-data">${data[i][1]}</td>
+            <td class="p-modal__table-data">${data[i][2]}</td>
+            <td class="p-modal__table-data">${data[i][3]}</td>
+          </tr>
       `;
     }
     return aux;
@@ -172,7 +186,7 @@ const fillModales = (data) => {
     modales += `
     <div
         class="p-modal modal fade"
-        id="sizeModal"
+        id="sizeModal${data[i].nombre}"
         tabindex="-1"
         aria-labelledby="sizeModalLabel"
         aria-hidden="true"
@@ -180,7 +194,7 @@ const fillModales = (data) => {
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="p-modal__content modal-content">
             <div class="p-modal__header">
-              <h4 class="p-modal__title" id="sizeModalLabel">Talles de buzo</h4>
+              <h4 class="p-modal__title" id="sizeModalLabel">Talles de ${data[i].producto}</h4>
               <button
                 class="p-modal__close-btn close"
                 type="button"
@@ -192,33 +206,7 @@ const fillModales = (data) => {
             </div>
             <div class="p-modal__line"></div>
             <table>
-              <thead>
-                <tr class="p-modal__table-row">
-                  <th class="p-modal__table-header" scope="col"></th>
-                  <th class="p-modal__table-header" scope="col">Ancho</th>
-                  <th class="p-modal__table-header" scope="col">Alto</th>
-                  <th class="p-modal__table-header" scope="col">Manga</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="p-modal__table-row">
-                  <th class="p-modal__table-header" scope="row">XS</th>
-                  <td class="p-modal__table-data">64</td>
-                  <td class="p-modal__table-data">63</td>
-                  <td class="p-modal__table-data">60</td>
-                </tr>
-                <tr class="p-modal__table-row">
-                  <th class="p-modal__table-header" scope="row">XS</th>
-                  <td class="p-modal__table-data">64</td>
-                  <td class="p-modal__table-data">63</td>
-                  <td class="p-modal__table-data">60</td>
-                </tr>
-                <tr class="p-modal__table-row p-modal__table-row--last">
-                  <th class="p-modal__table-header" scope="row">XS</th>
-                  <td class="p-modal__table-data">64</td>
-                  <td class="p-modal__table-data">63</td>
-                  <td class="p-modal__table-data">60</td>
-                </tr>
+              ${tablaTalles(data[i].talles)}
               </tbody>
             </table>
           </div>
