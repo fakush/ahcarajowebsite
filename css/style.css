@@ -1048,7 +1048,7 @@ body {
   }
 }
 .faq {
-  padding: 1.5rem var(--side-space);
+  padding: 1.5rem var(--side-space) 70px var(--side-space);
 }
 .faq__title {
   color: #318B7C;
