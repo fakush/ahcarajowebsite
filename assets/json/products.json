@@ -126,13 +126,10 @@
     "imagenes": "4",
     "producto": "Pocillo",
     "precio": "$45.000",
-    "bajada": "Pocillos de 11 onzas elaborados en cerámica y estampados con nuestros diseños de frases inspiradas en Colombia que se encuentran en nuestras redes sociales o se pueden personalizar con lo que sumercé elija.",
+    "bajada": "Pocillos elaborados en cerámica y estampados   con nuestros diseños de frases inspiradas en Colombia, en el color que elijas. Empacado en caja kraft y con cinta decorativa.",
     "tag": "¡Personalízalo!",
     "detalle": [
-      "<img class='p-card__details-icon' src='../assets/icons/weight-icon.svg' alt='icono hoja de arbol'> 11 onzas",
-      "Personalízalo con tu frase colombiana favorita",
-      "Incluye envío en Bogotá",
-      "Empacado en caja kraft y con cinta decorativa"
+      "<img class='p-card__details-icon' src='../assets/icons/weight-icon.svg' alt='icono hoja de arbol'> 11 onzas"
     ],
     "talles": false,
     "colores": []
@@ -145,7 +142,7 @@
     "precio": "$20.000",
     "bajada": "Aquí le ofrecemos nuestro tintico ¡Ah,Carajo! por 250 gr de origen 100% Colombiano con sabor a chocolate, frutos secos, frutos rojos, caña de azúcar y una dulce fragancia a panela y nuez de las montañas de nuestro país.",
     "tag": "Incluye pocillo personalizado",
-    "detalle": ["<img class='p-card__details-icon' src='../assets/icons/weight-icon.svg' alt='icono hoja de arbol'>250 gr", "100% Colombiano", "Incluye envío en Bogotá", "Incluye historia de su origen"],
+    "detalle": ["<img class='p-card__details-icon' src='../assets/icons/weight-icon.svg' alt='icono hoja de arbol'>250 gr"],
     "talles": false,
     "colores": []
   }
