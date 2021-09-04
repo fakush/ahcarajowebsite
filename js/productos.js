@@ -19,13 +19,40 @@ const fillCard = (data) => {
     }
     return indicadores;
   };
-  const punteo = (data) => {
+  const punteo = (detalles) => {
+    const iconTemplate = (url, alt) => `<img class="p-card__details-icon" src="${url}" alt="${alt}">`;
+    const icons = {
+      'hoja de arbol': {
+        url: "../assets/icons/tree-leaf-icon.svg",
+        alt: "icono hoja de arbol"
+      },
+      'reciclaje': {
+        url: "../assets/icons/recycling-icon.svg",
+        alt: "icono reciclaje"
+      },
+      'libro': {
+        url: "../assets/icons/book-icon.svg",
+        alt: "icono libro"
+      },
+      'mapa': {
+        url: "../assets/icons/map-icon.svg",
+        alt: "icono mapa"
+      },
+      'peso': {
+        url: "../assets/icons/weight-icon.svg",
+        alt: "icono peso"
+      }
+    }
     let punteo = ``;
-    if (data.length > 0) {
-      for (let i = 0; i < data.length; i++) {
+    if (detalles.length) {
+      for (let i = 0; i < detalles.length; i++) {
+        const icon =  icons[detalles[i].icono];  
         punteo += `
-		  		<li class="p-card__details-item">${data[i]}</li>
-		  `;
+          <li class="p-card__details-item">
+            ${icon ? iconTemplate(icon.url, icon.alt) : ''}
+            ${detalles[i].texto}
+          </li>
+        `;
       }
     }
     return punteo;
@@ -99,7 +126,7 @@ const fillCard = (data) => {
 					<h3 class="p-card__title">${data[i].producto}</h3>
 					<p class="p-card__price">${data[i].precio}</p>
 				</div>
-				<ul class="p-card__details-list">${punteo(data[i].detalle)}</ul>
+				<ul class="p-card__details-list">${punteo(data[i].detalles)}</ul>
 				<p class="p-card__details-text">${data[i].bajada}</p>
 				<div class="p-card__bottom-info">
           ${talles(data[i].talles, data[i].nombre)} 

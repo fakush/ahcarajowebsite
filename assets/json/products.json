@@ -8,10 +8,19 @@
     "precio": "$45.000",
     "bajada": "",
     "tag": "¡Personalízalo!",
-    "detalle": [
-      "100% algodón",
-      "Cuello V o Redondo",
-      "Empacada en una tula ecológica"
+    "detalles": [
+		{
+			"icono": "ninguno",
+			"texto": "100% algodón"
+		},
+		{
+			"icono": "ninguno",
+			"texto": "Cuello V o Redondo"
+		},
+		{
+			"icono": "ninguno",
+			"texto": "Empacada en una tula ecológica"
+		}
     ],
     "talles": [
       ["", "Ancho", "Largo", ""],
@@ -40,16 +49,25 @@
   {
     "id": 2,
     "nombre": "buzo",
-	"categoria": "ropa",
+    "categoria": "ropa",
     "imagenes": "4",
     "producto": "Buzo",
     "precio": "$65.000",
     "bajada": "",
     "tag": "¡Personalízalo!",
-    "detalle": [
-      "100% algodón mónaco",
-      "Con capota o cuello redondo",
-      "Empacado en una tula ecológica"
+    "detalles": [
+      {
+        "icono": "ninguno",
+        "texto": "100% algodón mónaco"
+      },
+      {
+        "icono": "ninguno",
+        "texto": "Con capota o cuello redondo"
+      },
+      {
+        "icono": "ninguno",
+        "texto": "Empacado en una tula ecológica"
+      }
     ],
     "talles": [
       ["", "Ancho", "Alto", "Manga"],
@@ -76,17 +94,29 @@
   {
     "id": 3,
     "nombre": "chaqueta",
-	"categoria": "ropa",
+    "categoria": "ropa",
     "imagenes": "3",
     "producto": "Chaqueta Resiliente",
     "precio": "$70.000",
     "bajada": "",
     "tag": "¡Personalízalo!",
-    "detalle": [
-      "100% antifluido",
-      "Tapabocas antifluido incorporado en la chaqueta",
-      "Diseños inspirados en la flora y fauna de Colombia",
-      "Empacado en una tula ecológica"
+    "detalles": [
+      {
+        "icono": "ninguno",
+        "texto": "100% antifluido"
+      },
+      {
+        "icono": "ninguno",
+        "texto": "Tapabocas antifluido incorporado en la chaqueta"
+      },
+      {
+        "icono": "ninguno",
+        "texto": "Diseños inspirados en la flora y fauna de Colombia"
+      },
+      {
+        "icono": "ninguno",
+        "texto": "Empacado en una tula ecológica"
+      }
     ],
     "talles": [
       ["", "contorno", "Brazo", "Largo"],
@@ -114,27 +144,47 @@
   {
     "id": 4,
     "nombre": "agenda",
-	"categoria": "agendas",
+    "categoria": "agendas",
     "imagenes": "4",
     "producto": "Agenda",
     "precio": "$45.000",
     "bajada": "",
     "tag": "Incluye stickers + 2 lápices BC",
-    "detalle": ["<img class='p-card__details-icon' src='../assets/icons/tree-leaf-icon.svg' alt='icono hoja de arbol'> 100 hojas cuadriculadas. Elaboradas a partir de fibras renovables, reciclables y biodegrabadebles." ,"<img class='p-card__details-icon' src='../assets/icons/recycling-icon.svg' alt='icono reciclaje'> Reciclable","<img class='p-card__details-icon' src='../assets/icons/book-icon.svg' alt='icono libro'> Calendario anual, planeador mensual", "<img class='p-card__details-icon' src='../assets/icons/map-icon.svg' alt='icono mapa'> Mapa de emociones, de sueños y de finanzas"],
+    "detalles": [
+      {
+        "icono": "hoja de arbol",
+        "texto": "100 hojas cuadriculadas. Elaboradas a partir de fibras renovables, reciclables y biodegrabadebles."
+      },
+      {
+        "icono": "reciclaje",
+        "texto": "Reciclable"
+      },
+      {
+        "icono": "libro",
+        "texto": "Calendario anual, planeador mensual"
+      },
+      {
+        "icono": "mapa",
+        "texto": "Mapa de emociones, de sueños y de finanzas"
+      }
+    ],
     "talles": false,
     "colores": []
   },
   {
     "id": 5,
     "nombre": "pocillo",
-	"categoria": "pocillos",
+    "categoria": "pocillos",
     "imagenes": "4",
     "producto": "Pocillo",
     "precio": "$45.000",
     "bajada": "Pocillos elaborados en cerámica y estampados   con nuestros diseños de frases inspiradas en Colombia, en el color que elijas. Empacado en caja kraft y con cinta decorativa.",
     "tag": "¡Personalízalo!",
-    "detalle": [
-      "<img class='p-card__details-icon' src='../assets/icons/weight-icon.svg' alt='icono hoja de arbol'> 11 onzas"
+    "detalles": [
+      {
+        "icono": "peso",
+        "texto": "11 onzas"
+      }
     ],
     "talles": false,
     "colores": []
@@ -142,13 +192,18 @@
   {
     "id": 6,
     "nombre": "cafe",
-	"categoria": "kit cafeteros",
+    "categoria": "kit cafeteros",
     "imagenes": "3",
     "producto": "Café ¡Ah, Carajo!",
     "precio": "$20.000",
     "bajada": "Aquí le ofrecemos nuestro tintico ¡Ah,Carajo! por 250 gr de origen 100% Colombiano con sabor a chocolate, frutos secos, frutos rojos, caña de azúcar y una dulce fragancia a panela y nuez de las montañas de nuestro país.",
     "tag": "Incluye pocillo personalizado",
-    "detalle": ["<img class='p-card__details-icon' src='../assets/icons/weight-icon.svg' alt='icono hoja de arbol'>250 gr"],
+    "detalles": [
+      {
+        "icono": "peso",
+        "texto": "250gr"
+      }
+    ],
     "talles": false,
     "colores": []
   }
