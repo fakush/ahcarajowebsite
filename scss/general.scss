@@ -248,6 +248,7 @@ body {
 @media screen and (min-width: map-get($breakpoints, md)) {
 	.banner {
 		display: flex;
+		min-height: calc(100vh - 78px); // Header height
 		&__img {
 			width: 100%;
 			height: auto !important;
@@ -325,6 +326,9 @@ body {
 			margin-left: auto;
 			margin-right: var(--side-space);
 		}
+	}
+	.banner {
+		min-height: calc(100vh - 100px);
 	}
 	.footer {
 		background-color: transparent;

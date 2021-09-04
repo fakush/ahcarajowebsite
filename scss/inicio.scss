@@ -107,6 +107,7 @@
 
 @media screen and (min-width: map-get($breakpoints, md)) {
 	.banner--home {
+		min-height: auto;
 		.banner {
 			&__content {
 				padding: 135px var(--side-space) 120px var(--side-space);
@@ -129,6 +130,9 @@
 	}
 }
 @media screen and (min-width: map-get($breakpoints, lg)) {
+	.banner--home {
+		min-height: auto;
+	}
 	.section-wrapper {
 		margin-top: var(--test);
 		padding: 0 var(--side-space) var(--space-between-items) var(--side-space);

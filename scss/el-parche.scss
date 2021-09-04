@@ -17,7 +17,6 @@
 
 @media screen and (min-width: map-get($breakpoints, md)) {
 	.banner--el-parche {
-		min-height: calc(100vh - 78px); // Header height
 		.banner {
 			&__content {
 				padding-top: 88px;
@@ -31,10 +30,5 @@
 				font-size: $font-size-4;
 			}
 		}
-	}
-}
-@media screen and (min-width: map-get($breakpoints, lg)) {
-	.banner--el-parche {
-		min-height: calc(100vh - 100px);
 	}
 }

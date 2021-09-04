@@ -259,6 +259,7 @@ body {
 @media screen and (min-width: 768px) {
   .banner {
     display: flex;
+    min-height: calc(100vh - 78px);
   }
   .banner__img {
     width: 100%;
@@ -331,6 +332,10 @@ body {
     gap: var(--space-between-items);
     margin-left: auto;
     margin-right: var(--side-space);
+  }
+
+  .banner {
+    min-height: calc(100vh - 100px);
   }
 
   .footer {
@@ -486,6 +491,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .banner--home {
+    min-height: auto;
+  }
   .banner--home .banner__content {
     padding: 135px var(--side-space) 120px var(--side-space);
   }
@@ -506,6 +514,10 @@ body {
   }
 }
 @media screen and (min-width: 992px) {
+  .banner--home {
+    min-height: auto;
+  }
+
   .section-wrapper {
     margin-top: var(--test);
     padding: 0 var(--side-space) var(--space-between-items) var(--side-space);
@@ -938,9 +950,6 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .banner--el-parche {
-    min-height: calc(100vh - 78px);
-  }
   .banner--el-parche .banner__content {
     padding-top: 88px;
     padding-bottom: 34px;
@@ -951,11 +960,6 @@ body {
   .banner--el-parche .banner__text {
     width: 400px;
     font-size: 16px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .banner--el-parche {
-    min-height: calc(100vh - 100px);
   }
 }
 .faq {
