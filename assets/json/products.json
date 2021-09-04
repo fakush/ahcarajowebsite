@@ -2,6 +2,7 @@
   {
     "id": 1,
     "nombre": "camiseta",
+	"categoria": "ropa",
     "imagenes": "4",
     "producto": "Camiseta",
     "precio": "$45.000",
@@ -39,6 +40,7 @@
   {
     "id": 2,
     "nombre": "buzo",
+	"categoria": "ropa",
     "imagenes": "4",
     "producto": "Buzo",
     "precio": "$65.000",
@@ -74,6 +76,7 @@
   {
     "id": 3,
     "nombre": "chaqueta",
+	"categoria": "ropa",
     "imagenes": "3",
     "producto": "Chaqueta Resiliente",
     "precio": "$70.000",
@@ -111,6 +114,7 @@
   {
     "id": 4,
     "nombre": "agenda",
+	"categoria": "agendas",
     "imagenes": "4",
     "producto": "Agenda",
     "precio": "$45.000",
@@ -123,6 +127,7 @@
   {
     "id": 5,
     "nombre": "pocillo",
+	"categoria": "pocillos",
     "imagenes": "4",
     "producto": "Pocillo",
     "precio": "$45.000",
@@ -137,6 +142,7 @@
   {
     "id": 6,
     "nombre": "cafe",
+	"categoria": "kit cafeteros",
     "imagenes": "3",
     "producto": "Café ¡Ah, Carajo!",
     "precio": "$20.000",

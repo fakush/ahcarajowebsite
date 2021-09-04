@@ -74,7 +74,7 @@ const fillCard = (data) => {
   // Creo una card para cada producto.
   for (let i = 0; i < data.length; i++) {
     card += `
-    <article class="p-card" data-aos="fade-up">
+    <article class="p-card" category="${data[i].categoria}">
 			<div class="p-card__carousel carousel slide carousel-fade" id="p-card-${
         data[i].id
       }" data-ride="carousel">
@@ -225,11 +225,24 @@ const fillModales = (data) => {
   cuerpoModales.innerHTML = modales;
 };
 
+// -------Order product cards depending of the clicked category in 'inicio'-------
+const orderCardsInCategories = () => {
+	const targetCategory = localStorage.getItem('clickedCategory');
+	if (targetCategory) {
+		const productCards = document.querySelectorAll(`[category="${targetCategory}"]`);
+		productCards.forEach((pCard) => {
+			pCard.style.order = "-1";
+			localStorage.removeItem('clickedCategory');
+		});
+	}
+}
+
 window.onload = function () {
-  fetch('../assets/json/products.json')
-    .then((response) => response.json())
-    .then((data) => {
-      fillCard(data);
-      fillModales(data);
-    });
+	fetch('../assets/json/products.json')
+	  .then((response) => response.json())
+	  .then((data) => {
+		fillCard(data);
+		fillModales(data);
+		orderCardsInCategories();
+	  });
 };
