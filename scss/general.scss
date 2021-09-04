@@ -136,8 +136,10 @@ body {
 		text-decoration: none;
 		border-radius: 12px;
 		box-shadow: $shadow-2;
+		transition: box-shadow ease-in-out 0.15s;
 		&:hover {
 			color: $white;
+			box-shadow: $shadow-2-hover-light;
 		}
 	}
 }
@@ -347,6 +349,10 @@ body {
 			margin: 0;
 			padding: 15px 14px;
 			filter: drop-shadow($shadow-2);
+			transition: box-shadow ease-in-out 0.15s;
+			&:hover {
+				filter: drop-shadow($shadow-2-hover-light);
+			}
 		}
 		&__whatsapp-icon {
 			width: 40px;

@@ -62,9 +62,13 @@
 		padding: var(--space-between-items) 0;
 		border: 1px solid $principal-dark;
 		border-radius: 1rem;
-		box-shadow: $shadow-2;
 		background-image: $product-preview-gradient, url('../assets/layout/pattern.png');
 		background-color: $white;
+		box-shadow: $shadow-2;
+		transition: box-shadow ease-in-out 0.15s;
+		&:hover {
+			box-shadow: $shadow-2-hover;
+		}
 	}
 	&__product-img {
 		max-height: 88px;
@@ -181,7 +185,6 @@
 		}
 		&__product-text {
 			align-self: flex-start;
-			margin-top: 10px;
 		}
 		&__product-title {
 			margin-bottom: 8px;

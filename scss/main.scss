@@ -22,14 +22,17 @@ $font-size-10: 17px;
 $font-size-11: 15px;
 $font-size-12: 9px;
 
-$shadow-1: 0px 1px 8px rgba(0, 0, 0, 0.25);
-$shadow-2: 2px 4px 8px rgba(0, 0, 0, 0.25);
-$shadow-3: 2px -3px 8px rgba(0, 0, 0, 0.25);
+$shadow-1: 0px 1px 8px hsla(0, 0%, 0%, 0.25);
+$shadow-2: 2px 4px 8px hsla(0, 0%, 0%, 0.25);
+$shadow-2-hover: 4px 8px 16px hsla(0, 0%, 0%, 0.25);
+$shadow-2-hover-light: 4px 6px 16px hsla(0, 0%, 0%, 0.2);
+$shadow-3: 2px -3px 8px hsla(0, 0%, 0%, 0.25);
+
 $product-preview-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 70.83%);
 
-// These media queries are used in the JS and HTML files.
+// These breakpoints are used in the JS files.
 // If you want to change them, use a searcher with the px, example '992px', to change all the coincidences
-$breakpoints: (
+$breakpoints: ( // Same breakpoints used by Bootstrap
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
