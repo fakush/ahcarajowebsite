@@ -119,7 +119,7 @@
       }
     ],
     "talles": [
-      ["", "contorno", "Brazo", "Largo"],
+      ["", "Contorno", "Brazo", "Largo"],
       ["S", 95, 63, 64],
       ["M", 100, 63, 64],
       ["L", 110, 65, 68],
