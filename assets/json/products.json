@@ -129,10 +129,7 @@
     "bajada": "Pocillos elaborados en cerámica y estampados   con nuestros diseños de frases inspiradas en Colombia, en el color que elijas. Empacado en caja kraft y con cinta decorativa.",
     "tag": "¡Personalízalo!",
     "detalle": [
-      "<img class='p-card__details-icon' src='../assets/icons/weight-icon.svg' alt='icono hoja de arbol'> 11 onzas",
-      "Personalízalo con tu frase colombiana favorita",
-      "Incluye envío en Bogotá",
-      "Empacado en caja kraft y con cinta decorativa"
+      "<img class='p-card__details-icon' src='../assets/icons/weight-icon.svg' alt='icono hoja de arbol'> 11 onzas"
     ],
     "talles": false,
     "colores": []
