@@ -280,6 +280,7 @@ window.onload = function () {
     .then((data) => {
       fillCard(data);
       fillModales(data);
+	  $('.carousel').carousel();
       orderCardsInCategories();
 	  if ($moreInfo) {
 		  showMoreInfo();
