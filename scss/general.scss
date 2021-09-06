@@ -129,6 +129,7 @@ body {
     font-size: $font-size-5;
   }
   &__link {
+    @include body-text-highlighted;
     display: table; // width max-c + p absolute not working in Safari 12.0
     position: absolute;
     right: var(--side-space);
@@ -136,8 +137,6 @@ body {
     padding: 0.5rem;
     background-color: $acento;
     color: $white;
-    font-size: $font-size-5;
-    font-weight: 600;
     text-decoration: none;
     border-radius: 12px;
     box-shadow: $shadow-2;
@@ -177,8 +176,8 @@ body {
 }
 .more-info {
   &__text {
+    @include body-text;
     color: $black;
-    font-size: $font-size-5;
     text-align: center;
   }
   &__link {

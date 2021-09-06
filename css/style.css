@@ -143,6 +143,8 @@ body {
   font-size: 13px;
 }
 .banner__link {
+  font-size: 13px;
+  font-weight: 600;
   display: table;
   position: absolute;
   right: var(--side-space);
@@ -150,12 +152,15 @@ body {
   padding: 0.5rem;
   background-color: #d49b16;
   color: #ffffff;
-  font-size: 13px;
-  font-weight: 600;
   text-decoration: none;
   border-radius: 12px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
   transition: box-shadow ease-in-out 0.15s;
+}
+@media screen and (min-width: 992px) {
+  .banner__link {
+    font-size: 16px;
+  }
 }
 .banner__link:hover {
   color: #ffffff;
@@ -191,9 +196,15 @@ body {
 }
 
 .more-info__text {
-  color: #303030;
   font-size: 13px;
+  font-weight: 400;
+  color: #303030;
   text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .more-info__text {
+    font-size: 16px;
+  }
 }
 .more-info__link {
   color: #d49b16;
