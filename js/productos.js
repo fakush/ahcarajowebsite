@@ -23,30 +23,30 @@ const fillCard = (data) => {
     const iconTemplate = (url, alt) => `<img class="p-card__details-icon" src="${url}" alt="${alt}">`;
     const icons = {
       'hoja de arbol': {
-        url: "../assets/icons/tree-leaf-icon.svg",
-        alt: "icono hoja de arbol"
+        url: '../assets/icons/tree-leaf-icon.svg',
+        alt: 'icono hoja de arbol',
       },
-      'reciclaje': {
-        url: "../assets/icons/recycling-icon.svg",
-        alt: "icono reciclaje"
+      reciclaje: {
+        url: '../assets/icons/recycling-icon.svg',
+        alt: 'icono reciclaje',
       },
-      'libro': {
-        url: "../assets/icons/book-icon.svg",
-        alt: "icono libro"
+      libro: {
+        url: '../assets/icons/book-icon.svg',
+        alt: 'icono libro',
       },
-      'mapa': {
-        url: "../assets/icons/map-icon.svg",
-        alt: "icono mapa"
+      mapa: {
+        url: '../assets/icons/map-icon.svg',
+        alt: 'icono mapa',
       },
-      'peso': {
-        url: "../assets/icons/weight-icon.svg",
-        alt: "icono peso"
-      }
-    }
+      peso: {
+        url: '../assets/icons/weight-icon.svg',
+        alt: 'icono peso',
+      },
+    };
     let punteo = ``;
     if (detalles.length) {
       for (let i = 0; i < detalles.length; i++) {
-        const icon =  icons[detalles[i].icono];  
+        const icon = icons[detalles[i].icono];
         punteo += `
           <li class="p-card__details-item">
             ${icon ? iconTemplate(icon.url, icon.alt) : ''}
@@ -80,7 +80,7 @@ const fillCard = (data) => {
   const colores = (data, nombre) => {
     if (data.length > 0) {
       let aux = ``;
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 3; i++) {
         aux += `
 					<li class="p-card__info-item" style="background-color: ${data[i].hexa}; border: 1px solid #303030;"></li>
 				`;
@@ -90,7 +90,7 @@ const fillCard = (data) => {
 						  <h4 class="p-card__info-title">Colores</h4>
 						  <ul class="p-card__info-list p-card__info-list--colors">
   							${aux}
-	  						<li class="p-card__info-item  p-card__info-item--more-colors">+${data.length - 5}</li>
+	  						<li class="p-card__info-item  p-card__info-item--more-colors">+${data.length - 3}</li>
 		  				</ul>
 					</button>
 	  `;
@@ -100,7 +100,9 @@ const fillCard = (data) => {
   };
   // Creo una card para cada producto.
   for (let i = 0; i < data.length; i++) {
-    const hasDetailIcons = data[i].detalles.some((detail) => (detail.icono === "ninguno" || !detail.icono) ? false : true);
+    const hasDetailIcons = data[i].detalles.some((detail) =>
+      detail.icono === 'ninguno' || !detail.icono ? false : true
+    );
     card += `
     <article class="p-card" category="${data[i].categoria}">
 			<div class="p-card__carousel carousel slide carousel-fade" id="p-card-${
@@ -257,22 +259,22 @@ const fillModales = (data) => {
 
 // -------Order product cards depending of the clicked category in 'inicio'-------
 const orderCardsInCategories = () => {
-	const targetCategory = localStorage.getItem('clickedCategory');
-	if (targetCategory) {
-		const productCards = document.querySelectorAll(`[category="${targetCategory}"]`);
-		productCards.forEach((pCard) => {
-			pCard.style.order = "-1";
-			localStorage.removeItem('clickedCategory');
-		});
-	}
-}
+  const targetCategory = localStorage.getItem('clickedCategory');
+  if (targetCategory) {
+    const productCards = document.querySelectorAll(`[category="${targetCategory}"]`);
+    productCards.forEach((pCard) => {
+      pCard.style.order = '-1';
+      localStorage.removeItem('clickedCategory');
+    });
+  }
+};
 
 window.onload = function () {
-	fetch('../assets/json/products.json')
-	  .then((response) => response.json())
-	  .then((data) => {
-		fillCard(data);
-		fillModales(data);
-		orderCardsInCategories();
-	  });
+  fetch('../assets/json/products.json')
+    .then((response) => response.json())
+    .then((data) => {
+      fillCard(data);
+      fillModales(data);
+      orderCardsInCategories();
+    });
 };
