@@ -102,7 +102,7 @@ const fillCard = (data) => {
   for (let i = 0; i < data.length; i++) {
 	  const hasDetailIcons = data[i].detalles.some((detail) => (detail.icono && detail.icono !== 'ninguno'));
     card += `
-    <article class="p-card" category="${data[i].categoria}">
+    <article class="p-card" category="${data[i].categoria}" data-aos="fade-up">
 			<div class="p-card__carousel carousel slide carousel-fade" id="p-card-${
         data[i].id
       }" data-ride="carousel">
@@ -271,6 +271,9 @@ const orderCardsInCategories = () => {
   }
 };
 
+const $moreInfo = document.querySelector('.more-info');
+const showMoreInfo = () => $moreInfo.style.display = null;
+
 window.onload = function () {
   fetch('../assets/json/products.json')
     .then((response) => response.json())
@@ -278,5 +281,8 @@ window.onload = function () {
       fillCard(data);
       fillModales(data);
       orderCardsInCategories();
+	  if ($moreInfo) {
+		  showMoreInfo();
+	  }
     });
 };
