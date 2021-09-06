@@ -20,7 +20,7 @@ const fillPreguntas = (data) => {
 
   for (let i = 0; i < data.length; i++) {
     preguntas += `
-    <div class="faq__collapsable">
+    <div class="faq__collapsable" data-aos="fade-up" data-aos-delay="${i*50}" data-aos-anchor-placement="#accordion">
           <div class="faq__collapsable-header" id="heading${i}">
             <button
               class="faq__collapsable-btn"
@@ -42,7 +42,7 @@ const fillPreguntas = (data) => {
             id="collapse${i}"
             class="collapse"
             aria-labelledby="heading${i}"
-            data-parent="#accordionExample"
+            data-parent="#accordion"
           >
             <div class="faq__collapsable-body">
                 ${contenidoSeccion(data[i].contenido)}
