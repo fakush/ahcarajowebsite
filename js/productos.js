@@ -100,9 +100,7 @@ const fillCard = (data) => {
   };
   // Creo una card para cada producto.
   for (let i = 0; i < data.length; i++) {
-    const hasDetailIcons = data[i].detalles.some((detail) =>
-      detail.icono === 'ninguno' || !detail.icono ? false : true
-    );
+	  const hasDetailIcons = data[i].detalles.some((detail) => (detail.icono && detail.icono !== 'ninguno'));
     card += `
     <article class="p-card" category="${data[i].categoria}">
 			<div class="p-card__carousel carousel slide carousel-fade" id="p-card-${
@@ -129,14 +127,18 @@ const fillCard = (data) => {
 					<h3 class="p-card__title">${data[i].producto}</h3>
 					<p class="p-card__price">${data[i].precio}</p>
 				</div>
-				<ul class="p-card__details-list ${hasDetailIcons ? 'p-card__details-list--with-icons' : ''}">
-				  ${punteo(data[i].detalles)}
-				</ul>
-				<p class="p-card__details-text">${data[i].bajada}</p>
-				<div class="p-card__bottom-info">
-          ${talles(data[i].talles, data[i].nombre)} 
-          ${colores(data[i].colores, data[i].nombre)}
-        </div>
+				${data[i].detalles ?
+					`<ul class="p-card__details-list ${hasDetailIcons ? 'p-card__details-list--with-icons' : ''}">
+						${punteo(data[i].detalles)}
+					</ul>`
+				: ''}
+				${data[i].bajada ? `<p class="p-card__details-text">${data[i].bajada}</p>` : ''}
+				${(data[i].talles) || (data[i].colores.length) ?
+					`<div class="p-card__bottom-info">
+						${(data[i].talles) ? talles(data[i].talles, data[i].nombre) : ''}
+						${(data[i].colores) ? colores(data[i].colores, data[i].nombre) : ''}
+					</div>`
+				: ''}
 			</div>
 		</article>
   `;
