@@ -1,11 +1,11 @@
 const vinculoFacebook = document.getElementById('facebookLink');
 const vinculoInstagram = document.getElementById('InstagramLink');
-const numeroWhatsapp = document.getElementById('whatsappNumber');
-const textoWhastapp = document.getElementById('whatsappText');
+const vinculoWhatsapp = document.getElementById('whatsappLink');
 
 const fillVinculos = (data) => {
   vinculoFacebook.href = data.facebook;
   vinculoInstagram.href = data.instagram;
+  vinculoWhatsapp.href = data.whatsapp;
 };
 
 window.onload = function () {
