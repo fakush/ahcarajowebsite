@@ -4,10 +4,12 @@ const contenidoSeccion = (data) => {
   aux = ``;
   for (let i = 0; i < data.length; i++) {
     aux += `
-            <h4 class="faq__collapsable-subtitle">${data[i].pregunta}</h4>
-              <p class="faq__collapsable-text">
-                ${data[i].respuesta}
-            </p>
+			<div>
+				<h4 class="faq__collapsable-subtitle">${data[i].pregunta}</h4>
+				<p class="faq__collapsable-text">
+					${data[i].respuesta}
+				</p>
+			</div>
         `;
   }
   return aux;

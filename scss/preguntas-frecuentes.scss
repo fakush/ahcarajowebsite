@@ -1,29 +1,29 @@
 .faq {
-	padding: 1.5rem var(--side-space) 70px var(--side-space);
+	padding: 2.5rem var(--side-space) 70px var(--side-space);
 	&__title {
 		color: $principal-dark;
 		font-size: $font-size-3;
 		font-weight: 700;
-		margin-bottom: 1rem;
+		margin-bottom: 1.2rem;
 	}
 	&__collapsable {
 		border-radius: 16px;
 		background-color: transparent;
 		border: 0;
-		margin-bottom: 1rem;
+		margin-bottom: 1.2rem;
 	}
 	&__collapsable-header {
 		padding: 0;
 		border: 1px solid #318B7C;
 		background: white;
-		border-radius: 16px !important;
+		border-radius: 1rem !important;
 	}
 	&__collapsable-btn {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
-		padding: 12px 16px;
+		padding: 1rem;
 		border: 0;
 		background-color: transparent;
 		&[aria-expanded="true"] {
@@ -44,22 +44,34 @@
 	}
 	&__collapsable-body {
 		display: grid;
-		row-gap: 1rem;
-		padding: 1rem 1rem 0 1rem;
+		row-gap: 2rem;
+		padding: 2rem 1rem 0 1rem;
 	}
 	&__collapsable-subtitle {
 		@include body-text-highlighted;
+		margin-bottom: var(--space-between-items);
 	}
 	&__collapsable-text {
 		@include body-text;
 	}
 }
 
-@media screen and (min-width: map-get($breakpoints, md)) {
+@media screen and (min-width: map-get($breakpoints, lg)) {
 	.faq {
-		&__container {
-			width: min(760px, 70%);
-			margin: 0 auto;
+		padding: 4rem 142px 70px 240px;
+		&__collapsable {
+			margin-bottom: 1.5rem;
 		}
+		&__collapsable-btn {
+			padding: 20px;
+		}
+		&__collapsable-title {
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+@media screen and (min-width: map-get($breakpoints, xxl)) {
+	.faq {
+		padding-left: 270px;
 	}
 }

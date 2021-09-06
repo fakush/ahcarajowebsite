@@ -1024,32 +1024,32 @@ body {
   }
 }
 .faq {
-  padding: 1.5rem var(--side-space) 70px var(--side-space);
+  padding: 2.5rem var(--side-space) 70px var(--side-space);
 }
 .faq__title {
   color: #318b7c;
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 .faq__collapsable {
   border-radius: 16px;
   background-color: transparent;
   border: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 .faq__collapsable-header {
   padding: 0;
   border: 1px solid #318B7C;
   background: white;
-  border-radius: 16px !important;
+  border-radius: 1rem !important;
 }
 .faq__collapsable-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 12px 16px;
+  padding: 1rem;
   border: 0;
   background-color: transparent;
 }
@@ -1074,12 +1074,13 @@ body {
 }
 .faq__collapsable-body {
   display: grid;
-  row-gap: 1rem;
-  padding: 1rem 1rem 0 1rem;
+  row-gap: 2rem;
+  padding: 2rem 1rem 0 1rem;
 }
 .faq__collapsable-subtitle {
   font-size: 13px;
   font-weight: 600;
+  margin-bottom: var(--space-between-items);
 }
 @media screen and (min-width: 992px) {
   .faq__collapsable-subtitle {
@@ -1096,10 +1097,23 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .faq__container {
-    width: min(760px, 70%);
-    margin: 0 auto;
+@media screen and (min-width: 992px) {
+  .faq {
+    padding: 4rem 142px 70px 240px;
+  }
+  .faq__collapsable {
+    margin-bottom: 1.5rem;
+  }
+  .faq__collapsable-btn {
+    padding: 20px;
+  }
+  .faq__collapsable-title {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .faq {
+    padding-left: 270px;
   }
 }
 
