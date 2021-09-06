@@ -612,7 +612,7 @@ body {
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
 }
 .p-card__img {
-  height: 320px;
+  height: 310px;
   background-size: cover;
   background-position: center;
   border-radius: 1rem 1rem 0 0;
