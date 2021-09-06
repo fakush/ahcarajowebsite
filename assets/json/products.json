@@ -2,25 +2,25 @@
   {
     "id": 1,
     "nombre": "camiseta",
-	"categoria": "ropa",
+    "categoria": "ropa",
     "imagenes": "4",
     "producto": "Camiseta",
     "precio": "$45.000",
     "bajada": "",
     "tag": "¡Personalízalo!",
     "detalles": [
-		{
-			"icono": "ninguno",
-			"texto": "100% algodón"
-		},
-		{
-			"icono": "ninguno",
-			"texto": "Cuello V o Redondo"
-		},
-		{
-			"icono": "ninguno",
-			"texto": "Empacada en una tula ecológica"
-		}
+      {
+        "icono": "ninguno",
+        "texto": "100% algodón"
+      },
+      {
+        "icono": "ninguno",
+        "texto": "Cuello V o Redondo"
+      },
+      {
+        "icono": "ninguno",
+        "texto": "Empacada en una tula ecológica"
+      }
     ],
     "talles": [
       ["", "Ancho", "Largo", ""],
@@ -30,20 +30,11 @@
       ["XL", 58, 74, ""]
     ],
     "colores": [
-      { "nombre": "Black", "hexa": "#000000" },
-      { "nombre": "Gray", "hexa": "#808080" },
-      { "nombre": "White", "hexa": "#FFFFFF" },
-      { "nombre": "Purple", "hexa": "#7F01B1" },
-      { "nombre": "Lilac", "hexa": "#D3A9CD" },
-      { "nombre": "Deep Blush", "hexa": "#E5709D" },
-      { "nombre": "Rose", "hexa": "#F91490" },
-      { "nombre": "Deep Koamaru", "hexa": "#162C88" },
-      { "nombre": "Apple", "hexa": "#4CA82D" },
-      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
-      { "nombre": "Thunderbird", "hexa": "#D3171E" },
-      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
-      { "nombre": "Ice Cold", "hexa": "#B2F4E8" },
-      { "nombre": "Blaze Orange", "hexa": "#FA6602" }
+      { "nombre": "Azul Oscuro", "hexa": "#0D193F" },
+      { "nombre": "Blanco", "hexa": "#FFFFFF" },
+      { "nombre": "Negro", "hexa": "#303030" },
+      { "nombre": "Gris claro", "hexa": "#A5A4A4" },
+      { "nombre": "Vinotinto", "hexa": "#72051A" }
     ]
   },
   {
@@ -79,16 +70,11 @@
       ["XL", 66, 77, 74]
     ],
     "colores": [
-      { "nombre": "Purple", "hexa": "#7F01B1" },
-      { "nombre": "Lilac", "hexa": "#D3A9CD" },
-      { "nombre": "Deep Blush", "hexa": "#E5709D" },
-      { "nombre": "Rose", "hexa": "#F91490" },
-      { "nombre": "Deep Koamaru", "hexa": "#162C88" },
-      { "nombre": "Apple", "hexa": "#4CA82D" },
-      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
-      { "nombre": "Thunderbird", "hexa": "#D3171E" },
-      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
-      { "nombre": "Ice Cold", "hexa": "#B2F4E8" }
+      { "nombre": "Azul Oscuro", "hexa": "#0D193F" },
+      { "nombre": "Blanco", "hexa": "#FFFFFF" },
+      { "nombre": "Negro", "hexa": "#303030" },
+      { "nombre": "Verde Menta", "hexa": "#88DAC2" },
+      { "nombre": "Rosado bebé", "hexa": "#F9C5E2" }
     ]
   },
   {
@@ -127,18 +113,11 @@
       ["XXL", 125, 66, 74]
     ],
     "colores": [
-      { "nombre": "Black", "hexa": "#000000" },
-      { "nombre": "Gray", "hexa": "#808080" },
-      { "nombre": "White", "hexa": "#FFFFFF" },
-      { "nombre": "Purple", "hexa": "#7F01B1" },
-      { "nombre": "Lilac", "hexa": "#D3A9CD" },
-      { "nombre": "Deep Blush", "hexa": "#E5709D" },
-      { "nombre": "Rose", "hexa": "#F91490" },
-      { "nombre": "Ripe Lemon", "hexa": "#F3CA1C" },
-      { "nombre": "Thunderbird", "hexa": "#D3171E" },
-      { "nombre": "Cornflower Blue", "hexa": "#4385F5" },
-      { "nombre": "Ice Cold", "hexa": "#B2F4E8" },
-      { "nombre": "Blaze Orange", "hexa": "#FA6602" }
+      { "nombre": "Azul Oscuro", "hexa": "#0D193F" },
+      { "nombre": "Blanco", "hexa": "#FFFFFF" },
+      { "nombre": "Negro", "hexa": "#303030" },
+      { "nombre": "Gris claro", "hexa": "#A5A4A4" },
+      { "nombre": "Vinotinto", "hexa": "#72051A" }
     ]
   },
   {
@@ -194,7 +173,7 @@
     "nombre": "cafe",
     "categoria": "kit cafeteros",
     "imagenes": "3",
-    "producto": "Café ¡Ah, Carajo!",
+    "producto": "Kit Cafetero",
     "precio": "$20.000",
     "bajada": "Aquí le ofrecemos nuestro tintico ¡Ah,Carajo! por 250 gr de origen 100% Colombiano con sabor a chocolate, frutos secos, frutos rojos, caña de azúcar y una dulce fragancia a panela y nuez de las montañas de nuestro país.",
     "tag": "Incluye pocillo personalizado",
