@@ -1030,13 +1030,13 @@ body {
   color: #318b7c;
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 .faq__collapsable {
   border-radius: 16px;
   background-color: transparent;
   border: 0;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
 }
 .faq__collapsable-header {
   padding: 0;
@@ -1080,7 +1080,7 @@ body {
 .faq__collapsable-subtitle {
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: var(--space-between-items);
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 992px) {
   .faq__collapsable-subtitle {
@@ -1106,9 +1106,6 @@ body {
   }
   .faq__collapsable-btn {
     padding: 20px;
-  }
-  .faq__collapsable-title {
-    margin-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 1440px) {
