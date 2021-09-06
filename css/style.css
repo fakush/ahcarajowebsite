@@ -599,7 +599,7 @@ body {
   .product-preview__product-description {
     display: block;
     color: #303030;
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .payment-means {
@@ -1057,10 +1057,15 @@ body {
   transform: scaleY(-1);
 }
 .faq__collapsable-title {
-  color: #303030;
   font-size: 13px;
   font-weight: 600;
+  color: #303030;
   text-align: left;
+}
+@media screen and (min-width: 992px) {
+  .faq__collapsable-title {
+    font-size: 16px;
+  }
 }
 .faq__collapsable-arrow {
   width: 14px;
@@ -1072,11 +1077,23 @@ body {
   row-gap: 1rem;
   padding: 1rem 1rem 0 1rem;
 }
-.faq__collapsable-subtitle, .faq__collapsable-text {
-  font-size: 13px;
-}
 .faq__collapsable-subtitle {
+  font-size: 13px;
   font-weight: 600;
+}
+@media screen and (min-width: 992px) {
+  .faq__collapsable-subtitle {
+    font-size: 16px;
+  }
+}
+.faq__collapsable-text {
+  font-size: 13px;
+  font-weight: 400;
+}
+@media screen and (min-width: 992px) {
+  .faq__collapsable-text {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 768px) {

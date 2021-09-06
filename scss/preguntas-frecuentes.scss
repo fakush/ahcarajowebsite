@@ -33,9 +33,8 @@
 		}
 	}
 	&__collapsable-title {
+		@include body-text-highlighted;
 		color: $black;
-		font-size: $font-size-5;
-		font-weight: 600;
 		text-align: left;
 	}
 	&__collapsable-arrow {
@@ -48,12 +47,11 @@
 		row-gap: 1rem;
 		padding: 1rem 1rem 0 1rem;
 	}
-	&__collapsable-subtitle,
-	&__collapsable-text {
-		font-size: $font-size-5;
-	}
 	&__collapsable-subtitle {
-		font-weight: 600;
+		@include body-text-highlighted;
+	}
+	&__collapsable-text {
+		@include body-text;
 	}
 }
 
