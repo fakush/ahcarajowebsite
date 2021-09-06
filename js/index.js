@@ -83,6 +83,6 @@ if ($navLinks.length && $underline) {
 	$navLinks.forEach(($link) => $link.addEventListener("click", activateThisLink));
 	window.addEventListener('resize', underlineToActive);
 }
-fetch('../assets/json/vinculos.json')
+fetch('/assets/json/vinculos.json')
 	.then((response) => response.json())
 	.then((data) => fillVinculos(data));
