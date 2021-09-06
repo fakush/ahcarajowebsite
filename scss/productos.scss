@@ -1,12 +1,12 @@
 $card-radius: 1rem;
 
 .products {
-	display: grid;
-	grid-template-columns: 1fr;
-	justify-content: center;
-	row-gap: var(--space-between-blocks);
-	column-gap: var(--space-between-items);
-	padding: 40px var(--side-space) var(--space-between-blocks) var(--side-space);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  row-gap: var(--space-between-blocks);
+  column-gap: var(--space-between-items);
+  padding: 40px var(--side-space) var(--space-between-blocks) var(--side-space);
 }
 .p-card {
 	display: flex;
@@ -15,10 +15,10 @@ $card-radius: 1rem;
 	border-radius: $card-radius;
 	box-shadow: $shadow-2;
 	&__img {
-		height: 210px;
-		background-size: cover;
-		background-position: center;
-		border-radius: $card-radius $card-radius 0 0;
+	  height: 310px;
+	  background-size: cover;
+	  background-position: center;
+	  border-radius: $card-radius $card-radius 0 0;
 	}
 	&__label {
 		position: absolute;
@@ -176,52 +176,52 @@ $card-radius: 1rem;
 	}
 }
 .more-info--products {
-	margin-bottom: 86px;
+  margin-bottom: 86px;
 }
 
 @media screen and (min-width: map-get($breakpoints, sm)) {
-	.p-card__body {
-		padding: 24px;
-	}
+  .p-card__body {
+    padding: 24px;
+  }
 }
 @media screen and (min-width: map-get($breakpoints, md)) {
-	.products {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	.p-modal {
-		&__color-list {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .p-modal {
+    &__color-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 @media screen and (min-width: map-get($breakpoints, lg)) {
-	.products {
-		padding-right: var(--side-space);
-		padding-left: var(--side-space);
-	}
-	.p-card {
-		&__info-item {
-			width: 1.5rem;
-			height: 1.5rem;
-			&--size,
-			&--more-colors {
-				font-size: $font-size-6;
-			}
-		}
-	}
-	.more-info--products {
-		margin-bottom: 38px;
-	}
+  .products {
+    padding-right: var(--side-space);
+    padding-left: var(--side-space);
+  }
+  .p-card {
+    &__info-item {
+      width: 1.5rem;
+      height: 1.5rem;
+      &--size,
+      &--more-colors {
+        font-size: $font-size-6;
+      }
+    }
+  }
+  .more-info--products {
+    margin-bottom: 38px;
+  }
 }
 @media screen and (min-width: map-get($breakpoints, xxl)) {
-	.products {
-		grid-template-columns: repeat(3, 1fr);
-	}
-	.more-info--products {
-		width: max-content;
-		margin-left: var(--side-space);
-	}
-	.more-info--products {
-		margin-bottom: 76px;
-	}
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .more-info--products {
+    width: max-content;
+    margin-left: var(--side-space);
+  }
+  .more-info--products {
+    margin-bottom: 76px;
+  }
 }

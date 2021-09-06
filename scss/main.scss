@@ -1,9 +1,9 @@
-$principal: #4DDCC3;
-$principal-dark: #318B7C;
-$acento: #D49B16;
-$white: #FFFFFF;
-$light-gray: #F6F6F6;
-$gray: #9A9A9A;
+$principal: #4ddcc3;
+$principal-dark: #318b7c;
+$acento: #d49b16;
+$white: #ffffff;
+$light-gray: #f6f6f6;
+$gray: #9a9a9a;
 $black: #303030;
 
 $font-family: 'Work Sans';
@@ -27,30 +27,32 @@ $shadow-2: 2px 4px 8px hsla(0, 0%, 0%, 0.25);
 $shadow-2-hover: 4px 8px 16px hsla(0, 0%, 0%, 0.25);
 $shadow-2-hover-light: 4px 6px 16px hsla(0, 0%, 0%, 0.2);
 $shadow-3: 2px -3px 8px hsla(0, 0%, 0%, 0.25);
+$shadow-4: 2px -3px 8px hsla(0, 0%, 0%, 0.5);
 
-$product-preview-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 70.83%);
+$product-preview-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 70.83%);
 
 // These breakpoints are used in the JS files.
 // If you want to change them, use a searcher with the px, example '992px', to change all the coincidences
-$breakpoints: ( // Same breakpoints used by Bootstrap
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px,
-	xxl: 1440px
+$breakpoints: (
+  // Same breakpoints used by Bootstrap
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
 );
 
 :root {
-	--side-space: 20px;
-	--space-between-blocks: 24px;
-	--space-between-items: 16px;
+  --side-space: 20px;
+  --space-between-blocks: 24px;
+  --space-between-items: 16px;
 }
 @media screen and (min-width: map-get($breakpoints, lg)) {
-	:root {
-		--side-space: 54px;
-		--space-between-blocks: 40px;
-		--space-between-items: 24px;
-	}
+  :root {
+    --side-space: 54px;
+    --space-between-blocks: 40px;
+    --space-between-items: 24px;
+  }
 }
 @mixin body-text {
 	font-size: 13px;
