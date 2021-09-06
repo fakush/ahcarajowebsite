@@ -624,19 +624,21 @@ body {
   z-index: 2;
   width: 103px;
   padding: 4px 11px;
-  background-color: #318b7c;
-  color: #ffffff;
+  background-color: #318B7C;
+  color: #FFFFFF;
   font-size: 11px;
   text-align: right;
   border-radius: 0.5rem 0 0 0.5rem;
 }
 .p-card__body {
-  display: grid;
-  grid-auto-rows: max-content;
-  row-gap: 1rem;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 18px 12px;
   border-radius: 0 0 1rem 1rem;
+}
+.p-card__body > *:not(:last-child) {
+  margin-bottom: 1rem;
 }
 .p-card__header {
   display: flex;
@@ -645,14 +647,9 @@ body {
   width: 100%;
 }
 .p-card__title {
-<<<<<<< HEAD
-  color: #318B7C;
+  color: #318b7c;
   font-size: 18px;
   font-weight: 500;
-=======
-  color: #318b7c;
-  font-size: 20px;
->>>>>>> 9ffa9968b625e63e6521240a012f2b7941e68ba4
   font-weight: 700;
 }
 @media screen and (min-width: 992px) {
@@ -690,11 +687,11 @@ body {
   width: 1rem;
 }
 .p-card__bottom-info {
-  align-self: end;
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
   column-gap: var(--space-between-blocks);
+  margin-top: auto;
 }
 .p-card__info-box {
   padding: 0;
@@ -768,7 +765,7 @@ body {
   width: 14px;
 }
 .p-modal__table-row {
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
 }
 .p-modal__table-row--last {
   border-bottom: 0;
