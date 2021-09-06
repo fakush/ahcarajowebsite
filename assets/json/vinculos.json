@@ -1,5 +1,8 @@
 {
   "facebook": "https://www.facebook.com/ahcarajo.co/",
   "instagram": "https://www.instagram.com/ahcarajo.co/",
-  "whatsapp": "https://api.whatsapp.com/send/?phone=573114118013&text=%C2%A1Hola!%20Me%20interesa%20saber%20m%C3%A1s%20de%20sus%20productos%20bacanos."
+  "whatsapp": {
+	  "numero": "573114118013",
+	  "mensaje": "¡Hola! Me interesa saber más de sus productos bacanos."
+  }
 }

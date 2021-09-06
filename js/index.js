@@ -82,6 +82,15 @@ const adaptToDeviceSize = () => {
 	}
 }
 
+const vinculoFacebook = document.getElementById('facebookLink');
+const vinculoInstagram = document.getElementById('InstagramLink');
+const vinculoWhatsapp = document.getElementById('whatsappLink');
+const fillVinculos = ({ facebook, instagram, whatsapp }) => {
+	vinculoFacebook.href = facebook;
+	vinculoInstagram.href = instagram;
+	vinculoWhatsapp.href = `https://api.whatsapp.com/send/?phone=${whatsapp.numero}&text=${encodeURIComponent(whatsapp.mensaje)}`;
+};
+
 
 // --------------Execution--------------
 AOS.init({
@@ -104,3 +113,6 @@ if ($navLinks.length && $underline) {
 	$navLinks.forEach(($link) => $link.addEventListener("click", activateThisLink));
 	window.addEventListener('resize', underlineToActive);
 }
+fetch('../assets/json/vinculos.json')
+	.then((response) => response.json())
+	.then((data) => fillVinculos(data));
