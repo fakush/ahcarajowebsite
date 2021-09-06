@@ -372,9 +372,11 @@ body {
     margin: 0;
     padding: 15px 14px;
     filter: drop-shadow(2px -3px 8px rgba(0, 0, 0, 0.25));
-    transition: box-shadow ease-in-out 0.15s;
+    transition: ease-out 0.25s;
+    transition-property: transform, filter;
   }
   .footer__whatsapp-link:hover {
+    transform: scale(1.25);
     filter: drop-shadow(2px -3px 8px rgba(0, 0, 0, 0.5));
   }
   .footer__whatsapp-icon {
