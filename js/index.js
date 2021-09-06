@@ -32,31 +32,6 @@ const activateThisLink = (e) => {
 	$activeNavLink.classList.remove("header__nav-link--active");
 };
 
-// -------Carousel containers with same height-------
-const $carouselContainers = document.querySelectorAll('[carousel-container]');
-const equalizeCarouselContainerHeights = () => {
-	let prevMaxHeight = 0;
-	$carouselContainers.forEach(($container) => {
-		$container.style.height = null;
-		$container.parentElement.parentElement.style.display = 'block';
-		if ($container.offsetHeight > prevMaxHeight) prevMaxHeight = $container.offsetHeight;
-		$container.parentElement.parentElement.style.display = null;
-	})
-	$carouselContainers.forEach(($container) => $container.style.height = `${prevMaxHeight}px`);
-}
-
-// -------Order product cards depending of the clicked category in 'inicio'-------
-const setTargetCategoryOnClick = () => {
-	const $categoryLinks = document.querySelectorAll('[categoryTarget]');
-	if ($categoryLinks.length) {
-		$categoryLinks.forEach((categoryLink) => {
-			categoryLink.addEventListener('click', () => {
-				localStorage.setItem('clickedCategory', categoryLink.getAttribute('categoryTarget'));
-			});
-		});
-	}
-}
-
 // -------On scroll down/up-------
 let previousPageY = 0;
 const handleScroll = () => {
@@ -99,13 +74,8 @@ AOS.init({
 });
 
 adaptToDeviceSize();
-setTargetCategoryOnClick();
 window.addEventListener('resize', adaptToDeviceSize);
 window.addEventListener('scroll', handleScroll);
-if ($carouselContainers.length) {
-	equalizeCarouselContainerHeights();
-	window.addEventListener('resize', equalizeCarouselContainerHeights);
-}
 if ($navLinks.length && $underline) {
 	moveUnderlineTo($activeNavLink);
 	$navLinks.forEach(($link) => $link.addEventListener("mouseenter", (e) => moveUnderlineTo(e.target)));
