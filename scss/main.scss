@@ -52,6 +52,28 @@ $breakpoints: ( // Same breakpoints used by Bootstrap
 		--space-between-items: 24px;
 	}
 }
+@mixin body-text {
+	font-size: 13px;
+	font-weight: 400;
+	@media screen and (min-width: map-get($breakpoints, lg)) {
+		font-size: 16px;
+	}
+}
+@mixin body-text-highlighted {
+	font-size: 13px;
+	font-weight: 600;
+	@media screen and (min-width: map-get($breakpoints, lg)) {
+		font-size: 16px;
+	}
+}
+@mixin header-title-2 {
+	font-size: 18px;
+	font-weight: 500;
+	@media screen and (min-width: map-get($breakpoints, lg)) {
+		font-size: 24px;
+	}
+}
+
 
 @import './general.scss';
 @import './inicio.scss';

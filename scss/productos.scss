@@ -29,7 +29,7 @@ $card-radius: 1rem;
 		padding: 4px 11px;
 		background-color: #318B7C;
 		color: #FFFFFF;
-		font-size: 11px;
+		font-size: $font-size-6;
 		text-align: right;
 		border-radius: 0.5rem 0 0 0.5rem;
 	}
@@ -49,24 +49,23 @@ $card-radius: 1rem;
 	}
 	&__title {
 		color: $principal-dark;
-		font-size: $font-size-3;
+		@include header-title-2;
 		font-weight: 700;
 	}
 	&__price {
-		font-size: $font-size-7;
-		font-weight: 500;
+		@include header-title-2;
 	}
 	&__details-list {
 		display: grid;
 		padding: 0;
 		list-style: none;
 		&--with-icons {
-			row-gap: 0.5rem;	
+			row-gap: 0.5rem;
 		}
 	}
 	&__details-item,
 	&__details-text {
-		font-size: $font-size-5;
+		@include body-text;
 	}
 	&__details-icon {
 		width: 1rem;
@@ -84,8 +83,7 @@ $card-radius: 1rem;
 		background: transparent;
 	}
 	&__info-title {
-		font-size: $font-size-5;
-		font-weight: 600;
+		@include body-text-highlighted;
 		text-align: left;
 	}
 	&__info-list {
@@ -127,8 +125,7 @@ $card-radius: 1rem;
 		margin-bottom: 1rem;
 	}
 	&__title {
-		font-size: $font-size-7;
-		font-weight: 500;
+		@include header-title-2;
 	}
 	&__line {
 		width: 100%;
@@ -149,8 +146,9 @@ $card-radius: 1rem;
 	}
 	&__table-header,
 	&__table-data {
-		font-size: $font-size-5;
+		@include body-text;
 		padding: 1rem;
+		text-align: center;
 	}
 	&__table-header {
 		font-weight: 500;
