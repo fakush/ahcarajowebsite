@@ -263,7 +263,7 @@ body {
   transform: none;
 }
 .footer--scrolling-down .footer__whatsapp-link {
-  filter: drop-shadow(2px -3px 8px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(2px -3px 8px rgba(0, 0, 0, 0.25));
 }
 
 @media screen and (min-width: 576px) {

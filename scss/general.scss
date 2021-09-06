@@ -235,7 +235,7 @@ body {
   &--scrolling-down {
     transform: none;
     .footer__whatsapp-link {
-      filter: drop-shadow($shadow-4);
+      filter: drop-shadow($shadow-3);
     }
   }
 }
