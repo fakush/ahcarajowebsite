@@ -624,8 +624,8 @@ body {
   z-index: 2;
   width: 103px;
   padding: 4px 11px;
-  background-color: #318b7c;
-  color: #ffffff;
+  background-color: #318B7C;
+  color: #FFFFFF;
   font-size: 11px;
   text-align: right;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -645,14 +645,9 @@ body {
   width: 100%;
 }
 .p-card__title {
-<<<<<<< HEAD
-  color: #318B7C;
+  color: #318b7c;
   font-size: 18px;
   font-weight: 500;
-=======
-  color: #318b7c;
-  font-size: 20px;
->>>>>>> 9ffa9968b625e63e6521240a012f2b7941e68ba4
   font-weight: 700;
 }
 @media screen and (min-width: 992px) {
@@ -768,7 +763,7 @@ body {
   width: 14px;
 }
 .p-modal__table-row {
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #DEDEDE;
 }
 .p-modal__table-row--last {
   border-bottom: 0;
