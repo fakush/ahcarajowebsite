@@ -104,7 +104,7 @@ const fillCards = (data) => {
   for (let i = 0; i < data.length; i++) {
 	  const hasDetailIcons = data[i].detalles.some((detail) => (detail.icono && detail.icono !== 'ninguno'));
     card += `
-    <article class="p-card" category="${data[i].categoria}" data-aos="fade-up" data-aos-duration="fade-up">
+    <article class="p-card" category="${data[i].categoria}" data-aos="fade">
 			<div class="carousel slide carousel-fade" id="p-card-${
         data[i].id
       }" data-ride="carousel">
