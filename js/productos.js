@@ -105,17 +105,13 @@ const fillCards = (data) => {
 	  const hasDetailIcons = data[i].detalles.some((detail) => (detail.icono && detail.icono !== 'ninguno'));
     card += `
     <article class="p-card" category="${data[i].categoria}" data-aos="fade">
-			<div class="carousel slide carousel-fade" id="p-card-${
-        data[i].id
-      }" data-ride="carousel">
+			<div class="carousel slide carousel-fade" id="p-card-${data[i].id}" data-ride="carousel">
 				<div class="carousel-inner">
 					<p class="p-card__label">${data[i].tag}</p>
 					${fotos(data[i].imagenes, data[i].nombre)}
 				</div>
 				<ol class="custom-indicators carousel-indicators">
-					<li class="custom-indicators__indicator active" data-target="#p-card-${
-            data[i].id
-          }" data-slide-to="0"></li>
+					<li class="custom-indicators__indicator active" data-target="#p-card-${data[i].id}" data-slide-to="0"></li>
 					${indicadores(data[i].imagenes, data[i].id)}
 				</ol>
 			</div>
