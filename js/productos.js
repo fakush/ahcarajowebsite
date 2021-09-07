@@ -1,13 +1,15 @@
 const cuerpoCards = document.getElementById('nuevasCards');
 const cuerpoModales = document.getElementById('nuevosModales');
 
-const fillCard = (data) => {
+const fillCards = (data) => {
   let card = ``;
-  // Me fijo cuantas fotos hay, y creo un div para cada uno, desde la segunda.
+  // Me fijo cuantas fotos hay, y creo un div para cada uno.
   const fotos = (int, prod) => {
     let fotos = ``;
-    for (let i = 2; i <= int; i++) {
-      fotos += `<div class="p-card__img p-card__img--${prod}-${i} carousel-item" data-interval="15000" style="background-image: url(../assets/products/${prod}-${i}.jpg);"></div>`;
+    for (let i = 1; i <= int; i++) {
+      fotos += `
+        <img class="p-card__img carousel-item ${i === 1 ? 'active' : ''}" src="../assets/products/${prod}-${i}.jpg" data-interval="15000"></img>
+      `;
     }
     return fotos;
   };
@@ -62,7 +64,7 @@ const fillCard = (data) => {
       let aux = ``;
       for (let i = 1; i < data.length; i++) {
         aux += `
-				<li class="p-card__info-item  p-card__info-item--size">${data[i][0]}</li>
+				<li class="p-card__info-item ">${data[i][0]}</li>
 			`;
       }
       let salida = `
@@ -82,15 +84,15 @@ const fillCard = (data) => {
       let aux = ``;
       for (let i = 0; i < 3; i++) {
         aux += `
-					<li class="p-card__info-item" style="background-color: ${data[i].hexa}; border: 1px solid #303030;"></li>
+					<li class="p-card__info-item" style="background-color: ${data[i].hexa};"></li>
 				`;
       }
       let salida = `
 	  				<button class="p-card__info-box" type="button" data-toggle="modal" data-target="#colorModal${nombre}">
 						  <h4 class="p-card__info-title">Colores</h4>
-						  <ul class="p-card__info-list p-card__info-list--colors">
+						  <ul class="p-card__info-list">
   							${aux}
-	  						<li class="p-card__info-item  p-card__info-item--more-colors">+${data.length - 3}</li>
+	  						<li class="p-card__info-item">+${data.length - 3}</li>
 		  				</ul>
 					</button>
 	  `;
@@ -102,17 +104,12 @@ const fillCard = (data) => {
   for (let i = 0; i < data.length; i++) {
 	  const hasDetailIcons = data[i].detalles.some((detail) => (detail.icono && detail.icono !== 'ninguno'));
     card += `
-    <article class="p-card" category="${data[i].categoria}" data-aos="fade-up">
-			<div class="p-card__carousel carousel slide carousel-fade" id="p-card-${
+    <article class="p-card" category="${data[i].categoria}" data-aos="fade-up" data-aos-duration="fade-up">
+			<div class="carousel slide carousel-fade" id="p-card-${
         data[i].id
       }" data-ride="carousel">
 				<div class="carousel-inner">
 					<p class="p-card__label">${data[i].tag}</p>
-					<div class="p-card__img p-card__img--${
-            data[i].nombre
-          }-1 carousel-item active" data-interval="15000" style="background-image: url(../assets/products/${
-      data[i].nombre
-    }-1.jpg);"></div>
 					${fotos(data[i].imagenes, data[i].nombre)}
 				</div>
 				<ol class="custom-indicators carousel-indicators">
@@ -155,7 +152,7 @@ const fillModales = (data) => {
     for (let i = 0; i < data.length; i++) {
       aux += `
           <li class="p-modal__color-item">
-            <span class="p-modal__color-circle" style="background-color: ${data[i].hexa}; border: 1px solid #303030;"></span>
+            <span class="p-modal__color-circle" style="background-color: ${data[i].hexa};"></span>
             ${data[i].nombre}
           </li>
 
@@ -271,20 +268,23 @@ const orderCardsInCategories = () => {
   }
 };
 
-const $moreInfo = document.querySelector('.more-info');
-const showMoreInfo = () => $moreInfo.style.display = null;
+
+const onResourcesLoaded = (func) => {
+  if (document.readyState === 'complete') {
+    func();
+  } else {
+    window.onload = func;
+  }
+}
 
 loadSocialMediaURLs();
-window.onload = function () {
-  fetch('../assets/json/products.json')
-    .then((response) => response.json())
-    .then((data) => {
-      fillCard(data);
-      fillModales(data);
-	  $('.carousel').carousel();
-      orderCardsInCategories();
-	  if ($moreInfo) {
-		  showMoreInfo();
-	  }
-    });
-};
+fetch('../assets/json/products.json')
+.then((response) => response.json())
+.then((data) => {
+  onResourcesLoaded(() => {
+    fillCards(data);
+    orderCardsInCategories();
+  });
+	fillModales(data);
+	$('.carousel').carousel();
+  });

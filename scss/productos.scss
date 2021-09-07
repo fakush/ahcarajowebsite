@@ -16,8 +16,8 @@ $card-radius: 1rem;
 	box-shadow: $shadow-2;
 	&__img {
 	  height: 310px;
-	  background-size: cover;
-	  background-position: center;
+	  object-fit: cover;
+    object-position: center;
 	  border-radius: $card-radius $card-radius 0 0;
 	}
 	&__label {
@@ -104,11 +104,57 @@ $card-radius: 1rem;
 		justify-content: center;
 		width: 1rem;
 		height: 1rem;
+    font-size: $font-size-12;
 		border-radius: 50%;
-		&--size,
-		&--more-colors {
-			font-size: $font-size-12;
-			border: 1px solid $black;
+    border: 1px solid $black;
+	}
+	&--skeleton {
+		.p-card {
+			&__img {
+        background-color: #CCCCCC;
+        animation: skeleton-loading 0.8s linear infinite alternate;
+			}
+      
+      &__header,
+      &__details-list {
+        margin-bottom: 1.5rem;
+      }
+      &__title,
+      &__details-item,
+      &__info-title,
+      &__info-list {
+        background-color: #CFE3E0;
+        border-radius: 6px;
+        animation: skeleton-loading 0.8s linear infinite alternate;
+      }
+      &__title,
+      &__info-list {
+        height: 1.5rem;
+      }
+      &__details-item,
+      &__info-title {
+        height: 1.25rem;
+      }
+      &__title {
+        width: 35%;
+      }
+      &__details-item {
+        width: 50%;
+        @for $i from 1 through 3 {
+          &--#{$i} {
+            width: 35% + ($i * 15%);
+          }
+        }
+      }
+      &__bottom-info {
+        grid-auto-columns: 1fr;
+      }
+      &__info-title {
+        width: 60%;
+      }
+      &__info-list {
+        width: 100%;
+      }
 		}
 	}
 }
@@ -175,11 +221,22 @@ $card-radius: 1rem;
 		width: 1.5rem;
 		height: 1.5rem;
 		border-radius: 50%;
+    border: 1px solid $black;
 	}
 }
 .more-info--products {
   margin-bottom: 86px;
 }
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
 
 @media screen and (min-width: map-get($breakpoints, sm)) {
   .p-card__body {
@@ -205,10 +262,7 @@ $card-radius: 1rem;
     &__info-item {
       width: 1.5rem;
       height: 1.5rem;
-      &--size,
-      &--more-colors {
-        font-size: $font-size-6;
-      }
+      font-size: $font-size-6;
     }
   }
   .more-info--products {

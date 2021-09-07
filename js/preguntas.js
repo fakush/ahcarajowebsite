@@ -56,10 +56,8 @@ const fillPreguntas = (data) => {
 };
 
 loadSocialMediaURLs();
-window.onload = function () {
-  fetch('../assets/json/preguntas.json')
-    .then((response) => response.json())
-    .then((data) => {
-      fillPreguntas(data);
-    });
-};
+fetch('../assets/json/preguntas.json')
+  .then((response) => response.json())
+  .then((data) => {
+	fillPreguntas(data);
+  });

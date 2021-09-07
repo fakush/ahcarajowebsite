@@ -283,7 +283,7 @@ body {
       font-size: $font-size-3;
     }
     &__link {
-      left: 370px;
+      left: 300px;
       bottom: 60px;
     }
   }
@@ -336,6 +336,9 @@ body {
   }
   .banner {
     min-height: calc(100vh - 100px);
+    &__link {
+      left: 370px;
+    }
   }
   .footer {
     background-color: transparent;
@@ -398,4 +401,8 @@ body {
       width: 51px;
     }
   }
+}
+
+.v-hidden {
+	visibility: hidden;
 }
