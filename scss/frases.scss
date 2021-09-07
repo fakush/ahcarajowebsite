@@ -7,12 +7,7 @@
 			}
 		}
 		&__content {
-			padding-top: 1rem;
-		}
-		&__title,
-		&__text {
-			margin-right: var(--side-space);
-			margin-left: var(--side-space);
+      padding: 1rem var(--side-space) var(--bottom-space) var(--side-space);
 		}
 		&__title {
 			margin-bottom: 3px;
@@ -22,14 +17,13 @@
 		}
 		&__link {
 			position: static;
-			margin: 1rem var(--side-space) 40px auto;
+			margin: 1rem 0 40px auto;
 		}
 	}
 }
 .phrases-history {
-	padding: 0 40px;
-	padding-bottom: 90px;
 	background-color: $principal-dark;
+  padding: 0 calc(40px - var(--side-space));
 	&__line {
 		width: 100%;
 		height: 1px;
@@ -86,7 +80,7 @@
 	.banner--phrases {
 		.banner {
 			&__content {
-				padding: 88px 40px 34px var(--side-space);
+        padding-top: 88px;
 			}
 			&__title {
 				width: 380px;

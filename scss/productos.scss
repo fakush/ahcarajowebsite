@@ -225,7 +225,7 @@ $card-radius: 1rem;
 	}
 }
 .more-info--products {
-  margin-bottom: 86px;
+  margin-bottom: var(--bottom-space);
 }
 
 @keyframes skeleton-loading {
@@ -265,9 +265,6 @@ $card-radius: 1rem;
       font-size: $font-size-6;
     }
   }
-  .more-info--products {
-    margin-bottom: 38px;
-  }
 }
 @media screen and (min-width: map-get($breakpoints, xxl)) {
   .products {
@@ -276,8 +273,5 @@ $card-radius: 1rem;
   .more-info--products {
     width: max-content;
     margin-left: var(--side-space);
-  }
-  .more-info--products {
-    margin-bottom: 76px;
   }
 }

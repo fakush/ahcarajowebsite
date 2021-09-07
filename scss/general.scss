@@ -197,7 +197,7 @@ body {
   bottom: 0;
   z-index: 10;
   height: 50px;
-  padding: var(--side-space) 0px var(--side-space) 1rem;
+  padding: 1rem var(--side-space) 1rem var(--side-space);
   background-color: $principal-dark;
   transform: translateY(150%);
   box-shadow: $shadow-3;
@@ -227,7 +227,7 @@ body {
     background: $acento;
     padding: 13px;
     border-radius: 50%;
-    margin: -21px var(--side-space) 8px auto;
+    margin: -21px 0 8px auto;
     pointer-events: all;
   }
   &__whatsapp-icon {
@@ -353,15 +353,15 @@ body {
     &__whatsapp-link {
       position: absolute;
       right: var(--side-space);
-      bottom: 40px;
+      bottom: var(--bottom-space);
       margin: 0;
       padding: 15px 14px;
       filter: drop-shadow($shadow-3);
       transition: ease-out 0.25s;
-	  transition-property: transform, filter;
-      &:hover {
-		transform: scale(1.25);
-		filter: drop-shadow($shadow-4);
+      transition-property: transform, filter;
+        &:hover {
+      transform: scale(1.25);
+      filter: drop-shadow($shadow-4);
       }
     }
     &__whatsapp-icon {

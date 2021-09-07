@@ -7,7 +7,7 @@
 			}
 		}
 		&__content {
-			padding: 0.75rem var(--side-space) 92px var(--side-space);
+			padding: 0.75rem var(--side-space) var(--bottom-space) var(--side-space);
 		}
 		&__title {
 			margin-bottom: 5px;
@@ -20,7 +20,6 @@
 		.banner {
 			&__content {
 				padding-top: 88px;
-				padding-bottom: 80px;
 			}
 			&__title {
 				margin-bottom: 16px;

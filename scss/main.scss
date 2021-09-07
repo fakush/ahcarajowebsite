@@ -46,12 +46,14 @@ $breakpoints: (
   --side-space: 20px;
   --space-between-blocks: 24px;
   --space-between-items: 16px;
+  --bottom-space: 85px;
 }
 @media screen and (min-width: map-get($breakpoints, lg)) {
   :root {
     --side-space: 54px;
     --space-between-blocks: 40px;
     --space-between-items: 24px;
+    --bottom-space: 40px;
   }
 }
 @mixin body-text {

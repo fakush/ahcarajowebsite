@@ -3,6 +3,7 @@
   --side-space: 20px;
   --space-between-blocks: 24px;
   --space-between-items: 16px;
+  --bottom-space: 85px;
 }
 
 @media screen and (min-width: 992px) {
@@ -10,6 +11,7 @@
     --side-space: 54px;
     --space-between-blocks: 40px;
     --space-between-items: 24px;
+    --bottom-space: 40px;
   }
 }
 * {
@@ -225,7 +227,7 @@ body {
   bottom: 0;
   z-index: 10;
   height: 50px;
-  padding: var(--side-space) 0px var(--side-space) 1rem;
+  padding: 1rem var(--side-space) 1rem var(--side-space);
   background-color: #318b7c;
   transform: translateY(150%);
   box-shadow: 2px -3px 8px rgba(0, 0, 0, 0.25);
@@ -256,7 +258,7 @@ body {
   background: #d49b16;
   padding: 13px;
   border-radius: 50%;
-  margin: -21px var(--side-space) 8px auto;
+  margin: -21px 0 8px auto;
   pointer-events: all;
 }
 .footer__whatsapp-icon {
@@ -374,7 +376,7 @@ body {
   .footer__whatsapp-link {
     position: absolute;
     right: var(--side-space);
-    bottom: 40px;
+    bottom: var(--bottom-space);
     margin: 0;
     padding: 15px 14px;
     filter: drop-shadow(2px -3px 8px rgba(0, 0, 0, 0.25));
@@ -441,7 +443,7 @@ body {
 .section-wrapper {
   display: grid;
   row-gap: var(--space-between-items);
-  padding: 0 var(--side-space) 95px var(--side-space);
+  padding: 0 var(--side-space) var(--bottom-space) var(--side-space);
   overflow-y: hidden;
 }
 
@@ -569,7 +571,6 @@ body {
 
   .section-wrapper {
     margin-top: var(--test);
-    padding: 0 var(--side-space) var(--space-between-items) var(--side-space);
   }
 
   .product-preview__container,
@@ -885,7 +886,7 @@ body {
 }
 
 .more-info--products {
-  margin-bottom: 86px;
+  margin-bottom: var(--bottom-space);
 }
 
 @keyframes skeleton-loading {
@@ -921,10 +922,6 @@ body {
     height: 1.5rem;
     font-size: 11px;
   }
-
-  .more-info--products {
-    margin-bottom: 38px;
-  }
 }
 @media screen and (min-width: 1440px) {
   .products {
@@ -935,10 +932,6 @@ body {
     width: max-content;
     margin-left: var(--side-space);
   }
-
-  .more-info--products {
-    margin-bottom: 76px;
-  }
 }
 .banner--phrases .banner__img {
   height: 361px;
@@ -947,11 +940,7 @@ body {
   background-image: url("../assets/banners/frases-banner.jpg");
 }
 .banner--phrases .banner__content {
-  padding-top: 1rem;
-}
-.banner--phrases .banner__title, .banner--phrases .banner__text {
-  margin-right: var(--side-space);
-  margin-left: var(--side-space);
+  padding: 1rem var(--side-space) var(--bottom-space) var(--side-space);
 }
 .banner--phrases .banner__title {
   margin-bottom: 3px;
@@ -961,13 +950,12 @@ body {
 }
 .banner--phrases .banner__link {
   position: static;
-  margin: 1rem var(--side-space) 40px auto;
+  margin: 1rem 0 40px auto;
 }
 
 .phrases-history {
-  padding: 0 40px;
-  padding-bottom: 90px;
   background-color: #318b7c;
+  padding: 0 calc(40px - var(--side-space));
 }
 .phrases-history__line {
   width: 100%;
@@ -1018,7 +1006,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .banner--phrases .banner__content {
-    padding: 88px 40px 34px var(--side-space);
+    padding-top: 88px;
   }
   .banner--phrases .banner__title {
     width: 380px;
@@ -1077,7 +1065,7 @@ body {
   background-image: url("../assets/banners/el-parche-banner.jpg");
 }
 .banner--el-parche .banner__content {
-  padding: 0.75rem var(--side-space) 92px var(--side-space);
+  padding: 0.75rem var(--side-space) var(--bottom-space) var(--side-space);
 }
 .banner--el-parche .banner__title {
   margin-bottom: 5px;
@@ -1086,7 +1074,6 @@ body {
 @media screen and (min-width: 768px) {
   .banner--el-parche .banner__content {
     padding-top: 88px;
-    padding-bottom: 80px;
   }
   .banner--el-parche .banner__title {
     margin-bottom: 16px;

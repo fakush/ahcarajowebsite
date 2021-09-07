@@ -23,7 +23,7 @@
 .section-wrapper {
 	display: grid;
 	row-gap: var(--space-between-items);
-	padding: 0 var(--side-space) 95px var(--side-space);
+	padding: 0 var(--side-space) var(--bottom-space) var(--side-space);
 	overflow-y: hidden;
 }
 .product-preview__container,
@@ -138,7 +138,6 @@
 	}
 	.section-wrapper {
 		margin-top: var(--test);
-		padding: 0 var(--side-space) var(--space-between-items) var(--side-space);
 	}
 	.product-preview__container,
 	.payment-means__container {
