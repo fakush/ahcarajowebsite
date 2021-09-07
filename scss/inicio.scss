@@ -41,15 +41,13 @@
 		margin-bottom: var(--space-between-items);
 	}
 	&__title {
+		@include header-title-2;
 		color: $black;
-		font-size: $font-size-7;
-		font-weight: 500;
 	}
 	&__link {
+		@include body-text-highlighted;
 		margin-left: auto;
 		color: $acento;
-		font-size: $font-size-5;
-		font-weight: 600;
 		&:hover {
 			color: $acento;
 		}
@@ -152,6 +150,9 @@
 		&__product {
 			row-gap: var(--space-between-items);
 		}
+		&__product-title {
+			font-size: $font-size-9;
+		}
 	}
 }
 @media screen and (min-width: map-get($breakpoints, xxl)) {
@@ -171,7 +172,7 @@
 	}
 	.product-preview {
 		&__link {
-			margin-left: var(--space-between-items);
+			margin-left: 4rem;
 		}
 		&__product {
 			column-gap: var(--space-between-items);
