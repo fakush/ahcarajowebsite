@@ -61,11 +61,17 @@ const loadSocialMediaURLs = (vinculosPath = '../assets/json/vinculos.json') => {
 	fetch(vinculosPath)
 		.then((response) => response.json())
 		.then(({ facebook, instagram, whatsapp }) => {
-			document.getElementById('facebookLink').href = facebook;
-			document.getElementById('instagramLink').href = instagram;
-			document.getElementById('whatsappLink').href = `
-				https://api.whatsapp.com/send/?phone=${whatsapp.numero}&text=${encodeURIComponent(whatsapp.mensaje)}
-			`;
+			const whatsappURL = `https://api.whatsapp.com/send/?phone=${whatsapp.numero}&text=${encodeURIComponent(whatsapp.mensaje)}`;
+			const URLs = {
+				facebook,
+				instagram,
+				whatsapp: whatsappURL,
+			};
+			const $socialMediaLinks = document.querySelectorAll('[loadURL]');
+			$socialMediaLinks.forEach((link) => {
+				const targetSocialMedia = link.getAttribute('loadURL');
+				link.href = URLs[targetSocialMedia];
+			});
 		});
 };
 
