@@ -96,6 +96,7 @@ body {
   }
 }
 .banner {
+  overflow-y: hidden;
   &__img {
     position: relative;
     background-size: cover;

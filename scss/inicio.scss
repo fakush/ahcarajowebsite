@@ -24,6 +24,7 @@
 	display: grid;
 	row-gap: var(--space-between-items);
 	padding: 0 var(--side-space) 95px var(--side-space);
+	overflow-y: hidden;
 }
 .product-preview__container,
 .payment-means__container {
