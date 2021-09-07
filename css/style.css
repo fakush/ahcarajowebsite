@@ -213,6 +213,7 @@ body {
 }
 .more-info__link {
   color: #d49b16;
+  font-weight: 700;
 }
 .more-info__link:hover {
   color: #d49b16;
