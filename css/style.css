@@ -147,8 +147,14 @@ body {
   font-weight: 700;
 }
 .banner__text {
-  color: #ffffff;
   font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) {
+  .banner__text {
+    font-size: 18px;
+  }
 }
 .banner__link {
   font-size: 13px;
@@ -311,9 +317,6 @@ body {
     font-size: 34px;
     font-weight: bold;
   }
-  .banner__text {
-    font-size: 20px;
-  }
   .banner__link {
     left: 300px;
     bottom: 60px;
@@ -333,13 +336,11 @@ body {
     padding: 12px 0;
   }
   .header__text {
-    font-size: 16px;
+    font-size: 18px;
   }
   .header__extra-text {
     display: inline;
-  }
-  .header__extra-text {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
   }
   .header__nav-list {
@@ -1030,7 +1031,6 @@ body {
   .banner--phrases .banner__text, .banner--phrases .banner__sub-text {
     width: 400px;
     margin-left: 0;
-    font-size: 16px;
   }
   .banner--phrases .banner__sub-text {
     display: block;
@@ -1096,7 +1096,6 @@ body {
   }
   .banner--el-parche .banner__text {
     width: 400px;
-    font-size: 16px;
   }
 }
 .faq {

@@ -125,8 +125,8 @@ body {
     font-weight: 700;
   }
   &__text {
+    @include body-text;
     color: $white;
-    font-size: $font-size-5;
   }
   &__link {
     @include body-text-highlighted;
@@ -279,9 +279,6 @@ body {
       font-size: $font-size-2;
       font-weight: bold;
     }
-    &__text {
-      font-size: $font-size-3;
-    }
     &__link {
       left: 300px;
       bottom: 60px;
@@ -304,13 +301,11 @@ body {
       padding: 12px 0;
     }
     &__text {
-      font-size: $font-size-4;
+      font-size: $font-size-7;
     }
     &__extra-text {
       display: inline;
-    }
-    &__extra-text {
-      font-size: $font-size-5;
+      font-size: $font-size-4;
       font-weight: 400;
     }
     &__nav-list {
