@@ -274,6 +274,7 @@ const orderCardsInCategories = () => {
 const $moreInfo = document.querySelector('.more-info');
 const showMoreInfo = () => $moreInfo.style.display = null;
 
+loadSocialMediaURLs();
 window.onload = function () {
   fetch('../assets/json/products.json')
     .then((response) => response.json())

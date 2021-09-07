@@ -57,12 +57,16 @@ const adaptToDeviceSize = () => {
 	}
 }
 
-const fillVinculos = ({ facebook, instagram, whatsapp }) => {
-	document.getElementById('facebookLink').href = facebook;
-	document.getElementById('instagramLink').href = instagram;
-	document.getElementById('whatsappLink').href = `
-		https://api.whatsapp.com/send/?phone=${whatsapp.numero}&text=${encodeURIComponent(whatsapp.mensaje)}
-	`;
+const loadSocialMediaURLs = (vinculosPath = '../assets/json/vinculos.json') => {
+	fetch(vinculosPath)
+		.then((response) => response.json())
+		.then(({ facebook, instagram, whatsapp }) => {
+			document.getElementById('facebookLink').href = facebook;
+			document.getElementById('instagramLink').href = instagram;
+			document.getElementById('whatsappLink').href = `
+				https://api.whatsapp.com/send/?phone=${whatsapp.numero}&text=${encodeURIComponent(whatsapp.mensaje)}
+			`;
+		});
 };
 
 
@@ -82,7 +86,3 @@ if ($navLinks.length && $underline) {
 	$navLinks.forEach(($link) => $link.addEventListener("click", activateThisLink));
 	window.addEventListener('resize', underlineToActive);
 }
-
-fetch(`${window.location.protocol}//${window.location.host}/assets/json/vinculos.json`)
-	.then((response) => response.json())
-	.then((data) => fillVinculos(data));

@@ -29,3 +29,4 @@ if ($carouselContainers.length) {
 	equalizeCarouselContainerHeights();
 	window.addEventListener('resize', equalizeCarouselContainerHeights);
 }
+loadSocialMediaURLs('./assets/json/vinculos.json');

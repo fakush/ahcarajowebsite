@@ -45,6 +45,7 @@ const fillFrasesContent = (data) => {
   `;
 };
 
+loadSocialMediaURLs();
 window.onload = function () {
   fetch('../assets/json/frases.json')
     .then((response) => response.json())

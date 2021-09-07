@@ -55,6 +55,7 @@ const fillPreguntas = (data) => {
   cuerpoPreguntas.innerHTML = preguntas;
 };
 
+loadSocialMediaURLs();
 window.onload = function () {
   fetch('../assets/json/preguntas.json')
     .then((response) => response.json())

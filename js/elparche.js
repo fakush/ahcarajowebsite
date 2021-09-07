@@ -7,6 +7,7 @@ const fillParche = ({ titulo, cuerpo }) => {
 	`
 };
 
+loadSocialMediaURLs();
 window.onload = function () {
   fetch('../assets/json/parche.json')
     .then((response) => response.json())
