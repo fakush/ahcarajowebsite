@@ -29,4 +29,5 @@ if ($carouselContainers.length) {
 	equalizeCarouselContainerHeights();
 	window.addEventListener('resize', equalizeCarouselContainerHeights);
 }
+$('.carousel').carousel();
 loadSocialMediaURLs('./assets/json/vinculos.json');

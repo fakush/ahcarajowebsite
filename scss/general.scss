@@ -77,8 +77,8 @@ body {
     padding-right: 0.5rem; //Gap
   }
   &__nav-link {
+    @include body-text;
     color: $black;
-    font-size: $font-size-5;
     text-decoration: none;
     &--active {
       font-weight: 600;
@@ -323,9 +323,6 @@ body {
       &:not(:last-child) .header__nav-link {
         padding-right: 2rem;
       }
-    }
-    &__nav-link {
-      font-size: $font-size-4;
     }
     &__contact {
       display: grid;

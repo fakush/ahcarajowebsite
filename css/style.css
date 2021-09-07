@@ -94,9 +94,15 @@ body {
   padding-right: 0.5rem;
 }
 .header__nav-link {
-  color: #303030;
   font-size: 13px;
+  font-weight: 400;
+  color: #303030;
   text-decoration: none;
+}
+@media screen and (min-width: 992px) {
+  .header__nav-link {
+    font-size: 18px;
+  }
 }
 .header__nav-link--active {
   font-weight: 600;
@@ -164,7 +170,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .banner__link {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .banner__link:hover {
@@ -208,7 +214,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .more-info__text {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .more-info__link {
@@ -347,9 +353,6 @@ body {
   .header__nav-item:not(:last-child) .header__nav-link {
     padding-right: 2rem;
   }
-  .header__nav-link {
-    font-size: 16px;
-  }
   .header__contact {
     display: grid;
     grid-auto-flow: column;
@@ -483,7 +486,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .product-preview__link {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .product-preview__link:hover {
@@ -671,7 +674,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .p-card__label {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .p-card__body {
@@ -724,7 +727,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .p-card__details-item, .p-card__details-text {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .p-card__details-icon {
@@ -749,7 +752,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .p-card__info-title {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .p-card__info-list {
@@ -862,7 +865,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .p-modal__table-header, .p-modal__table-data {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .p-modal__table-header {
@@ -981,9 +984,14 @@ body {
 }
 .phrases-history__blockquote, .phrases-history__author-wrapper {
   font-size: 13px;
+  font-weight: 400;
+}
+@media screen and (min-width: 992px) {
+  .phrases-history__blockquote, .phrases-history__author-wrapper {
+    font-size: 18px;
+  }
 }
 .phrases-history__blockquote {
-  font-size: 13px;
   position: relative;
 }
 .phrases-history__blockquote::before {
@@ -1044,7 +1052,6 @@ body {
   .phrases-history__blockquote {
     width: 390px;
     margin: 0 auto;
-    font-size: 16px;
   }
   .phrases-history__large-text {
     font-size: 24px;
@@ -1130,7 +1137,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .faq__collapsable-title {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .faq__collapsable-arrow {
@@ -1150,7 +1157,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .faq__collapsable-subtitle {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .faq__collapsable-text {
@@ -1159,7 +1166,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .faq__collapsable-text {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 

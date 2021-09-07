@@ -60,14 +60,14 @@ $breakpoints: (
 	font-size: 13px;
 	font-weight: 400;
 	@media screen and (min-width: map-get($breakpoints, lg)) {
-		font-size: 16px;
+		font-size: 18px;
 	}
 }
 @mixin body-text-highlighted {
 	font-size: 13px;
 	font-weight: 600;
 	@media screen and (min-width: map-get($breakpoints, lg)) {
-		font-size: 16px;
+		font-size: 18px;
 	}
 }
 @mixin header-title-2 {

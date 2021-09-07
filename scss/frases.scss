@@ -44,10 +44,9 @@
 	}
 	&__blockquote,
 	&__author-wrapper {
-		font-size: $font-size-5;
+    @include body-text;
 	}
 	&__blockquote {
-		font-size: $font-size-5;
 		position: relative;
 		&::before {
 			content: "“";
@@ -113,7 +112,6 @@
 		&__blockquote {
 			width: 390px;
 			margin: 0 auto;
-			font-size: $font-size-4;
 		}
 		&__large-text {
 			font-size: $font-size-9;
