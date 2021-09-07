@@ -29,7 +29,7 @@ $card-radius: 1rem;
 		padding: 4px 11px;
 		background-color: #318B7C;
 		color: #FFFFFF;
-		font-size: $font-size-6;
+    @include body-text;
 		text-align: right;
 		border-radius: 0.5rem 0 0 0.5rem;
 	}

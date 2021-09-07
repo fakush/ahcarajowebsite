@@ -664,9 +664,15 @@ body {
   padding: 4px 11px;
   background-color: #318B7C;
   color: #FFFFFF;
-  font-size: 11px;
+  font-size: 13px;
+  font-weight: 400;
   text-align: right;
   border-radius: 0.5rem 0 0 0.5rem;
+}
+@media screen and (min-width: 992px) {
+  .p-card__label {
+    font-size: 16px;
+  }
 }
 .p-card__body {
   display: flex;
