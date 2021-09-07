@@ -82,7 +82,10 @@ const fillCards = (data) => {
   const colores = (data, nombre) => {
     if (data.length > 0) {
       let aux = ``;
-      for (let i = 0; i < 3; i++) {
+      const maxPreviewQuantity = 6;
+      const maxIterations = data.length > maxPreviewQuantity ? (maxPreviewQuantity -1)
+        : Math.min(data.length, maxPreviewQuantity);
+      for (let i = 0; i < maxIterations; i++) {
         aux += `
 					<li class="p-card__info-item" style="background-color: ${data[i].hexa};"></li>
 				`;
@@ -92,7 +95,7 @@ const fillCards = (data) => {
 						  <h4 class="p-card__info-title">Colores</h4>
 						  <ul class="p-card__info-list">
   							${aux}
-	  						<li class="p-card__info-item">+${data.length - 3}</li>
+	  						${data.length > maxPreviewQuantity ? `<li class="p-card__info-item">+${data.length - maxIterations}</li>`: ''}
 		  				</ul>
 					</button>
 	  `;
@@ -151,7 +154,6 @@ const fillModales = (data) => {
             <span class="p-modal__color-circle" style="background-color: ${data[i].hexa};"></span>
             ${data[i].nombre}
           </li>
-
       `;
     }
     return aux;
