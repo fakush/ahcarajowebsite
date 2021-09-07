@@ -380,7 +380,7 @@ body {
     margin: 0;
     padding: 15px 14px;
     filter: drop-shadow(2px -3px 8px rgba(0, 0, 0, 0.25));
-    transition: ease-out 0.25s;
+    transition: ease-out 0.4s;
     transition-property: transform, filter;
   }
   .footer__whatsapp-link:hover {
