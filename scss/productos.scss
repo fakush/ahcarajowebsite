@@ -15,10 +15,11 @@ $card-radius: 1rem;
 	border-radius: $card-radius;
 	box-shadow: $shadow-2;
 	&__img {
-	  height: 310px;
+    width: 100%;
+    height: 310px;
 	  object-fit: cover;
     object-position: center;
-	  border-radius: $card-radius $card-radius 0 0;
+    border-radius: $card-radius $card-radius 0 0;
 	}
 	&__label {
 		position: absolute;

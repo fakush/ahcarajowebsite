@@ -8,7 +8,11 @@ const fillCards = (data) => {
     let fotos = ``;
     for (let i = 1; i <= int; i++) {
       fotos += `
-        <img class="p-card__img carousel-item ${i === 1 ? 'active' : ''}" src="../assets/products/${prod}-${i}.jpg" data-interval="15000"></img>
+        <picture class="carousel-item ${i === 1 ? 'active' : ''}">
+          <source srcset="../assets/products/${prod}-${i}.webp" type="image/webp">
+          <img class="p-card__img" src="../assets/products/${prod}-${i}.jpg"
+            alt="imagen de ${prod} ${i}" data-interval="15000">
+        </picture>
       `;
     }
     return fotos;
