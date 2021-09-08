@@ -1,11 +1,8 @@
 .banner--phrases {
   overflow-y: hidden;
 	.banner {
-		&__img {
+		&__img-wrapper {
 			height: 361px;
-			&--phrases {
-				background-image: url('../assets/banners/frases-banner.jpg');
-			}
 		}
 		&__content {
       padding: 1rem var(--side-space) var(--bottom-space) var(--side-space);

@@ -1,11 +1,8 @@
 .banner--el-parche {
   overflow-y: hidden;
 	.banner {
-		&__img {
+		&__img-wrapper {
 			height: 363px;
-			&--el-parche {
-				background-image: url('../assets/banners/el-parche-banner.jpg');
-			}
 		}
 		&__content {
 			padding: 0.75rem var(--side-space) var(--bottom-space) var(--side-space);

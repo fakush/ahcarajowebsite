@@ -118,10 +118,16 @@ body {
   transition: all 0.3s linear;
 }
 
-.banner__img {
+.banner__img-wrapper {
   position: relative;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+}
+.banner__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .banner__img-border {
   position: absolute;
@@ -294,8 +300,7 @@ body {
     display: flex;
     min-height: calc(100vh - 78px);
   }
-  .banner__img {
-    width: 100%;
+  .banner__img-wrapper {
     height: auto !important;
     order: 1;
   }
@@ -363,7 +368,7 @@ body {
     min-height: calc(100vh - 100px);
   }
   .banner__link {
-    left: 370px;
+    left: 350px;
   }
 
   .footer {
@@ -423,17 +428,8 @@ body {
   visibility: hidden;
 }
 
-.banner--home .banner__img {
+.banner--home .banner__img-wrapper {
   height: 311px;
-}
-.banner--home .banner__img--slide-1 {
-  background-image: url("../assets/banners/inicio-slide-1.jpg");
-}
-.banner--home .banner__img--slide-2 {
-  background-image: url("../assets/banners/inicio-slide-2.jpg");
-}
-.banner--home .banner__img--slide-3 {
-  background-image: url("../assets/banners/inicio-slide-3.jpg");
 }
 .banner--home .banner__content {
   padding: 3px var(--side-space) 82px var(--side-space);
@@ -971,11 +967,8 @@ body {
 .banner--phrases {
   overflow-y: hidden;
 }
-.banner--phrases .banner__img {
+.banner--phrases .banner__img-wrapper {
   height: 361px;
-}
-.banner--phrases .banner__img--phrases {
-  background-image: url("../assets/banners/frases-banner.jpg");
 }
 .banner--phrases .banner__content {
   padding: 1rem var(--side-space) var(--bottom-space) var(--side-space);
@@ -1102,11 +1095,8 @@ body {
 .banner--el-parche {
   overflow-y: hidden;
 }
-.banner--el-parche .banner__img {
+.banner--el-parche .banner__img-wrapper {
   height: 363px;
-}
-.banner--el-parche .banner__img--el-parche {
-  background-image: url("../assets/banners/el-parche-banner.jpg");
 }
 .banner--el-parche .banner__content {
   padding: 0.75rem var(--side-space) var(--bottom-space) var(--side-space);

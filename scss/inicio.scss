@@ -1,16 +1,7 @@
 .banner--home {
 	.banner {
-		&__img {
+		&__img-wrapper {
 			height: 311px;
-			&--slide-1 {
-			background-image: url('../assets/banners/inicio-slide-1.jpg');
-			}
-			&--slide-2 {
-				background-image: url('../assets/banners/inicio-slide-2.jpg');
-			}
-			&--slide-3 {
-				background-image: url('../assets/banners/inicio-slide-3.jpg');
-			}
 		}
 		&__content {
 			padding: 3px var(--side-space) 82px var(--side-space);
