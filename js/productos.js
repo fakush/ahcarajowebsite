@@ -91,14 +91,14 @@ const fillCards = (data) => {
 				`;
       }
       let salida = `
-	  				<button class="p-card__info-box" type="button" data-toggle="modal" data-target="#colorModal${nombre}">
-						  <h4 class="p-card__info-title">Colores</h4>
-						  <ul class="p-card__info-list">
-  							${aux}
-	  						${data.length > maxPreviewQuantity ? `<li class="p-card__info-item">+${data.length - maxIterations}</li>`: ''}
-		  				</ul>
-					</button>
-	  `;
+	  		<button class="p-card__info-box" type="button" data-toggle="modal" data-target="#colorModal${nombre}">
+				  <h4 class="p-card__info-title">Colores</h4>
+				  <ul class="p-card__info-list">
+  					${aux}
+	  				${data.length > maxPreviewQuantity ? `<li class="p-card__info-item">+${data.length - maxIterations}</li>`: ''}
+		  		</ul>
+				</button>
+	    `;
       return salida;
     }
     return ``;
@@ -276,7 +276,7 @@ const onResourcesLoaded = (func) => {
 }
 
 loadSocialMediaURLs();
-fetch('../assets/json/products.json')
+fetch('../assets/json/productos.json')
 .then((response) => response.json())
 .then((data) => {
   onResourcesLoaded(() => {
