@@ -108,6 +108,9 @@ $card-radius: 1rem;
 		border-radius: 50%;
     border: 1px solid $black;
 	}
+  &__info-text {
+    font-size: $font-size-5;
+  }
 	&--skeleton {
 		.p-card {
 			&__img {
@@ -259,10 +262,16 @@ $card-radius: 1rem;
     padding-left: var(--side-space);
   }
   .p-card {
+    &__details-icon {
+      width: 1.3rem;
+    }
     &__info-item {
       width: 1.5rem;
       height: 1.5rem;
       font-size: $font-size-6;
+    }
+    &__info-text {
+      font-size: $font-size-4;
     }
   }
 }

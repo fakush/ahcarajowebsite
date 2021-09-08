@@ -112,13 +112,7 @@
       ["XL", 120, 66, 71],
       ["XXL", 125, 66, 74]
     ],
-    "colores": [
-      { "nombre": "Azul Oscuro", "hexa": "#0D193F" },
-      { "nombre": "Blanco", "hexa": "#FFFFFF" },
-      { "nombre": "Negro", "hexa": "#303030" },
-      { "nombre": "Gris claro", "hexa": "#A5A4A4" },
-      { "nombre": "Vinotinto", "hexa": "#72051A" }
-    ]
+    "colores": "Consultar disponibilidad"
   },
   {
     "id": 4,

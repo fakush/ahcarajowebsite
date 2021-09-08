@@ -98,8 +98,9 @@ const fillCards = (data) => {
 	  		<button class="p-card__info-box" type="button" data-toggle="modal" data-target="#colorModal${nombre}">
 				  <h4 class="p-card__info-title">Colores</h4>
 				  <ul class="p-card__info-list">
-  					${aux}
-	  				${data.length > maxPreviewQuantity ? `<li class="p-card__info-item">+${data.length - maxIterations}</li>`: ''}
+  					${typeof data === 'string' ? `<li><p class="p-card__info-text">${data}</p></li>` : aux + (
+              data.length > maxPreviewQuantity ? `<li class="p-card__info-item">+${data.length - maxIterations}</li>` : ''
+            )}
 		  		</ul>
 				</button>
 	    `;
@@ -133,10 +134,10 @@ const fillCards = (data) => {
 					</ul>`
 				: ''}
 				${data[i].bajada ? `<p class="p-card__details-text">${data[i].bajada}</p>` : ''}
-				${(data[i].talles) || (data[i].colores.length) ?
+				${data[i].talles.length || data[i].colores.length ?
 					`<div class="p-card__bottom-info">
-						${(data[i].talles) ? talles(data[i].talles, data[i].nombre) : ''}
-						${(data[i].colores) ? colores(data[i].colores, data[i].nombre) : ''}
+						${data[i].talles.length ? talles(data[i].talles, data[i].nombre) : ''}
+						${data[i].colores.length ? colores(data[i].colores, data[i].nombre) : ''}
 					</div>`
 				: ''}
 			</div>

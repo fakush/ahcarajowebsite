@@ -95,9 +95,13 @@ body {
 }
 .header__nav-link {
   font-size: 13px;
-  font-weight: 400;
   color: #303030;
   text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .header__nav-link {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   .header__nav-link {
@@ -154,8 +158,12 @@ body {
 }
 .banner__text {
   font-size: 13px;
-  font-weight: 400;
   color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .banner__text {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   .banner__text {
@@ -176,6 +184,11 @@ body {
   border-radius: 12px;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
   transition: box-shadow ease-in-out 0.15s;
+}
+@media screen and (min-width: 768px) {
+  .banner__link {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   .banner__link {
@@ -217,9 +230,13 @@ body {
 
 .more-info__text {
   font-size: 13px;
-  font-weight: 400;
   color: #303030;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .more-info__text {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   .more-info__text {
@@ -478,6 +495,11 @@ body {
   margin-left: auto;
   color: #d49b16;
 }
+@media screen and (min-width: 768px) {
+  .product-preview__link {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 992px) {
   .product-preview__link {
     font-size: 18px;
@@ -691,9 +713,13 @@ body {
   background-color: #318B7C;
   color: #FFFFFF;
   font-size: 13px;
-  font-weight: 400;
   text-align: right;
   border-radius: 0.5rem 0 0 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-card__label {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   .p-card__label {
@@ -746,7 +772,11 @@ body {
 }
 .p-card__details-item, .p-card__details-text {
   font-size: 13px;
-  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .p-card__details-item, .p-card__details-text {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   .p-card__details-item, .p-card__details-text {
@@ -773,6 +803,11 @@ body {
   font-weight: 600;
   text-align: left;
 }
+@media screen and (min-width: 768px) {
+  .p-card__info-title {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 992px) {
   .p-card__info-title {
     font-size: 18px;
@@ -797,6 +832,9 @@ body {
   font-size: 9px;
   border-radius: 50%;
   border: 1px solid #303030;
+}
+.p-card__info-text {
+  font-size: 13px;
 }
 .p-card--skeleton .p-card__img {
   background-color: #CCCCCC;
@@ -882,9 +920,13 @@ body {
 }
 .p-modal__table-header, .p-modal__table-data {
   font-size: 13px;
-  font-weight: 400;
   padding: 1rem;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .p-modal__table-header, .p-modal__table-data {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   .p-modal__table-header, .p-modal__table-data {
@@ -949,10 +991,16 @@ body {
     padding-left: var(--side-space);
   }
 
+  .p-card__details-icon {
+    width: 1.3rem;
+  }
   .p-card__info-item {
     width: 1.5rem;
     height: 1.5rem;
     font-size: 11px;
+  }
+  .p-card__info-text {
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1007,7 +1055,11 @@ body {
 }
 .phrases-history__blockquote, .phrases-history__author-wrapper {
   font-size: 13px;
-  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .phrases-history__blockquote, .phrases-history__author-wrapper {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   .phrases-history__blockquote, .phrases-history__author-wrapper {
@@ -1156,6 +1208,11 @@ body {
   color: #303030;
   text-align: left;
 }
+@media screen and (min-width: 768px) {
+  .faq__collapsable-title {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 992px) {
   .faq__collapsable-title {
     font-size: 18px;
@@ -1176,6 +1233,11 @@ body {
   font-weight: 600;
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .faq__collapsable-subtitle {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 992px) {
   .faq__collapsable-subtitle {
     font-size: 18px;
@@ -1183,7 +1245,11 @@ body {
 }
 .faq__collapsable-text {
   font-size: 13px;
-  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .faq__collapsable-text {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   .faq__collapsable-text {
