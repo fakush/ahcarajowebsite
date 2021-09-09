@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "nombre": "camiseta",
+    "tituloProducto": "Camiseta",
+    "nombreImagen": "camiseta",
+    "cantidadImagenes": "4",
     "categoria": "ropa",
-    "imagenes": "4",
-    "producto": "Camiseta",
-    "precio": "$45.000",
-    "bajada": "",
     "tag": "¡Personalízalo!",
-    "detalles": [
+    "precio": "$45.000",
+    "textoDetalles": "",
+    "listaDetalles": [
       {
         "icono": "ninguno",
         "texto": "100% algodón"
@@ -39,14 +39,14 @@
   },
   {
     "id": 2,
-    "nombre": "buzo",
+    "nombreImagen": "buzo",
     "categoria": "ropa",
-    "imagenes": "4",
-    "producto": "Buzo",
+    "cantidadImagenes": "4",
+    "tituloProducto": "Buzo",
     "precio": "$65.000",
-    "bajada": "",
+    "textoDetalles": "",
     "tag": "¡Personalízalo!",
-    "detalles": [
+    "listaDetalles": [
       {
         "icono": "ninguno",
         "texto": "100% algodón mónaco"
@@ -79,14 +79,14 @@
   },
   {
     "id": 3,
-    "nombre": "chaqueta",
+    "nombreImagen": "chaqueta",
     "categoria": "ropa",
-    "imagenes": "3",
-    "producto": "Chaqueta Resiliente",
+    "cantidadImagenes": "3",
+    "tituloProducto": "Chaqueta Resiliente",
     "precio": "$70.000",
-    "bajada": "",
+    "textoDetalles": "",
     "tag": "¡Personalízalo!",
-    "detalles": [
+    "listaDetalles": [
       {
         "icono": "ninguno",
         "texto": "100% antifluido"
@@ -112,18 +112,21 @@
       ["XL", 120, 66, 71],
       ["XXL", 125, 66, 74]
     ],
-    "colores": "Consultar disponibilidad"
+    "colores": {
+      "texto": "Consultar disponibilidad",
+      "popup": "Hola parcer@. Pa' poderlo atender como se debe y brindarle los colores y diseños disponibles en nuestras chaquetas, escribanos al Whatsapp para darle toda la info!"
+    }
   },
   {
     "id": 4,
-    "nombre": "agenda",
+    "nombreImagen": "agenda",
     "categoria": "agendas",
-    "imagenes": "4",
-    "producto": "Agenda",
+    "cantidadImagenes": "4",
+    "tituloProducto": "Agenda",
     "precio": "$45.000",
-    "bajada": "",
+    "textoDetalles": "",
     "tag": "Incluye stickers<br> + 2 lápices BC",
-    "detalles": [
+    "listaDetalles": [
       {
         "icono": "hoja de arbol",
         "texto": "100 hojas cuadriculadas. Elaboradas a partir de fibras renovables, reciclables y biodegrabadebles."
@@ -146,14 +149,14 @@
   },
   {
     "id": 5,
-    "nombre": "pocillo",
+    "nombreImagen": "pocillo",
     "categoria": "pocillos",
-    "imagenes": "4",
-    "producto": "Pocillo",
+    "cantidadImagenes": "4",
+    "tituloProducto": "Pocillo",
     "precio": "$20.000",
-    "bajada": "Pocillos elaborados en cerámica y estampados con nuestros diseños de frases inspiradas en Colombia, en el color que elijas. Empacado en caja kraft y con cinta decorativa.",
+    "textoDetalles": "Pocillos elaborados en cerámica y estampados con nuestros diseños de frases inspiradas en Colombia, en el color que elijas. Empacado en caja kraft y con cinta decorativa.",
     "tag": "¡Personalízalo!",
-    "detalles": [
+    "listaDetalles": [
       {
         "icono": "peso",
         "texto": "11 onzas"
@@ -164,14 +167,14 @@
   },
   {
     "id": 6,
-    "nombre": "cafe",
+    "nombreImagen": "cafe",
     "categoria": "kit cafetero",
-    "imagenes": "3",
-    "producto": "Kit Cafetero",
+    "cantidadImagenes": "3",
+    "tituloProducto": "Kit Cafetero",
     "precio": "$45.000",
-    "bajada": "Aquí le ofrecemos nuestro tintico ¡Ah,Carajo! por 250 gr de origen 100% Colombiano con sabor a chocolate, frutos secos, frutos rojos, caña de azúcar y una dulce fragancia a panela y nuez de las montañas de nuestro país.",
+    "textoDetalles": "Aquí le ofrecemos nuestro tintico ¡Ah,Carajo! por 250 gr de origen 100% Colombiano con sabor a chocolate, frutos secos, frutos rojos, caña de azúcar y una dulce fragancia a panela y nuez de las montañas de nuestro país.",
     "tag": "Incluye pocillo<br> personalizado",
-    "detalles": [
+    "listaDetalles": [
       {
         "icono": "peso",
         "texto": "250gr"

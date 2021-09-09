@@ -818,9 +818,9 @@ body {
   }
 }
 .p-card__info-icon {
-  width: 10px;
-  height: 10px;
-  margin-left: 0.25rem;
+  width: 16px;
+  height: 16px;
+  margin-left: 0.5rem;
 }
 .p-card__info-list {
   display: grid;
@@ -923,6 +923,20 @@ body {
 }
 .p-modal__scrollable {
   overflow-y: scroll;
+}
+.p-modal__text {
+  margin-top: 1rem;
+  font-size: 13px;
+}
+@media screen and (min-width: 768px) {
+  .p-modal__text {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .p-modal__text {
+    font-size: 18px;
+  }
 }
 .p-modal__table-row {
   border-bottom: 1px solid #DEDEDE;

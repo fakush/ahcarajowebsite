@@ -93,9 +93,9 @@ $card-radius: 1rem;
 		text-align: left;
 	}
   &__info-icon {
-    width: 10px;
-    height: 10px;
-    margin-left: 0.25rem;
+    width: 16px;
+    height: 16px;
+    margin-left: 0.5rem;
   }
 	&__info-list {
 		display: grid;
@@ -200,6 +200,10 @@ $card-radius: 1rem;
 	}
   &__scrollable {
     overflow-y: scroll;
+  }
+  &__text {
+    margin-top: 1rem;
+    @include body-text;
   }
 	&__table-row {
 		border-bottom: 1px solid #DEDEDE;
