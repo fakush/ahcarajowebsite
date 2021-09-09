@@ -19,11 +19,11 @@ const createProductCard = ({
     }
     return slides;
   }
-  const createSlideIndicators = (indicatorsQuantity) => {
+  const createSlideIndicators = (indicatorsQuantity, id) => {
     let indicators = '';
     for (let i = 0; i < indicatorsQuantity; i++) {
       indicators += `
-        <li class="custom-indicators__indicator ${i === 0 ? 'active': ''}" data-target="#p-card-${i + 1}" data-slide-to="${i}"></li>
+        <li class="custom-indicators__indicator ${i === 0 ? 'active': ''}" data-target="#p-card-${id}" data-slide-to="${i}"></li>
       `;
     }
     return indicators;
@@ -121,7 +121,7 @@ const createProductCard = ({
           ${createImgSlides(cantidadImagenes,nombreImagen)}
         </div>
         <ol class="custom-indicators carousel-indicators">
-          ${createSlideIndicators(cantidadImagenes)}
+          ${createSlideIndicators(cantidadImagenes, id)}
         </ol>
       </div>
       <div class="p-card__body">
