@@ -83,28 +83,45 @@ const fillCards = (data) => {
     }
     return ``;
   };
-  const colores = (data, nombre) => {
-    if (data.length > 0) {
-      let aux = ``;
-      const maxPreviewQuantity = 6;
-      const maxIterations = data.length > maxPreviewQuantity ? (maxPreviewQuantity -1)
-        : Math.min(data.length, maxPreviewQuantity);
-      for (let i = 0; i < maxIterations; i++) {
-        aux += `
-					<li class="p-card__info-item" style="background-color: ${data[i].hexa};"></li>
-				`;
+  const createInfoList = ({ list, listType, title, productName }) => {
+    if (typeof list === 'string') return `
+      <div class="p-card__info-box">
+				<h4 class="p-card__info-title">${title}</h4>
+				<ul class="p-card__info-list">
+          <li><p class="p-card__info-text">${list}</p></li>
+		  	</ul>
+			</div>
+    `;
+    let items = ``;
+    const maxPreviewQuantity = 6;
+    const numberOfItems = listType === 'size' ? (list.length - 1) : list.length;
+    const currentMaxIterations = numberOfItems > maxPreviewQuantity ? (maxPreviewQuantity - 1) : numberOfItems;
+    if (listType === 'size') {
+      for (let i = 1; i <= currentMaxIterations; i++) {
+        items += `
+          <li class="p-card__info-item">${list[i][0]}</li>
+        `;
       }
-      let salida = `
-	  		<button class="p-card__info-box" type="button" data-toggle="modal" data-target="#colorModal${nombre}">
-				  <h4 class="p-card__info-title">Colores</h4>
+    } else if (listType === 'color') {
+      for (let i = 0; i < currentMaxIterations; i++) {
+        items += `
+          <li class="p-card__info-item" style="background-color: ${list[i].hexa};"></li>
+        `;
+      }
+    }
+    if (list.length) {
+      return `
+	  		<button class="p-card__info-box" type="button" data-toggle="modal" data-target="#${listType}Modal${productName}">
+          <div class="p-card__info-header">
+            <h4 class="p-card__info-title">${title}</h4>
+            <img class="p-card__info-icon" src="../assets/icons/info-circle-icon.svg" alt="icono mas informacion">
+          </div>
 				  <ul class="p-card__info-list">
-  					${typeof data === 'string' ? `<li><p class="p-card__info-text">${data}</p></li>` : aux + (
-              data.length > maxPreviewQuantity ? `<li class="p-card__info-item">+${data.length - maxIterations}</li>` : ''
-            )}
+            ${items}
+  					${numberOfItems > maxPreviewQuantity ? `<li class="p-card__info-item">+${numberOfItems - currentMaxIterations}</li>` : ''}
 		  		</ul>
 				</button>
 	    `;
-      return salida;
     }
     return ``;
   };
@@ -136,8 +153,18 @@ const fillCards = (data) => {
 				${data[i].bajada ? `<p class="p-card__details-text">${data[i].bajada}</p>` : ''}
 				${data[i].talles.length || data[i].colores.length ?
 					`<div class="p-card__bottom-info">
-						${data[i].talles.length ? talles(data[i].talles, data[i].nombre) : ''}
-						${data[i].colores.length ? colores(data[i].colores, data[i].nombre) : ''}
+						${data[i].talles.length ? createInfoList({
+              list: data[i].talles,
+              listType: 'size',
+              title: 'Talles',
+              productName: data[i].nombre
+            }) : ''}
+						${data[i].colores.length ? createInfoList({ 
+                list: data[i].colores,
+                listType: 'color',
+                title: 'Colores',
+                productName: data[i].nombre
+              }) : ''}
 					</div>`
 				: ''}
 			</div>
@@ -173,7 +200,7 @@ const fillModales = (data) => {
         aria-labelledby="colorModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="p-modal__content modal-content">
             <div class="p-modal__header">
               <h4 class="p-modal__title" id="colorModalLabel">Colores</h4>
@@ -233,7 +260,7 @@ const fillModales = (data) => {
         aria-labelledby="sizeModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="p-modal__content modal-content">
             <div class="p-modal__header">
               <h4 class="p-modal__title" id="sizeModalLabel">Talles de ${data[i].producto}</h4>
@@ -251,6 +278,7 @@ const fillModales = (data) => {
               ${tablaTalles(data[i].talles)}
               </tbody>
             </table>
+            <p class="p-modal__sub-text">(*medidas expredas en cm)</p>
           </div>
         </div>
       </div>

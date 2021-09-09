@@ -84,10 +84,19 @@ $card-radius: 1rem;
 		border: 0;
 		background: transparent;
 	}
+  &__info-header {
+    display: flex;
+    align-items: center;
+  }
 	&__info-title {
 		@include body-text-highlighted;
 		text-align: left;
 	}
+  &__info-icon {
+    width: 10px;
+    height: 10px;
+    margin-left: 0.25rem;
+  }
 	&__info-list {
 		display: grid;
 		grid-auto-flow: column;
@@ -189,6 +198,9 @@ $card-radius: 1rem;
 	&__close-icon {
 		width: 14px;
 	}
+  &__scrollable {
+    overflow-y: scroll;
+  }
 	&__table-row {
 		border-bottom: 1px solid #DEDEDE;
 		&--last {
@@ -205,6 +217,11 @@ $card-radius: 1rem;
 		font-weight: 500;
 		border-bottom: 0 !important;
 	}
+  &__sub-text {
+    margin-top: 0.5rem;
+    font-size: $font-size-6;
+    text-align: right;
+  }
 	&__color-list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);

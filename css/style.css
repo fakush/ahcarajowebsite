@@ -798,6 +798,10 @@ body {
   border: 0;
   background: transparent;
 }
+.p-card__info-header {
+  display: flex;
+  align-items: center;
+}
 .p-card__info-title {
   font-size: 13px;
   font-weight: 600;
@@ -812,6 +816,11 @@ body {
   .p-card__info-title {
     font-size: 18px;
   }
+}
+.p-card__info-icon {
+  width: 10px;
+  height: 10px;
+  margin-left: 0.25rem;
 }
 .p-card__info-list {
   display: grid;
@@ -912,6 +921,9 @@ body {
 .p-modal__close-icon {
   width: 14px;
 }
+.p-modal__scrollable {
+  overflow-y: scroll;
+}
 .p-modal__table-row {
   border-bottom: 1px solid #DEDEDE;
 }
@@ -936,6 +948,11 @@ body {
 .p-modal__table-header {
   font-weight: 500;
   border-bottom: 0 !important;
+}
+.p-modal__sub-text {
+  margin-top: 0.5rem;
+  font-size: 11px;
+  text-align: right;
 }
 .p-modal__color-list {
   display: grid;
