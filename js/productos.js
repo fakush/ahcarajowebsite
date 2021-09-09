@@ -63,26 +63,6 @@ const fillCards = (data) => {
     }
     return punteo;
   };
-  const talles = (data, nombre) => {
-    if (data.length > 0) {
-      let aux = ``;
-      for (let i = 1; i < data.length; i++) {
-        aux += `
-				<li class="p-card__info-item ">${data[i][0]}</li>
-			`;
-      }
-      let salida = `
-          <button class="p-card__info-box" type="button" data-toggle="modal" data-target="#sizeModal${nombre}">
-						<h4 class="p-card__info-title">Talles</h4>
-						<ul class="p-card__info-list">
-							${aux}
-						</ul>
-          </button>
-					`;
-      return salida;
-    }
-    return ``;
-  };
   const createInfoList = ({ list, listType, title, productName }) => {
     if (typeof list === 'string') return `
       <div class="p-card__info-box">
@@ -93,17 +73,18 @@ const fillCards = (data) => {
 			</div>
     `;
     let items = ``;
-    const maxPreviewQuantity = 6;
-    const numberOfItems = listType === 'size' ? (list.length - 1) : list.length;
-    const currentMaxIterations = numberOfItems > maxPreviewQuantity ? (maxPreviewQuantity - 1) : numberOfItems;
+    const maxInfoCircles = 6;
+    const nViewMore = 1;
+    const infoQuantity = listType === 'size' ? (list.length - 1) : list.length;
+    const nPreviewInfoInCard = infoQuantity > maxInfoCircles ? (maxInfoCircles - nViewMore) : infoQuantity;
     if (listType === 'size') {
-      for (let i = 1; i <= currentMaxIterations; i++) {
+      for (let i = 1; i <= nPreviewInfoInCard; i++) {
         items += `
           <li class="p-card__info-item">${list[i][0]}</li>
         `;
       }
     } else if (listType === 'color') {
-      for (let i = 0; i < currentMaxIterations; i++) {
+      for (let i = 0; i < nPreviewInfoInCard; i++) {
         items += `
           <li class="p-card__info-item" style="background-color: ${list[i].hexa};"></li>
         `;
@@ -118,7 +99,7 @@ const fillCards = (data) => {
           </div>
 				  <ul class="p-card__info-list">
             ${items}
-  					${numberOfItems > maxPreviewQuantity ? `<li class="p-card__info-item">+${numberOfItems - currentMaxIterations}</li>` : ''}
+  					${infoQuantity > maxInfoCircles ? `<li class="p-card__info-item">+${infoQuantity - nPreviewInfoInCard}</li>` : ''}
 		  		</ul>
 				</button>
 	    `;
