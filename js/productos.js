@@ -1,7 +1,7 @@
 'use strict'
 
-const cardsContainer = document.getElementById('pCardsContainer');
-const modalsContainer = document.getElementById('pModalsContainer');
+const $cardsContainer = document.getElementById('pCardsContainer');
+const $modalsContainer = document.getElementById('pModalsContainer');
 
 const createProductCard = ({
   id, tituloProducto, nombreImagen, cantidadImagenes, categoria, precio, textoDetalles, tag, listaDetalles, talles, colores
@@ -114,7 +114,7 @@ const createProductCard = ({
   // ----------------------------------Product Card--------------------------------------------------
   const hasDetailIcons = listaDetalles.some((detail) => (detail.icono && detail.icono !== 'ninguno'));
   return (`
-    <article class="p-card" category="${categoria}" data-aos="fade">
+    <article class="p-card" category="${categoria}" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
       <div class="carousel slide carousel-fade" id="p-card-${id}" data-ride="carousel">
         <div class="carousel-inner">
           <p class="p-card__label">${tag}</p>
@@ -284,9 +284,14 @@ fetch('../assets/json/productos.json')
       ...productData
     });
   });
-  modalsContainer.innerHTML = modals;
+
+  const $spinnerLoader = document.getElementById('spinnerLoader');
+  const $moreInfo = document.querySelector('.more-info');
+  $moreInfo.style.display = null;
+  $modalsContainer.innerHTML = modals;
   onResourcesLoaded(() => {
-    cardsContainer.innerHTML = cards;
+    $spinnerLoader.style.display = 'none';
+    $cardsContainer.innerHTML = cards;
     orderCardsInCategories();
     $('.carousel').carousel();
   });
