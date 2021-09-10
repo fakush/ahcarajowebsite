@@ -12,6 +12,7 @@ $card-radius: 1rem;
 .p-card {
 	display: flex;
 	flex-direction: column;
+  height: 100%;
 	background-color: $white;
 	border-radius: $card-radius;
 	box-shadow: $shadow-2;

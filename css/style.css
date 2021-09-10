@@ -694,6 +694,7 @@ body {
 .p-card {
   display: flex;
   flex-direction: column;
+  height: 100%;
   background-color: #ffffff;
   border-radius: 1rem;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
