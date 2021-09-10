@@ -6,63 +6,6 @@ const $modalsContainer = document.getElementById('pModalsContainer');
 const createProductCard = ({
   id, tituloProducto, nombreImagen, cantidadImagenes, categoria, precio, textoDetalles, tag, listaDetalles, talles, colores
 }) => {
-  const createImgSlides = (slidesQuantity, imageName) => {
-    let slides = ''
-    for (let i = 1; i <= slidesQuantity; i += 1) {
-      slides += `
-        <picture class="carousel-item ${i === 1 ? 'active' : ''}">
-          <source srcset="../assets/products/${imageName}-${i}.webp" type="image/webp">
-          <img class="p-card__img" src="../assets/products/${imageName}-${i}.jpg"
-            alt="imagen de ${imageName} ${i}" data-interval="15000">
-        </picture>
-      `;
-    }
-    return slides;
-  }
-  const createSlideIndicators = (indicatorsQuantity, id) => {
-    let indicators = '';
-    for (let i = 0; i < indicatorsQuantity; i++) {
-      indicators += `
-        <li class="custom-indicators__indicator ${i === 0 ? 'active': ''}" data-target="#p-card-${id}" data-slide-to="${i}"></li>
-      `;
-    }
-    return indicators;
-  };
-  const createDetails = (detailList) => {
-    const icons = {
-      'hoja de arbol': {
-        url: '../assets/icons/tree-leaf-icon.svg',
-        alt: 'icono hoja de arbol',
-      },
-      reciclaje: {
-        url: '../assets/icons/recycling-icon.svg',
-        alt: 'icono reciclaje',
-      },
-      libro: {
-        url: '../assets/icons/book-icon.svg',
-        alt: 'icono libro',
-      },
-      mapa: {
-        url: '../assets/icons/map-icon.svg',
-        alt: 'icono mapa',
-      },
-      peso: {
-        url: '../assets/icons/weight-icon.svg',
-        alt: 'icono peso',
-      },
-    };
-    let details = ``;
-    detailList.forEach((detail) => {
-      const icon = icons[detail.icono];
-      details += `
-          <li class="p-card__details-item">
-            ${icon ? `<img class="p-card__details-icon" src="${icon.url}" alt="${icon.alt}">`: ''}
-            ${detail.texto}
-          </li>
-        `;
-    });
-    return details;
-  };
   const createInfoList = ({ collection, collectionType, title, productName }) => {
     if (collection.texto) return `
       <button class="p-card__info-box" type="button" data-toggle="modal" data-target="#${collectionType}Modal${productName}">
@@ -94,34 +37,61 @@ const createProductCard = ({
           `;
       }
     }
-    if (collection.length) {
-      return `
-          <button class="p-card__info-box" type="button" data-toggle="modal" data-target="#${collectionType}Modal${productName}">
-            <div class="p-card__info-header">
-              <h4 class="p-card__info-title">${title}</h4>
-              <img class="p-card__info-icon" src="../assets/icons/info-circle-icon.svg" alt="icono mas informacion">
-            </div>
-            <ul class="p-card__info-list">
-              ${items}
-              ${infoQuantity > maxInfoCircles ? `<li class="p-card__info-item">+${infoQuantity - nPreviewInfoInCard}</li>` : ''}
-            </ul>
-          </button>
-        `;
-    }
-    return ``;
+    return `
+      <button class="p-card__info-box" type="button" data-toggle="modal" data-target="#${collectionType}Modal${productName}">
+        <div class="p-card__info-header">
+          <h4 class="p-card__info-title">${title}</h4>
+          <img class="p-card__info-icon" src="../assets/icons/info-circle-icon.svg" alt="icono mas informacion">
+        </div>
+        <ul class="p-card__info-list">
+          ${items}
+          ${infoQuantity > maxInfoCircles ? `<li class="p-card__info-item">+${infoQuantity - nPreviewInfoInCard}</li>` : ''}
+        </ul>
+      </button>
+    `;
   };
 
   // ----------------------------------Product Card--------------------------------------------------
-  const hasDetailIcons = listaDetalles.some((detail) => (detail.icono && detail.icono !== 'ninguno'));
+  const hasDetailIcons = listaDetalles.some((detail) => detail.icono);
+  const icons = {
+    'hoja de arbol': {
+      url: '../assets/icons/tree-leaf-icon.svg',
+      alt: 'icono hoja de arbol',
+    },
+    reciclaje: {
+      url: '../assets/icons/recycling-icon.svg',
+      alt: 'icono reciclaje',
+    },
+    libro: {
+      url: '../assets/icons/book-icon.svg',
+      alt: 'icono libro',
+    },
+    mapa: {
+      url: '../assets/icons/map-icon.svg',
+      alt: 'icono mapa',
+    },
+    peso: {
+      url: '../assets/icons/weight-icon.svg',
+      alt: 'icono peso',
+    },
+  };
   return (`
     <article class="p-card" category="${categoria}" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
       <div class="carousel slide carousel-fade" id="p-card-${id}" data-ride="carousel">
         <div class="carousel-inner">
           <p class="p-card__label">${tag}</p>
-          ${createImgSlides(cantidadImagenes,nombreImagen)}
+          ${Array.from({ length: cantidadImagenes }, (el, i) => i === 0 ? null : `
+            <picture class="carousel-item ${i === 1 ? 'active' : ''}">
+              <source srcset="../assets/products/${nombreImagen}-${i}.webp" type="image/webp">
+              <img class="p-card__img" src="../assets/products/${nombreImagen}-${i}.jpg"
+                alt="imagen de ${nombreImagen} ${i}" data-interval="15000">
+            </picture>
+          `).join('')}
         </div>
         <ol class="custom-indicators carousel-indicators">
-          ${createSlideIndicators(cantidadImagenes, id)}
+          ${Array.from({ length: cantidadImagenes }, (el, i) => `
+            <li class="custom-indicators__indicator ${i === 0 ? 'active' : ''}" data-target="#p-card-${id}" data-slide-to="${i}"></li>
+          `).join('')}
         </ol>
       </div>
       <div class="p-card__body">
@@ -131,7 +101,12 @@ const createProductCard = ({
         </div>
         ${listaDetalles.length ? (
           `<ul class="p-card__details-list ${hasDetailIcons ? 'p-card__details-list--with-icons' : ''}">
-            ${createDetails(listaDetalles)}
+            ${listaDetalles.map(({ icono, texto }) => `
+              <li class="p-card__details-item">
+                ${icons[icono] ? `<img class="p-card__details-icon" src="${icons[icono].url}" alt="${icons[icono].alt}">` : ''}
+                ${texto}
+              </li>
+            `).join('')}
           </ul>`
         ) : ''}
         ${textoDetalles ? `<p class="p-card__details-text">${textoDetalles}</p>` : ''}
@@ -175,40 +150,29 @@ const createModal = ({ titulo, nombreImagen, type, talles, colores }) => {
       </ul>
     `;
   };
-  const createSizeTable = (sizeList) => {
-    const createSizesRows = (sizeList) => {
-      let rows = '';
-      for (let i = 1; i < sizeList.length; i++) {
-        rows += `
-            <tr class="p-modal__table-row">
-              <th class="p-modal__table-header" scope="row">${sizeList[i][0]}</th>
-              <td class="p-modal__table-data">${sizeList[i][1]}</td>
-              <td class="p-modal__table-data">${sizeList[i][2]}</td>
-              <td class="p-modal__table-data">${sizeList[i][3]}</td>
-            </tr>
-        `;
-      }
-      return rows;
-    }
-    return sizeList.length ? (
-      `
-        <table>
-          <thead>
-            <tr class="p-modal__table-row">
-              <th class="p-modal__table-header" scope="col"></th>
-              <th class="p-modal__table-header" scope="col">${sizeList[0][1]}</th>
-              <th class="p-modal__table-header" scope="col">${sizeList[0][2]}</th>
-              <th class="p-modal__table-header" scope="col">${sizeList[0][3]}</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${createSizesRows(sizeList)}
-          </tbody>
-        </table>
-        <p class="p-modal__sub-text">(*medidas expredas en cm)</p>
-      `
-    ) : '';
-  }
+  const createSizeTable = (sizeList) => `
+    <table>
+      <thead>
+        <tr class="p-modal__table-row">
+          ${sizeList[0].map((headItem) => `
+            <th class="p-modal__table-header" scope="col">${headItem}</th>
+          `).join('')}
+        </tr>
+      </thead>
+      <tbody>
+        ${sizeList.map((row, i) => i === 0 ? null : (`
+          <tr class="p-modal__table-row">
+            ${row.map((item, j) => j === 0 ? (`
+              <th class="p-modal__table-header" scope="row">${item}</th>
+            `) : (`
+              <td class="p-modal__table-data">${item}</td>
+            `)).join('')}
+          </tr>
+        `)).join('')}
+      </tbody>
+    </table>
+    <p class="p-modal__sub-text">(*medidas expredas en cm)</p>
+  `;
   const createPopup = (popup) => `<p class="p-modal__text">${popup}</p>`;
   const content = {
     size: talles.length ? createSizeTable(talles) : (talles.popup ? createPopup(talles.popup) : ''),
@@ -267,32 +231,31 @@ const onResourcesLoaded = (func) => {
 
 loadSocialMediaURLs();
 fetch('../assets/json/productos.json')
-.then((response) => response.json())
-.then((productList) => {
-  let cards = '';
-  let modals = '';
-  productList.forEach((productData) => {
-    cards += createProductCard(productData);
-    modals += createModal({
-      titulo: `Talles de ${productData.tituloProducto}`,
-      type: 'size',
-      ...productData
+  .then((response) => response.json())
+  .then((productList) => {
+    let cards = '';
+    let modals = '';
+    productList.forEach((productData) => {
+      cards += createProductCard(productData);
+      modals += createModal({
+        titulo: `Talles de ${productData.tituloProducto}`,
+        type: 'size',
+        ...productData
+      });
+      modals += createModal({
+        titulo: `Colores de ${productData.tituloProducto}`,
+        type: 'color',
+        ...productData
+      });
     });
-    modals += createModal({
-      titulo: `Colores de ${productData.tituloProducto}`,
-      type: 'color',
-      ...productData
+    const $spinnerLoader = document.getElementById('spinnerLoader');
+    const $moreInfo = document.querySelector('.more-info');
+    $moreInfo.style.display = null;
+    $modalsContainer.innerHTML = modals;
+    onResourcesLoaded(() => {
+      $spinnerLoader.style.display = 'none';
+      $cardsContainer.innerHTML = cards;
+      orderCardsInCategories();
+      $('.carousel').carousel();
     });
-  });
-
-  const $spinnerLoader = document.getElementById('spinnerLoader');
-  const $moreInfo = document.querySelector('.more-info');
-  $moreInfo.style.display = null;
-  $modalsContainer.innerHTML = modals;
-  onResourcesLoaded(() => {
-    $spinnerLoader.style.display = 'none';
-    $cardsContainer.innerHTML = cards;
-    orderCardsInCategories();
-    $('.carousel').carousel();
-  });
   });
