@@ -72,6 +72,12 @@
 	}
 
 }
+.lds-ellipsis--phrases {
+  position: static;
+  transform: none;
+  height: 30vh;
+  color: white;
+}
 
 @media screen and (min-width: map-get($breakpoints, md)) {
 	.banner--phrases {

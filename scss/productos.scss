@@ -206,66 +206,6 @@ $card-radius: 1rem;
   margin-bottom: var(--bottom-space);
 }
 
-.lds-ellipsis {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  font-size: 1rem;
-  &__wrapper {
-    position: relative;
-    width: 4.375em;
-    height: 0.8125em;
-  }
-  &__circle {
-    position: absolute;
-    padding: 0.4063em;
-    border-radius: 50%;
-    background-color: $acento;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
-    &--1 {
-      left: 0.5em;
-      animation: lds-ellipsis1 0.6s infinite;
-    }
-    &--2 {
-      left: 0.5em;
-      animation: lds-ellipsis2 0.6s infinite;
-    }
-    &--3 {
-      left: 2em;
-      animation: lds-ellipsis2 0.6s infinite;
-    }
-    &--4 {
-      left: 3.5em;
-      animation: lds-ellipsis3 0.6s infinite;
-    }
-  }
-}
-@keyframes lds-ellipsis1 {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes lds-ellipsis2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(1.5em, 0);
-  }
-}
-@keyframes lds-ellipsis3 {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-
 
 @media screen and (min-width: map-get($breakpoints, sm)) {
   .p-card__body {
@@ -300,9 +240,6 @@ $card-radius: 1rem;
       font-size: $font-size-4;
     }
   }
-  .lds-ellipsis {
-    font-size: 1.5rem;
-  }
 }
 @media screen and (min-width: map-get($breakpoints, xxl)) {
   .products {
@@ -311,8 +248,5 @@ $card-radius: 1rem;
   .more-info--products {
     width: max-content;
     margin-left: var(--side-space);
-  }
-  .lds-ellipsis {
-    font-size: 2rem;
   }
 }

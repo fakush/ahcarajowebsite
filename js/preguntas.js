@@ -1,63 +1,52 @@
-const cuerpoPreguntas = document.getElementById('nuevasPreguntas');
+const $faqContent = document.getElementById('accordion');
 
-const contenidoSeccion = (data) => {
-  aux = ``;
-  for (let i = 0; i < data.length; i++) {
-    aux += `
-			<div>
-				<h4 class="faq__collapsable-subtitle">${data[i].pregunta}</h4>
-				<p class="faq__collapsable-text">
-					${data[i].respuesta}
-				</p>
-			</div>
-        `;
-  }
-  return aux;
-};
-
-const fillPreguntas = (data) => {
-  let preguntas = ``;
-
-  for (let i = 0; i < data.length; i++) {
-    preguntas += `
-    <div class="faq__collapsable" data-aos="fade-up" data-aos-delay="${i*50}" data-aos-anchor-placement="#accordion">
-          <div class="faq__collapsable-header" id="heading${i}">
-            <button
-              class="faq__collapsable-btn"
-              type="button"
-              data-toggle="collapse"
-              data-target="#collapse${i}"
-              aria-expanded="false"
-              aria-controls="collapse${i}"
-            >
-              <h3 class="faq__collapsable-title">${data[i].seccion}</h3>
-              <img
-                class="faq__collapsable-arrow"
-                src="../assets/icons/arrow-down.svg"
-                alt="flecha hacia abajo"
-              />
-            </button>
-          </div>
-          <div
-            id="collapse${i}"
-            class="collapse"
-            aria-labelledby="heading${i}"
-            data-parent="#accordion"
+const createFAQContent = (faqList) => `
+  <div class="faq__container">
+    <h2 class="faq__title" data-aos="fade-up">Preguntas frecuentes</h2>
+    ${faqList.map(({ seccion, contenido }, i) => `
+      <div class="faq__collapsable" data-aos="fade-up" data-aos-delay="${i * 50}" data-aos-anchor-placement="#accordion">
+        <div class="faq__collapsable-header" id="heading${i}">
+          <button
+            class="faq__collapsable-btn"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapse${i}"
+            aria-expanded="false"
+            aria-controls="collapse${i}"
           >
-            <div class="faq__collapsable-body">
-                ${contenidoSeccion(data[i].contenido)}
-            </div>
+            <h3 class="faq__collapsable-title">${seccion}</h3>
+            <img
+              class="faq__collapsable-arrow"
+              src="../assets/icons/arrow-down.svg"
+              alt="flecha hacia abajo"
+            />
+          </button>
+        </div>
+        <div
+          id="collapse${i}"
+          class="collapse"
+          aria-labelledby="heading${i}"
+          data-parent="#accordion"
+        >
+          <div class="faq__collapsable-body">
+              ${contenido.map(({ pregunta, respuesta }) => `
+                <div>
+                  <h4 class="faq__collapsable-subtitle">${pregunta}</h4>
+                  <p class="faq__collapsable-text">
+                    ${respuesta}
+                  </p>
+                </div>
+              `).join('')}
           </div>
         </div>
-        
-      `;
-  }
-  cuerpoPreguntas.innerHTML = preguntas;
-};
+      </div>
+    `).join('')}
+  </div>
+`;
 
 loadSocialMediaURLs();
 fetch('../assets/json/preguntas.json')
   .then((response) => response.json())
-  .then((data) => {
-	fillPreguntas(data);
+  .then((faqList) => {
+    $faqContent.innerHTML = createFAQContent(faqList);
   });

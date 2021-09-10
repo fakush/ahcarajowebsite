@@ -248,13 +248,11 @@ fetch('../assets/json/productos.json')
         ...productData
       });
     });
-    const $spinnerLoader = document.getElementById('spinnerLoader');
     const $moreInfo = document.querySelector('.more-info');
-    $moreInfo.style.display = null;
     $modalsContainer.innerHTML = modals;
     onResourcesLoaded(() => {
-      $spinnerLoader.style.display = 'none';
       $cardsContainer.innerHTML = cards;
+      $moreInfo.style.display = null;
       orderCardsInCategories();
       $('.carousel').carousel();
     });

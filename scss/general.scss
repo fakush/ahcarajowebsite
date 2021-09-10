@@ -247,6 +247,70 @@ body {
   }
 }
 
+.lds-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1rem;
+  color: $acento;
+  transform: translate(-50%, -50%);
+  &__wrapper {
+    position: relative;
+    width: 4.375em;
+    height: 0.8125em;
+  }
+  &__circle {
+    position: absolute;
+    padding: 0.4063em;
+    border-radius: 50%;
+    background-color: currentColor;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    &--1 {
+      left: 0.5em;
+      animation: lds-ellipsis1 0.6s infinite;
+    }
+    &--2 {
+      left: 0.5em;
+      animation: lds-ellipsis2 0.6s infinite;
+    }
+    &--3 {
+      left: 2em;
+      animation: lds-ellipsis2 0.6s infinite;
+    }
+    &--4 {
+      left: 3.5em;
+      animation: lds-ellipsis3 0.6s infinite;
+    }
+  }
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(1.5em, 0);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
 @media screen and (min-width: map-get($breakpoints, sm)) {
   .header {
     &__nav-list {
@@ -365,6 +429,9 @@ body {
       width: 40px;
     }
   }
+  .lds-ellipsis {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: map-get($breakpoints, xxl)) {
@@ -397,6 +464,9 @@ body {
     &__whatsapp-icon {
       width: 51px;
     }
+  }
+  .lds-ellipsis {
+    font-size: 2rem;
   }
 }
 
