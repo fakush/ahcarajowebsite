@@ -2,13 +2,13 @@
   overflow-y: hidden;
 	.banner {
 		&__img-wrapper {
-			height: 363px;
+			height: 22.6875rem;
 		}
 		&__content {
 			padding: 0.75rem var(--side-space) var(--bottom-space) var(--side-space);
 		}
 		&__title {
-			margin-bottom: 5px;
+			margin-bottom: 0.3125rem;
 		}
 	}
 }
@@ -17,13 +17,13 @@
 	.banner--el-parche {
 		.banner {
 			&__content {
-				padding-top: 88px;
+				padding-top: 5.5rem;
 			}
 			&__title {
-				margin-bottom: 16px;
+				margin-bottom: 1rem;
 			}
 			&__text {
-				width: 400px;
+				width: 25rem;
 			}
 		}
 	}

@@ -1,10 +1,10 @@
 .banner--home {
 	.banner {
 		&__img-wrapper {
-			height: 311px;
+			height: 19.4375rem;
 		}
 		&__content {
-			padding: 3px var(--side-space) 82px var(--side-space);
+			padding: 0.1875rem var(--side-space) 5.125rem var(--side-space);
 		}
 		&__title {
 			margin-bottom: var(--space-between-items);
@@ -52,7 +52,7 @@
 		row-gap: var(--space-between-items);
     position: relative;
 		padding: var(--space-between-items) 0;
-		border: 1px solid $principal-dark;
+		border: 0.0625rem solid $principal-dark;
 		border-radius: 1rem;
 		background-color: $white;
 		box-shadow: $shadow-2;
@@ -90,12 +90,12 @@
     z-index: 1;
   }
 	&__product-img {
-		max-height: 88px;
+		max-height: 5.5rem;
 	}
 	&__product-title {
 		color: $acento;
 		margin-bottom: 0;
-		font-size: $font-size-3;
+		font-size: $fs-6;
 		font-weight: bold;
 		text-align: center;
 	}
@@ -107,7 +107,7 @@
 	&__title {
 		display: inline-block;
 		margin-bottom: var(--space-between-items);
-		font-size: $font-size-7;
+		font-size: $fs-7;
 		font-weight: 500;
 		text-align: center;
 	}
@@ -115,11 +115,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		max-height: 41px;
-		padding: 5px 9px;
+		max-height: 2.5625rem;
+		padding: 0.3125rem 0.5625rem;
 		background-color: $white;
-		border: 1px solid $gray;
-		border-radius: 16px;
+		border: 0.0625rem solid $gray;
+		border-radius: 1rem;
 		box-shadow: $shadow-2;
 	}
 	&__img {
@@ -133,16 +133,16 @@
 		min-height: auto;
 		.banner {
 			&__content {
-				padding: 135px var(--side-space) 120px var(--side-space);
+				padding: 8.4375rem var(--side-space) 7.5rem var(--side-space);
 			}
 			&__title {
-				width: 379px;
-				margin-bottom: 22px;
+				width: 23.6875rem;
+				margin-bottom: 1.375rem;
 				margin-left: 0;
 				margin-right: 0;
 			}
 			&__text {
-				width: 346px;
+				width: 21.625rem;
 				padding: 0;
 			}
 		}
@@ -171,7 +171,7 @@
 			row-gap: var(--space-between-items);
 		}
 		&__product-title {
-			font-size: $font-size-9;
+			font-size: $fs-5;
 		}
 	}
 }
@@ -179,7 +179,7 @@
 	.banner--home {
 		.banner {
 			&__content {
-				padding: 199px 89px 125px var(--side-space);
+				padding: 12.4375rem 5.5625rem 7.8125rem var(--side-space);
 			}
 		}
 	}
@@ -197,24 +197,24 @@
 		&__product {
 			column-gap: var(--space-between-items);
 			grid-auto-flow: column;
-			padding: 20px 16px 16px 24px;
+			padding: 1.25rem 1rem 1rem 1.5rem;
 			border: none;
 		}
 		&__product-img {
-			max-width: 110px;
-			max-height: 108px;
+			max-width: 6.875rem;
+			max-height: 6.75rem;
 		}
 		&__product-text {
 			align-self: flex-start;
 		}
 		&__product-title {
-			margin-bottom: 8px;
+			margin-bottom: 0.5rem;
 			text-align: left;
 		}
 		&__product-description {
 			display: block;
 			color: $black;
-			font-size: $font-size-4;
+			font-size: $fs-9;
 		}
 	}
 	.payment-means {

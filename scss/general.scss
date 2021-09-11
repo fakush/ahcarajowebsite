@@ -37,11 +37,11 @@ body {
     left: var(--side-space);
   }
   &__logo {
-    width: 92px;
+    width: 5.75rem;
     filter: drop-shadow($shadow-1);
     transition: width ease-in-out 0.6s;
     &--scrolling-down {
-      width: 58px;
+      width: 3.625rem;
     }
   }
   &__top {
@@ -51,7 +51,7 @@ body {
   &__text {
     grid-column-start: 2;
     color: $white;
-    font-size: $font-size-6;
+    font-size: $fs-12;
     font-weight: 600;
     text-align: center;
   }
@@ -90,7 +90,7 @@ body {
   }
   &__underline {
     position: absolute;
-    height: 3px;
+    height: 0.1875rem;
     background-color: $acento;
     transition: all 0.3s linear;
   }
@@ -111,7 +111,7 @@ body {
     position: absolute;
     right: 0;
     left: 0;
-    bottom: -2px; // Fix bottom white space in Chrome
+    bottom: -0.125rem; // Fix bottom white space in Chrome
     width: 100%;
     color: $principal-dark;
     &--mobile {
@@ -127,7 +127,7 @@ body {
   }
   &__title {
     color: $white;
-    font-size: $font-size-3;
+    font-size: $fs-6;
     font-weight: 700;
   }
   &__text {
@@ -139,12 +139,12 @@ body {
     display: table; // width max-c + p absolute not working in Safari 12.0
     position: absolute;
     right: var(--side-space);
-    bottom: 35px;
+    bottom: 2.1875rem;
     padding: 0.5rem;
     background-color: $acento;
     color: $white;
     text-decoration: none;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     box-shadow: $shadow-2;
     transition: box-shadow ease-in-out 0.15s;
     &:hover {
@@ -160,17 +160,17 @@ body {
   gap: 1rem;
   position: absolute;
   right: 0;
-  bottom: 14px;
+  bottom: 0.875rem;
   left: 0;
   z-index: 2;
   padding: 0;
   margin: 0;
   list-style: none;
   &__indicator {
-    padding: 5px;
-    border: 3px solid $white !important;
-    width: 12px !important;
-    height: 12px !important;
+    padding: 0.3125rem;
+    border: 0.1875rem solid $white !important;
+    width: 0.75rem !important;
+    height: 0.75rem !important;
     background-color: transparent !important;
     box-sizing: border-box !important;
     border-radius: 50%;
@@ -202,7 +202,7 @@ body {
   left: 0;
   bottom: 0;
   z-index: 10;
-  height: 50px;
+  height: 3.125rem;
   padding: 1rem var(--side-space) 1rem var(--side-space);
   background-color: $principal-dark;
   transform: translateY(150%);
@@ -215,29 +215,29 @@ body {
   }
   &__social-media-icon {
     color: $white;
-    height: 23px;
+    height: 1.4375rem;
   }
   &__dividing-line {
     margin: 0 1rem;
-    width: 1px;
-    height: 23px;
+    width: 0.0625rem;
+    height: 1.4375rem;
     background-color: $white;
   }
   &__text {
     color: $white;
     font-weight: 600;
-    font-size: min(#{$font-size-5}, 3vw);
+    font-size: min(#{$fs-11}, 3vw);
     letter-spacing: -0.08em;
   }
   &__whatsapp-link {
     background: $acento;
-    padding: 13px;
+    padding: 0.8125rem;
     border-radius: 50%;
-    margin: -21px 0 8px auto;
+    margin: -1.3125rem 0 0.5rem auto;
     pointer-events: all;
   }
   &__whatsapp-icon {
-    width: 36px;
+    width: 2.25rem;
   }
   &--scrolling-down {
     transform: none;
@@ -254,7 +254,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 1rem;
+  font-size: $fs-9;
   color: $acento;
   transform: translate(-50%, -50%);
   &__wrapper {
@@ -314,7 +314,7 @@ body {
 @media screen and (min-width: map-get($breakpoints, sm)) {
   .header {
     &__nav-list {
-      margin-right: clamp(48px, 8vw, 72px);
+      margin-right: clamp(3rem, 8vw, 4.5rem);
     }
     &__nav-item:not(:last-child) .header__nav-link {
       padding-right: 2rem;
@@ -325,7 +325,7 @@ body {
 @media screen and (min-width: map-get($breakpoints, md)) {
   .banner {
     display: flex;
-    min-height: calc(100vh - 78px); // 100vh - header height
+    min-height: calc(100vh - 4.875rem); // 100vh - header height
     &__img-wrapper {
       height: auto !important;
       order: 1;
@@ -333,7 +333,7 @@ body {
     &__img-border {
       top: 0;
       right: unset;
-      left: -2px;
+      left: -0.125rem;
       bottom: 0;
       width: auto;
       height: 100%;
@@ -345,12 +345,12 @@ body {
       }
     }
     &__title {
-      font-size: $font-size-2;
+      font-size: $fs-3;
       font-weight: bold;
     }
     &__link {
-      left: 300px;
-      bottom: 60px;
+      left: 18.75rem;
+      bottom: 3.75rem;
     }
   }
 }
@@ -358,29 +358,29 @@ body {
 @media screen and (min-width: map-get($breakpoints, lg)) {
   .header {
     &__logo-wrapper-link {
-      top: 14px;
+      top: 0.875rem;
     }
     &__logo {
-      width: 124px;
+      width: 7.75rem;
       &--scrolling-down {
-        width: 78px;
+        width: 4.875rem;
       }
     }
     &__top {
-      padding: 12px 0;
+      padding: 0.75rem 0;
     }
     &__text {
-      font-size: $font-size-7;
+      font-size: $fs-7;
     }
     &__extra-text {
       display: inline;
-      font-size: $font-size-4;
+      font-size: $fs-9;
       font-weight: 400;
     }
     &__nav-list {
-      margin-left: 240px;
+      margin-left: 15rem;
       margin-right: 0;
-      padding: 20px 0;
+      padding: 1.25rem 0;
     }
     &__nav-item {
       &:not(:last-child) .header__nav-link {
@@ -396,9 +396,9 @@ body {
     }
   }
   .banner {
-    min-height: calc(100vh - 100px); // 100vh - Header height
+    min-height: calc(100vh - 6.25rem); // 100vh - Header height
     &__link {
-      left: 350px;
+      left: 21.875rem;
     }
   }
   .footer {
@@ -416,7 +416,7 @@ body {
       right: var(--side-space);
       bottom: var(--bottom-space);
       margin: 0;
-      padding: 15px 14px;
+      padding: 0.9375rem 0.875rem;
       filter: drop-shadow($shadow-3);
       transition: ease-out 0.4s;
       transition-property: transform, filter;
@@ -426,47 +426,47 @@ body {
       }
     }
     &__whatsapp-icon {
-      width: 40px;
+      width: 2.5rem;
     }
   }
   .lds-ellipsis {
-    font-size: 1.5rem;
+    font-size: $fs-5;
   }
 }
 
 @media screen and (min-width: map-get($breakpoints, xxl)) {
   .header {
     &__logo {
-      width: 154px;
+      width: 9.625rem;
       &--scrolling-down {
-        width: 78px;
+        width: 4.875rem;
       }
     }
     &__nav-list {
-      margin-left: 270px;
+      margin-left: 16.875rem;
     }
     &__nav-item {
       &:not(:last-child) .header__nav-link {
-        padding-right: 72px;
+        padding-right: 4.5rem;
       }
     }
   }
   .banner {
     &__title {
-      font-size: $font-size-1;
+      font-size: $fs-2;
     }
     &__link {
-      left: 402px;
-      bottom: 70px;
+      left: 25.125rem;
+      bottom: 4.375rem;
     }
   }
   .footer {
     &__whatsapp-icon {
-      width: 51px;
+      width: 3.1875rem;
     }
   }
   .lds-ellipsis {
-    font-size: 2rem;
+    font-size: $fs-4;
   }
 }
 

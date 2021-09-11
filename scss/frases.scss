@@ -2,33 +2,33 @@
   overflow-y: hidden;
 	.banner {
 		&__img-wrapper {
-			height: 361px;
+			height: 22.5625rem;
 		}
 		&__content {
       padding: 1rem var(--side-space) var(--bottom-space) var(--side-space);
 		}
 		&__title {
-			margin-bottom: 3px;
+			margin-bottom: 0.1875rem;
 		}
 		&__sub-text {
 			display: none;
 		}
 		&__link {
 			position: static;
-			margin: 1rem 0 40px auto;
+			margin: 1rem 0 2.5rem auto;
 		}
 	}
 }
 .phrases-history {
 	background-color: $principal-dark;
-  padding: 0 calc(40px - var(--side-space));
+  padding: 0 calc(2.5rem - var(--side-space));
 	&__line {
 		width: 100%;
-		height: 1px;
+		height: 0.0625rem;
 		background-color: $white;
 	}
 	&__content {
-		padding: 40px 0;
+		padding: 2.5rem 0;
 	}
 	&__title,
 	&__blockquote,
@@ -36,9 +36,9 @@
 		color: $white;
 	}
 	&__title {
-		font-size: $font-size-3;
+		font-size: $fs-6;
 		font-weight: 700;
-		margin-bottom: 21px;
+		margin-bottom: 1.3125rem;
 	}
 	&__blockquote,
 	&__author-wrapper {
@@ -48,7 +48,7 @@
 		position: relative;
 		&::before {
 			content: "“";
-			font-size: 72px;
+			font-size: $fs-1;
 			line-height: 0;
 			vertical-align: bottom;
 			margin-right: -0.05em;
@@ -58,11 +58,11 @@
 		}
 	}
 	&__large-text {
-		font-size: $font-size-4;
+		font-size: $fs-9;
 		font-weight: 600;
 	}
 	&__author-wrapper {
-		margin-top: 9px;
+		margin-top: 0.5625rem;
 		text-align: right;
 	}
 	&__author-name {
@@ -83,16 +83,16 @@
 	.banner--phrases {
 		.banner {
 			&__content {
-        padding-top: 88px;
+        padding-top: 5.5rem;
 			}
 			&__title {
-				width: 380px;
+				width: 23.75rem;
 				margin-top: 0;
 				margin-left: 0;
 			}
 			&__text,
 			&__sub-text {
-				width: 400px;
+				width: 25rem;
 				margin-left: 0;
 			}
 			&__sub-text {
@@ -102,28 +102,28 @@
 				font-weight: 600;
 			}
 			&__link {
-				margin: 24px auto 34px auto;
+				margin: 1.5rem auto 2.125rem auto;
 			}
 		}
 	}
 	.phrases-history {
 		padding: 0;
 		&__title {
-			font-size: $font-size-8;
+			font-size: $fs-4;
 			text-align: center;
 		}
 		&__blockquote {
-			width: 390px;
+			width: 24.375rem;
 			margin: 0 auto;
 		}
 		&__large-text {
-			font-size: $font-size-9;
+			font-size: $fs-5;
 		}
 		&__author-name {
-			font-size: $font-size-10;
+			font-size: $fs-8;
 		}
 		&__author-location {
-			font-size: $font-size-11;
+			font-size: $fs-10;
 		}
 	}
 }
@@ -132,11 +132,11 @@
 	.banner--phrases {
 		.banner {
 			&__content {
-				padding-right: 53px;
+				padding-right: 3.3125rem;
 			}
 			&__text,
 			&__sub-text {
-				width: 474px;
+				width: 29.625rem;
 			}
 		}
 	}

@@ -1,20 +1,20 @@
 .faq {
-	padding: 2.5rem var(--side-space) 70px var(--side-space);
+	padding: 2.5rem var(--side-space) 4.375rem var(--side-space);
 	&__title {
 		color: $principal-dark;
-		font-size: $font-size-3;
+		font-size: $fs-6;
 		font-weight: 700;
 		margin-bottom: 1.5rem;
 	}
 	&__collapsable {
-		border-radius: 16px;
+		border-radius: 1rem;
 		background-color: transparent;
 		border: 0;
 		margin-bottom: 2rem;
 	}
 	&__collapsable-header {
 		padding: 0;
-		border: 1px solid #318B7C;
+		border: 0.0625rem solid #318B7C;
 		background: white;
 		border-radius: 1rem !important;
 	}
@@ -38,7 +38,7 @@
 		text-align: left;
 	}
 	&__collapsable-arrow {
-		width: 14px;
+		width: 0.875rem;
 		margin: 0 0.5rem;
 		transition: transform ease-in-out 0.25s;
 	}
@@ -58,17 +58,17 @@
 
 @media screen and (min-width: map-get($breakpoints, lg)) {
 	.faq {
-		padding: 4rem 142px 70px 240px;
+		padding: 4rem 8.875rem 4.375rem 15rem;
 		&__collapsable {
 			margin-bottom: 1.5rem;
 		}
 		&__collapsable-btn {
-			padding: 20px;
+			padding: 1.25rem;
 		}
 	}
 }
 @media screen and (min-width: map-get($breakpoints, xxl)) {
 	.faq {
-		padding-left: 270px;
+		padding-left: 16.875rem;
 	}
 }
