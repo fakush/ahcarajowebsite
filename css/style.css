@@ -911,9 +911,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1rem;
-  height: 1rem;
-  font-size: 0.5625rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 0.625rem;
   border-radius: 50%;
   border: 0.0625rem solid #303030;
 }
