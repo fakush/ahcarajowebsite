@@ -865,7 +865,6 @@ body {
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  column-gap: var(--space-between-blocks);
   margin-top: auto;
 }
 .p-card__info-box {

@@ -79,7 +79,6 @@ $card-radius: 1rem;
 		display: grid;
 		grid-auto-flow: column;
 		justify-content: space-between;
-		column-gap: var(--space-between-blocks);
 		margin-top: auto;
 	}
 	&__info-box {
