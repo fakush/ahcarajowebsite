@@ -80,13 +80,16 @@ const createProductCard = ({
       <div class="carousel slide carousel-fade" id="p-card-${id}" data-ride="carousel">
         <div class="carousel-inner">
           <p class="p-card__label">${tag}</p>
-          ${Array.from({ length: cantidadImagenes }, (el, i) => i === 0 ? null : `
-            <picture class="carousel-item ${i === 1 ? 'active' : ''}">
-              <source srcset="../assets/products/${nombreImagen}-${i}.webp" type="image/webp">
-              <img class="p-card__img" src="../assets/products/${nombreImagen}-${i}.jpg"
-                alt="imagen de ${nombreImagen} ${i}" data-interval="15000">
-            </picture>
-          `).join('')}
+          ${Array.from({ length: cantidadImagenes }, (el, i) => {
+            let j = i + 1;
+            return `
+              <picture class="carousel-item ${j === 1 ? 'active' : ''}">
+                <source srcset="../assets/products/${nombreImagen}-${j}.webp" type="image/webp">
+                <img class="p-card__img" src="../assets/products/${nombreImagen}-${j}.jpg"
+                  alt="imagen de ${nombreImagen} ${j}" data-interval="15000">
+              </picture>
+            `;
+          }).join('')}
         </div>
         <ol class="custom-indicators carousel-indicators">
           ${Array.from({ length: cantidadImagenes }, (el, i) => `
